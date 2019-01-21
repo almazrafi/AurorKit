@@ -2,9 +2,6 @@ language: objective-c
 osx_image: xcode10.1
 xcode_workspace: AurorKit.xcworkspace
 
-script:
-  - xcodebuild [DEFAULT_OPTIONS] CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
-
 matrix:
   include:
     - xcode_scheme: AurorKit iOS
