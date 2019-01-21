@@ -4,3 +4,6 @@ xcode_workspace: AurorKit.xcworkspace
 xcode_scheme: AurorKit iOS
 xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone XS
 xcode_sdk: iphonesimulator12.1
+
+before_install:
+  - pod repo update
