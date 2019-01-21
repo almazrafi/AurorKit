@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8DB7CDCAF979330B98C74E0E /* Pods_AurorKit_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85098C465C529153E35618D5 /* Pods_AurorKit_iOS.framework */; };
+		9288EFD24E051AE13A468779 /* Pods_AurorKit_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98F4AE16788C7D39A7C6C81 /* Pods_AurorKit_tvOS.framework */; };
 		C0252D5521F3A35E00F41A26 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0252D5421F3A35E00F41A26 /* ArrayExtension.swift */; };
 		C0252D5721F3A5AC00F41A26 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0252D5621F3A5AC00F41A26 /* DataExtension.swift */; };
 		C0252D5C21F3BDF300F41A26 /* DataExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0252D5821F3A9D600F41A26 /* DataExtensionTests.swift */; };
@@ -42,6 +43,25 @@
 		C05A655F21F3951A0038EC55 /* CollectionExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05A655B21F392DB0038EC55 /* CollectionExtensionTests.swift */; };
 		C05A656121F399DE0038EC55 /* ContiguousArrayExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05A656021F399DE0038EC55 /* ContiguousArrayExtensionTests.swift */; };
 		C05A656321F39A9B0038EC55 /* RangeReplaceableCollectionExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05A656221F39A9B0038EC55 /* RangeReplaceableCollectionExtensionTests.swift */; };
+		C080D0FC21F66C59003FBCF4 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A94B1D21F204CA00FC4146 /* Event.swift */; };
+		C080D0FD21F66C5B003FBCF4 /* EventConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A94B2E21F20E2A00FC4146 /* EventConnection.swift */; };
+		C080D0FE21F66C5F003FBCF4 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0252D5421F3A35E00F41A26 /* ArrayExtension.swift */; };
+		C080D0FF21F66C62003FBCF4 /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05A654821F354C50038EC55 /* CGPointExtension.swift */; };
+		C080D10021F66C64003FBCF4 /* CGRectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05A655121F35AA70038EC55 /* CGRectExtension.swift */; };
+		C080D10121F66C68003FBCF4 /* CGSizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05A655321F35AF80038EC55 /* CGSizeExtension.swift */; };
+		C080D10221F66C6A003FBCF4 /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05A653F21F343C30038EC55 /* CollectionExtension.swift */; };
+		C080D10321F66C6D003FBCF4 /* ContiguousArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05A654521F353DA0038EC55 /* ContiguousArrayExtension.swift */; };
+		C080D10421F66C70003FBCF4 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0252D5621F3A5AC00F41A26 /* DataExtension.swift */; };
+		C080D10521F66C72003FBCF4 /* FloatingPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0252D5D21F3BEAA00F41A26 /* FloatingPointExtension.swift */; };
+		C080D10621F66C77003FBCF4 /* NSLayoutConstraintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0252D6D21F3D92000F41A26 /* NSLayoutConstraintExtension.swift */; };
+		C080D10721F66C77003FBCF4 /* RangeReplaceableCollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05A654221F3450D0038EC55 /* RangeReplaceableCollectionExtension.swift */; };
+		C080D10821F66C77003FBCF4 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0252D6121F3C37B00F41A26 /* StringExtension.swift */; };
+		C080D10921F66C77003FBCF4 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AFE91D21F4F29600A7005D /* UIColorExtension.swift */; };
+		C080D10A21F66C77003FBCF4 /* UIEdgeInsetsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0252D7221F3E2D800F41A26 /* UIEdgeInsetsExtension.swift */; };
+		C080D10B21F66C77003FBCF4 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0252D7721F3E43F00F41A26 /* UIImageExtension.swift */; };
+		C080D10C21F66C77003FBCF4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0336CE821F4B293006A182C /* UIViewExtension.swift */; };
+		C080D10D21F66C77003FBCF4 /* UIWindowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0336CEE21F4B955006A182C /* UIWindowExtension.swift */; };
+		C080D10E21F66C83003FBCF4 /* AurorKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C0E9FD7021F253A8009C453F /* AurorKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0AFE91E21F4F29600A7005D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AFE91D21F4F29600A7005D /* UIColorExtension.swift */; };
 		C0AFE92021F4F63500A7005D /* UIColorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AFE91F21F4F63500A7005D /* UIColorExtensionTests.swift */; };
 		C0E9FD7721F253A8009C453F /* AurorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E9FD6E21F253A7009C453F /* AurorKit.framework */; };
@@ -61,14 +81,18 @@
 
 /* Begin PBXFileReference section */
 		02DF386D7694E2F925587C3C /* Pods_AurorKit_Tests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AurorKit_Tests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C808BE434147BC0C5E421A2 /* Pods_AurorKit_Tests_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AurorKit_Tests_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A1797C916E23EDF094082BC /* Pods-Tools Tests iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tools Tests iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tools Tests iOS/Pods-Tools Tests iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		419C987651E8C27EE4DC0711 /* Pods-AurorKit Tests iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit Tests iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit Tests iOS/Pods-AurorKit Tests iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		41E970DCF7C6C31014757D38 /* Pods-AurorKit tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit tvOS/Pods-AurorKit tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		4729FDF1840038709A92D52D /* Pods_Tools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D88DA49C686B691E290915B /* Pods-AurorKit iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit iOS/Pods-AurorKit iOS.release.xcconfig"; sourceTree = "<group>"; };
 		51838DBE8E0F632983485FE5 /* Pods-Tools iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tools iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tools iOS/Pods-Tools iOS.release.xcconfig"; sourceTree = "<group>"; };
 		53521E43618BBC71546FD3A0 /* Pods_ToolsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToolsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		673888F294850D16CD82D675 /* Pods-AurorKit Tests tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit Tests tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit Tests tvOS/Pods-AurorKit Tests tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		705A5036C99D0373556C95DF /* Pods-ToolsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToolsTests/Pods-ToolsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		85098C465C529153E35618D5 /* Pods_AurorKit_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AurorKit_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86F2C0ACD94EC7673833AE84 /* Pods-AurorKit Tests tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit Tests tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit Tests tvOS/Pods-AurorKit Tests tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		A307A5D2709CCE5883715795 /* Pods-Tools iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tools iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tools iOS/Pods-Tools iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		A615379005C214C0E252ED2C /* Pods_Tools_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tools_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF8A3DA52A751CCAD383D67A /* Pods-Tools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tools.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tools/Pods-Tools.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +128,7 @@
 		C05A655B21F392DB0038EC55 /* CollectionExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensionTests.swift; sourceTree = "<group>"; };
 		C05A656021F399DE0038EC55 /* ContiguousArrayExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContiguousArrayExtensionTests.swift; sourceTree = "<group>"; };
 		C05A656221F39A9B0038EC55 /* RangeReplaceableCollectionExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeReplaceableCollectionExtensionTests.swift; sourceTree = "<group>"; };
+		C080D0F421F66BD7003FBCF4 /* AurorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AurorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0A94B1D21F204CA00FC4146 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		C0A94B2721F2056400FC4146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0A94B2E21F20E2A00FC4146 /* EventConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventConnection.swift; sourceTree = "<group>"; };
@@ -118,6 +143,8 @@
 		C0E9FD7621F253A8009C453F /* AurorKit Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AurorKit Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D023EA186ECF76C7D5EC6690 /* Pods-Tools Tests iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tools Tests iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tools Tests iOS/Pods-Tools Tests iOS.release.xcconfig"; sourceTree = "<group>"; };
 		D6414EEBC854146F383353DF /* Pods-AurorKit Tests iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit Tests iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit Tests iOS/Pods-AurorKit Tests iOS.release.xcconfig"; sourceTree = "<group>"; };
+		D747C59744FA10EC5ED9298D /* Pods-AurorKit tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit tvOS/Pods-AurorKit tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		D98F4AE16788C7D39A7C6C81 /* Pods_AurorKit_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AurorKit_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8BD169B3AA76E91FD1F2917 /* Pods_Tools_Tests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tools_Tests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC0C46562E338F44E3D9382E /* Pods-ToolsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToolsTests/Pods-ToolsTests.release.xcconfig"; sourceTree = "<group>"; };
 		FEDE77F67EE8D78875B43718 /* Pods-AurorKit iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit iOS/Pods-AurorKit iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +152,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C080D0F121F66BD7003FBCF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9288EFD24E051AE13A468779 /* Pods_AurorKit_tvOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0E9FD6B21F253A7009C453F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -210,6 +245,7 @@
 			children = (
 				C0E9FD6E21F253A7009C453F /* AurorKit.framework */,
 				C0E9FD7621F253A8009C453F /* AurorKit Tests iOS.xctest */,
+				C080D0F421F66BD7003FBCF4 /* AurorKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -262,6 +298,8 @@
 				A615379005C214C0E252ED2C /* Pods_Tools_iOS.framework */,
 				02DF386D7694E2F925587C3C /* Pods_AurorKit_Tests_iOS.framework */,
 				85098C465C529153E35618D5 /* Pods_AurorKit_iOS.framework */,
+				D98F4AE16788C7D39A7C6C81 /* Pods_AurorKit_tvOS.framework */,
+				1C808BE434147BC0C5E421A2 /* Pods_AurorKit_Tests_tvOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -281,6 +319,10 @@
 				D6414EEBC854146F383353DF /* Pods-AurorKit Tests iOS.release.xcconfig */,
 				FEDE77F67EE8D78875B43718 /* Pods-AurorKit iOS.debug.xcconfig */,
 				4D88DA49C686B691E290915B /* Pods-AurorKit iOS.release.xcconfig */,
+				D747C59744FA10EC5ED9298D /* Pods-AurorKit tvOS.debug.xcconfig */,
+				41E970DCF7C6C31014757D38 /* Pods-AurorKit tvOS.release.xcconfig */,
+				86F2C0ACD94EC7673833AE84 /* Pods-AurorKit Tests tvOS.debug.xcconfig */,
+				673888F294850D16CD82D675 /* Pods-AurorKit Tests tvOS.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -288,6 +330,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		C080D0EF21F66BD7003FBCF4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C080D10E21F66C83003FBCF4 /* AurorKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0E9FD6921F253A7009C453F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -299,6 +349,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		C080D0F321F66BD7003FBCF4 /* AurorKit tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C080D0F921F66BD7003FBCF4 /* Build configuration list for PBXNativeTarget "AurorKit tvOS" */;
+			buildPhases = (
+				C1F4F43AA3CF698836653909 /* [CP] Check Pods Manifest.lock */,
+				C080D0EF21F66BD7003FBCF4 /* Headers */,
+				C080D0F021F66BD7003FBCF4 /* Sources */,
+				C080D0F121F66BD7003FBCF4 /* Frameworks */,
+				C080D0F221F66BD7003FBCF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AurorKit tvOS";
+			productName = "AurorKit tvOS";
+			productReference = C080D0F421F66BD7003FBCF4 /* AurorKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		C0E9FD6D21F253A7009C453F /* AurorKit iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0E9FD8321F253A8009C453F /* Build configuration list for PBXNativeTarget "AurorKit iOS" */;
@@ -348,6 +417,9 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Aurors;
 				TargetAttributes = {
+					C080D0F321F66BD7003FBCF4 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					C0E9FD6D21F253A7009C453F = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -369,12 +441,20 @@
 			projectRoot = "";
 			targets = (
 				C0E9FD6D21F253A7009C453F /* AurorKit iOS */,
+				C080D0F321F66BD7003FBCF4 /* AurorKit tvOS */,
 				C0E9FD7521F253A8009C453F /* AurorKit Tests iOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C080D0F221F66BD7003FBCF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0E9FD6C21F253A7009C453F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -438,6 +518,28 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AurorKit Tests iOS/Pods-AurorKit Tests iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C1F4F43AA3CF698836653909 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AurorKit tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F66D570489E84E416F8936CE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -463,6 +565,31 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C080D0F021F66BD7003FBCF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C080D10021F66C64003FBCF4 /* CGRectExtension.swift in Sources */,
+				C080D10A21F66C77003FBCF4 /* UIEdgeInsetsExtension.swift in Sources */,
+				C080D10921F66C77003FBCF4 /* UIColorExtension.swift in Sources */,
+				C080D10D21F66C77003FBCF4 /* UIWindowExtension.swift in Sources */,
+				C080D10221F66C6A003FBCF4 /* CollectionExtension.swift in Sources */,
+				C080D10721F66C77003FBCF4 /* RangeReplaceableCollectionExtension.swift in Sources */,
+				C080D0FE21F66C5F003FBCF4 /* ArrayExtension.swift in Sources */,
+				C080D10121F66C68003FBCF4 /* CGSizeExtension.swift in Sources */,
+				C080D10621F66C77003FBCF4 /* NSLayoutConstraintExtension.swift in Sources */,
+				C080D10C21F66C77003FBCF4 /* UIViewExtension.swift in Sources */,
+				C080D0FD21F66C5B003FBCF4 /* EventConnection.swift in Sources */,
+				C080D10321F66C6D003FBCF4 /* ContiguousArrayExtension.swift in Sources */,
+				C080D0FF21F66C62003FBCF4 /* CGPointExtension.swift in Sources */,
+				C080D10421F66C70003FBCF4 /* DataExtension.swift in Sources */,
+				C080D10521F66C72003FBCF4 /* FloatingPointExtension.swift in Sources */,
+				C080D10821F66C77003FBCF4 /* StringExtension.swift in Sources */,
+				C080D0FC21F66C59003FBCF4 /* Event.swift in Sources */,
+				C080D10B21F66C77003FBCF4 /* UIImageExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0E9FD6A21F253A7009C453F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -524,6 +651,69 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		C080D0FA21F66BD7003FBCF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D747C59744FA10EC5ED9298D /* Pods-AurorKit tvOS.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y992LMDMB3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_TESTABILITY = NO;
+				INFOPLIST_FILE = AurorKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Aurors.AurorKit;
+				PRODUCT_NAME = AurorKit;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C080D0FB21F66BD7003FBCF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41E970DCF7C6C31014757D38 /* Pods-AurorKit tvOS.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y992LMDMB3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AurorKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Aurors.AurorKit;
+				PRODUCT_NAME = AurorKit;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		C0A94B1621F2049800FC4146 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -662,6 +852,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Aurors.AurorKit;
 				PRODUCT_NAME = AurorKit;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -691,6 +882,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Aurors.AurorKit;
 				PRODUCT_NAME = AurorKit;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -741,6 +933,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C080D0F921F66BD7003FBCF4 /* Build configuration list for PBXNativeTarget "AurorKit tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C080D0FA21F66BD7003FBCF4 /* Debug */,
+				C080D0FB21F66BD7003FBCF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C0A94B0C21F2049800FC4146 /* Build configuration list for PBXProject "AurorKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

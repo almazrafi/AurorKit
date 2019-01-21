@@ -4,6 +4,10 @@ target 'AurorKit iOS' do
   platform :ios, '10.0'
 end
 
+target 'AurorKit tvOS' do
+    platform :tvos, '10.0'
+end
+
 target 'AurorKit Tests iOS' do
   inherit! :search_paths
   platform :ios, '10.0'

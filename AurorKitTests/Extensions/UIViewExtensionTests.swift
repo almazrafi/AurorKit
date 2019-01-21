@@ -25,7 +25,7 @@ class UIViewExtensionTests: QuickSpec {
                 it("should return the leading anchor", closure: {
                     let leadingAnchor = view.safeAreaLeadingAnchor
                   
-                    if #available(iOS 11.0, *) {
+                    if #available(iOS 11.0, tvOS 11.0, *) {
                         expect(leadingAnchor).to(beIdenticalTo(view.safeAreaLayoutGuide.leadingAnchor))
                     } else {
                         expect(leadingAnchor).to(beIdenticalTo(view.leadingAnchor))
@@ -37,7 +37,7 @@ class UIViewExtensionTests: QuickSpec {
                 it("should return the trailing anchor", closure: {
                     let trailingAnchor = view.safeAreaTrailingAnchor
                     
-                    if #available(iOS 11.0, *) {
+                    if #available(iOS 11.0, tvOS 11.0, *) {
                         expect(trailingAnchor).to(beIdenticalTo(view.safeAreaLayoutGuide.trailingAnchor))
                     } else {
                         expect(trailingAnchor).to(beIdenticalTo(view.trailingAnchor))
@@ -49,7 +49,7 @@ class UIViewExtensionTests: QuickSpec {
                 it("should return the top anchor", closure: {
                     let topAnchor = view.safeAreaTopAnchor
                   
-                    if #available(iOS 11.0, *) {
+                    if #available(iOS 11.0, tvOS 11.0, *) {
                         expect(topAnchor).to(beIdenticalTo(view.safeAreaLayoutGuide.topAnchor))
                     } else {
                         expect(topAnchor).to(beIdenticalTo(view.topAnchor))
@@ -61,7 +61,7 @@ class UIViewExtensionTests: QuickSpec {
                 it("should return the bottom anchor", closure: {
                     let bottomAnchor = view.safeAreaBottomAnchor
                     
-                    if #available(iOS 11.0, *) {
+                    if #available(iOS 11.0, tvOS 11.0, *) {
                         expect(bottomAnchor).to(beIdenticalTo(view.safeAreaLayoutGuide.bottomAnchor))
                     } else {
                         expect(bottomAnchor).to(beIdenticalTo(view.bottomAnchor))
@@ -73,7 +73,7 @@ class UIViewExtensionTests: QuickSpec {
                 it("should return the width anchor", closure: {
                     let widthAnchor = view.safeAreaWidthAnchor
                     
-                    if #available(iOS 11.0, *) {
+                    if #available(iOS 11.0, tvOS 11.0, *) {
                         expect(widthAnchor).to(beIdenticalTo(view.safeAreaLayoutGuide.widthAnchor))
                     } else {
                         expect(widthAnchor).to(beIdenticalTo(view.widthAnchor))
@@ -85,7 +85,7 @@ class UIViewExtensionTests: QuickSpec {
                 it("should return the height anchor", closure: {
                     let heightAnchor = view.safeAreaHeightAnchor
                     
-                    if #available(iOS 11.0, *) {
+                    if #available(iOS 11.0, tvOS 11.0, *) {
                         expect(heightAnchor).to(beIdenticalTo(view.safeAreaLayoutGuide.heightAnchor))
                     } else {
                         expect(heightAnchor).to(beIdenticalTo(view.heightAnchor))
@@ -97,7 +97,7 @@ class UIViewExtensionTests: QuickSpec {
                 it("should return the horizontal center anchor", closure: {
                     let centerXAnchor = view.safeAreaCenterXAnchor
                     
-                    if #available(iOS 11.0, *) {
+                    if #available(iOS 11.0, tvOS 11.0, *) {
                         expect(centerXAnchor).to(beIdenticalTo(view.safeAreaLayoutGuide.centerXAnchor))
                     } else {
                         expect(centerXAnchor).to(beIdenticalTo(view.centerXAnchor))
@@ -109,7 +109,7 @@ class UIViewExtensionTests: QuickSpec {
                 it("should return the vertical center anchor", closure: {
                     let centerYAnchor = view.safeAreaCenterYAnchor
                     
-                    if #available(iOS 11.0, *) {
+                    if #available(iOS 11.0, tvOS 11.0, *) {
                         expect(centerYAnchor).to(beIdenticalTo(view.safeAreaLayoutGuide.centerYAnchor))
                     } else {
                         expect(centerYAnchor).to(beIdenticalTo(view.centerYAnchor))
