@@ -4,6 +4,10 @@ target 'AurorKit iOS' do
   platform :ios, '10.0'
 end
 
+target 'AurorKit macOS' do
+    platform :macos, '10.12'
+end
+
 target 'AurorKit tvOS' do
     platform :tvos, '10.0'
 end
@@ -14,6 +18,14 @@ target 'AurorKit Tests iOS' do
 
   pod 'Quick'
   pod 'Nimble'
+end
+
+target 'AurorKit Tests macOS' do
+    inherit! :search_paths
+    platform :macos, '10.12'
+    
+    pod 'Quick'
+    pod 'Nimble'
 end
 
 post_install do |installer|
