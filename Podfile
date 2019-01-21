@@ -28,6 +28,11 @@ target 'AurorKit Tests macOS' do
     pod 'Nimble'
 end
 
+target 'AurorKit Tests tvOS' do
+    inherit! :search_paths
+    platform :tvos, '10.0'
+end
+
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|

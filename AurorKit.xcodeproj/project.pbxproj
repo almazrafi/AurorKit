@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1E135022786DE74247CF6783 /* Pods_AurorKit_Tests_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C62A792872FFA08D5778085 /* Pods_AurorKit_Tests_macOS.framework */; };
+		2F2FE41AA602809A7E7E14B0 /* Pods_AurorKit_Tests_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C808BE434147BC0C5E421A2 /* Pods_AurorKit_Tests_tvOS.framework */; };
 		8DB7CDCAF979330B98C74E0E /* Pods_AurorKit_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85098C465C529153E35618D5 /* Pods_AurorKit_iOS.framework */; };
 		9288EFD24E051AE13A468779 /* Pods_AurorKit_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98F4AE16788C7D39A7C6C81 /* Pods_AurorKit_tvOS.framework */; };
 		C0252D5521F3A35E00F41A26 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0252D5421F3A35E00F41A26 /* ArrayExtension.swift */; };
@@ -63,6 +64,10 @@
 		C080D10C21F66C77003FBCF4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0336CE821F4B293006A182C /* UIViewExtension.swift */; };
 		C080D10D21F66C77003FBCF4 /* UIWindowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0336CEE21F4B955006A182C /* UIWindowExtension.swift */; };
 		C080D10E21F66C83003FBCF4 /* AurorKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C0E9FD7021F253A8009C453F /* AurorKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0A6036C21F680B9009EC42C /* AurorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C080D0F421F66BD7003FBCF4 /* AurorKit.framework */; };
+		C0A6037521F682D3009EC42C /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A6037221F6825C009EC42C /* Tests.swift */; };
+		C0A6037621F682D3009EC42C /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A6037221F6825C009EC42C /* Tests.swift */; };
+		C0A6037721F682D4009EC42C /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A6037221F6825C009EC42C /* Tests.swift */; };
 		C0AE178221F678520070DD72 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A94B1D21F204CA00FC4146 /* Event.swift */; };
 		C0AE178321F678520070DD72 /* EventConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A94B2E21F20E2A00FC4146 /* EventConnection.swift */; };
 		C0AE178421F6785A0070DD72 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0252D5421F3A35E00F41A26 /* ArrayExtension.swift */; };
@@ -98,6 +103,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C0A6036D21F680B9009EC42C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0A94B0921F2049800FC4146 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C080D0F321F66BD7003FBCF4;
+			remoteInfo = "AurorKit tvOS";
+		};
 		C0AE179E21F6793A0070DD72 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C0A94B0921F2049800FC4146 /* Project object */;
@@ -168,6 +180,8 @@
 		C05A656021F399DE0038EC55 /* ContiguousArrayExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContiguousArrayExtensionTests.swift; sourceTree = "<group>"; };
 		C05A656221F39A9B0038EC55 /* RangeReplaceableCollectionExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeReplaceableCollectionExtensionTests.swift; sourceTree = "<group>"; };
 		C080D0F421F66BD7003FBCF4 /* AurorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AurorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0A6036721F680B9009EC42C /* AurorKit Tests tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AurorKit Tests tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0A6037221F6825C009EC42C /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		C0A94B1D21F204CA00FC4146 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		C0A94B2721F2056400FC4146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0A94B2E21F20E2A00FC4146 /* EventConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventConnection.swift; sourceTree = "<group>"; };
@@ -200,6 +214,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9288EFD24E051AE13A468779 /* Pods_AurorKit_tvOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0A6036421F680B9009EC42C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0A6036C21F680B9009EC42C /* AurorKit.framework in Frameworks */,
+				2F2FE41AA602809A7E7E14B0 /* Pods_AurorKit_Tests_tvOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +331,7 @@
 				C080D0F421F66BD7003FBCF4 /* AurorKit.framework */,
 				C0AE177A21F677E60070DD72 /* AurorKit.framework */,
 				C0AE179821F6793A0070DD72 /* AurorKit Tests macOS.xctest */,
+				C0A6036721F680B9009EC42C /* AurorKit Tests tvOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -338,6 +362,7 @@
 				C0E9FD6221F2496A009C453F /* Events */,
 				C05A653C21F3420E0038EC55 /* Extensions */,
 				C0A94B2721F2056400FC4146 /* Info.plist */,
+				C0A6037221F6825C009EC42C /* Tests.swift */,
 			);
 			path = AurorKitTests;
 			sourceTree = "<group>";
@@ -444,6 +469,25 @@
 			productReference = C080D0F421F66BD7003FBCF4 /* AurorKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		C0A6036621F680B9009EC42C /* AurorKit Tests tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0A6036F21F680B9009EC42C /* Build configuration list for PBXNativeTarget "AurorKit Tests tvOS" */;
+			buildPhases = (
+				F8A666386EE3A4187B2E10D1 /* [CP] Check Pods Manifest.lock */,
+				C0A6036321F680B9009EC42C /* Sources */,
+				C0A6036421F680B9009EC42C /* Frameworks */,
+				C0A6036521F680B9009EC42C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C0A6036E21F680B9009EC42C /* PBXTargetDependency */,
+			);
+			name = "AurorKit Tests tvOS";
+			productName = "AurorKit Tests tvOS";
+			productReference = C0A6036721F680B9009EC42C /* AurorKit Tests tvOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C0AE177921F677E60070DD72 /* AurorKit macOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0AE178121F677E70070DD72 /* Build configuration list for PBXNativeTarget "AurorKit macOS" */;
@@ -535,6 +579,9 @@
 					C080D0F321F66BD7003FBCF4 = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					C0A6036621F680B9009EC42C = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					C0AE177921F677E60070DD72 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -565,6 +612,7 @@
 				C0AE177921F677E60070DD72 /* AurorKit macOS */,
 				C080D0F321F66BD7003FBCF4 /* AurorKit tvOS */,
 				C0E9FD7521F253A8009C453F /* AurorKit Tests iOS */,
+				C0A6036621F680B9009EC42C /* AurorKit Tests tvOS */,
 				C0AE179721F6793A0070DD72 /* AurorKit Tests macOS */,
 			);
 		};
@@ -572,6 +620,13 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		C080D0F221F66BD7003FBCF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0A6036521F680B9009EC42C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -639,7 +694,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AurorKit Tests iOS/Pods-AurorKit Tests iOS-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-AurorKit Tests iOS/Pods-AurorKit Tests iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble-iOS/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick-iOS/Quick.framework",
 			);
@@ -652,7 +707,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AurorKit Tests iOS/Pods-AurorKit Tests iOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AurorKit Tests iOS/Pods-AurorKit Tests iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C1F4F43AA3CF698836653909 /* [CP] Check Pods Manifest.lock */ = {
@@ -729,7 +784,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AurorKit Tests macOS/Pods-AurorKit Tests macOS-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-AurorKit Tests macOS/Pods-AurorKit Tests macOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble-macOS/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick-macOS/Quick.framework",
 			);
@@ -742,7 +797,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AurorKit Tests macOS/Pods-AurorKit Tests macOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AurorKit Tests macOS/Pods-AurorKit Tests macOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F66D570489E84E416F8936CE /* [CP] Check Pods Manifest.lock */ = {
@@ -761,6 +816,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-AurorKit iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8A666386EE3A4187B2E10D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AurorKit Tests tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -792,6 +869,14 @@
 				C080D10821F66C77003FBCF4 /* StringExtension.swift in Sources */,
 				C080D0FC21F66C59003FBCF4 /* Event.swift in Sources */,
 				C080D10B21F66C77003FBCF4 /* UIImageExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0A6036321F680B9009EC42C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0A6037621F682D3009EC42C /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -828,6 +913,7 @@
 				C0AE17A421F679E30070DD72 /* EventTests.swift in Sources */,
 				C0AE17AB21F679EB0070DD72 /* ContiguousArrayExtensionTests.swift in Sources */,
 				C0AE17A721F679EB0070DD72 /* CGPointExtensionTests.swift in Sources */,
+				C0A6037721F682D4009EC42C /* Tests.swift in Sources */,
 				C0AE17AD21F679EB0070DD72 /* FloatingPointExtensionTests.swift in Sources */,
 				C0AE17A621F679EB0070DD72 /* ArrayExtensionTests.swift in Sources */,
 			);
@@ -878,6 +964,7 @@
 				C0AFE92021F4F63500A7005D /* UIColorExtensionTests.swift in Sources */,
 				C0336CF121F4B9F2006A182C /* UIWindowExtensionTests.swift in Sources */,
 				C0252D7521F3E33000F41A26 /* UIEdgeInsetsExtensionTests.swift in Sources */,
+				C0A6037521F682D3009EC42C /* Tests.swift in Sources */,
 				C0336CED21F4B42A006A182C /* UIViewExtensionTests.swift in Sources */,
 				C0252D7021F3DCCD00F41A26 /* NSLayoutConstraintTests.swift in Sources */,
 			);
@@ -886,6 +973,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C0A6036E21F680B9009EC42C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C080D0F321F66BD7003FBCF4 /* AurorKit tvOS */;
+			targetProxy = C0A6036D21F680B9009EC42C /* PBXContainerItemProxy */;
+		};
 		C0AE179F21F6793A0070DD72 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C0AE177921F677E60070DD72 /* AurorKit macOS */;
@@ -959,6 +1051,50 @@
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C0A6037021F680B9009EC42C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86F2C0ACD94EC7673833AE84 /* Pods-AurorKit Tests tvOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y992LMDMB3;
+				INFOPLIST_FILE = AurorKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Aurors.AurorKit.Tests-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		C0A6037121F680B9009EC42C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 673888F294850D16CD82D675 /* Pods-AurorKit Tests tvOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y992LMDMB3;
+				INFOPLIST_FILE = AurorKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Aurors.AurorKit.Tests-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
@@ -1296,6 +1432,15 @@
 			buildConfigurations = (
 				C080D0FA21F66BD7003FBCF4 /* Debug */,
 				C080D0FB21F66BD7003FBCF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0A6036F21F680B9009EC42C /* Build configuration list for PBXNativeTarget "AurorKit Tests tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0A6037021F680B9009EC42C /* Debug */,
+				C0A6037121F680B9009EC42C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
