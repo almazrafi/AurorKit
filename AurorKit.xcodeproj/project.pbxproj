@@ -694,7 +694,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AurorKit Tests iOS/Pods-AurorKit Tests iOS-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-AurorKit Tests iOS/Pods-AurorKit Tests iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble-iOS/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick-iOS/Quick.framework",
 			);
@@ -707,7 +707,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AurorKit Tests iOS/Pods-AurorKit Tests iOS-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AurorKit Tests iOS/Pods-AurorKit Tests iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C1F4F43AA3CF698836653909 /* [CP] Check Pods Manifest.lock */ = {
@@ -784,7 +784,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AurorKit Tests macOS/Pods-AurorKit Tests macOS-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-AurorKit Tests macOS/Pods-AurorKit Tests macOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble-macOS/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick-macOS/Quick.framework",
 			);
@@ -797,7 +797,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AurorKit Tests macOS/Pods-AurorKit Tests macOS-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AurorKit Tests macOS/Pods-AurorKit Tests macOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F66D570489E84E416F8936CE /* [CP] Check Pods Manifest.lock */ = {
@@ -1218,7 +1218,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 30DE42F6E4165D37080648E4 /* Pods-AurorKit macOS.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1250,7 +1250,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D36F6A818A8A1DA9E5CE5E34 /* Pods-AurorKit macOS.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1283,7 +1283,7 @@
 			baseConfigurationReference = 995185B164442F4E0C9198F0 /* Pods-AurorKit Tests macOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
@@ -1307,7 +1307,7 @@
 			baseConfigurationReference = 6D805ABE17E7A4C045DA5C2E /* Pods-AurorKit Tests macOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
