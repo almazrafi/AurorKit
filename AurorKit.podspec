@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.subspec 'Extensions' do |extensions|
     extensions.source_files = "AurorKit/Extensions"
 
-    extensions.osx.exclude_files = [
+    extensions.macos.exclude_files = [
       "AurorKit/Extensions/NSLayoutConstraintExtension.swift",
       "AurorKit/Extensions/UIColorExtension.swift",
       "AurorKit/Extensions/UIEdgeInsetsExtension.swift",
