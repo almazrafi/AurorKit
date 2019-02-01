@@ -1,0 +1,5 @@
+disabled_rules:
+  - explicit_acl
+  - explicit_top_level_acl
+  - function_body_length
+  - file_length
