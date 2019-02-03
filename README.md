@@ -9,6 +9,7 @@
 
 AurorKit is a collection of tools and extensions to help you develop apps for iOS, macOS, watchOS and tvOS platforms.
 
+Bla-bla-bla
 
 ## Requirements
 - iOS 10.0+ / macOS 10.12+ / watchOS 3.0+ / tvOS 10.0+
