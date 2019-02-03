@@ -1,24 +1,29 @@
-Pod::Spec.new do |s|
-  s.name = "AurorKit"
-  s.version = "0.0.2"
-  s.summary = "Swift extensions and tools"
+Pod::Spec.new do |spec|
+  spec.name = "AurorKit"
+  spec.version = "0.0.3"
+  spec.summary = "Swift extensions and tools"
   
-  s.homepage = "https://github.com/almazrafi/AurorKit"
-  s.license = { :type => 'MIT', :file => 'LICENSE' }
-  s.author = { "Almaz Ibragimov" => "almazrafi@gmail.com" }
-  s.source = { :git => "https://github.com/almazrafi/AurorKit.git", :tag => "#{s.version}" }
+  spec.homepage = "https://github.com/almazrafi/AurorKit"
+  spec.license = { :type => 'MIT', :file => 'LICENSE' }
+  spec.author = { "Almaz Ibragimov" => "almazrafi@gmail.com" }
+  spec.source = { :git => "https://github.com/almazrafi/AurorKit.git", :tag => "#{spec.version}" }
 
-  s.swift_version = '4.2'
-  s.framework = 'Foundation'
+  spec.swift_version = '4.2'
+  spec.requires_arc = true
+  
+  spec.ios.frameworks = 'Foundation', 'CoreGraphics', 'UIKit'
+  spec.ios.deployment_target = "10.0"
 
-  s.ios.deployment_target = "10.0"
-  s.osx.deployment_target = "10.12"
-  s.watchos.deployment_target = "3.0"
-  s.tvos.deployment_target = "10.0"
+  spec.osx.frameworks = 'Foundation', 'CoreGraphics'
+  spec.osx.deployment_target = "10.12"
 
-  s.default_subspec = 'Extensions'
+  spec.watchos.frameworks = 'Foundation', 'CoreGraphics', 'UIKit'
+  spec.watchos.deployment_target = "3.0"
 
-  s.subspec 'Extensions' do |extensions|
+  spec.tvos.frameworks = 'Foundation', 'CoreGraphics', 'UIKit'
+  spec.tvos.deployment_target = "10.0"
+
+  spec.subspec 'Extensions' do |extensions|
     extensions.source_files = "AurorKit/Extensions"
 
     extensions.macos.exclude_files = [
@@ -37,7 +42,7 @@ Pod::Spec.new do |s|
     ]
   end
 
-  s.subspec 'Events' do |events|
+  spec.subspec 'Events' do |events|
     events.source_files = "AurorKit/Events"
   end
 end
