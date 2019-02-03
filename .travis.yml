@@ -19,6 +19,11 @@ matrix:
 before_install:
   - pod repo update
 
+after_success:
+    - bash <(curl -s https://codecov.io/bash) -cF ios -J 'AurorKit'
+    - bash <(curl -s https://codecov.io/bash) -cF osx -J 'AurorKit'
+    - bash <(curl -s https://codecov.io/bash) -cF tvos -J 'AurorKit'
+
 install:
   - ./Bootstrap.sh
 
