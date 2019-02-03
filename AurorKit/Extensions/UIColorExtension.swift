@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UIColor {
+extension UIColor {
 
     // MARK: - Initializers
 

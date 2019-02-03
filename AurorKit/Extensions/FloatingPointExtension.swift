@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension FloatingPoint {
+extension FloatingPoint {
 
     // MARK: - Instance Properties
 

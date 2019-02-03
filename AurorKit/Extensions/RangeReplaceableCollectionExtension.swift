@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension RangeReplaceableCollection {
+extension RangeReplaceableCollection {
 
     // MARK: - Instance Methods
 

@@ -18,6 +18,10 @@ public final class Event<T> {
 
     public private(set) var connections: [EventConnection<T>] = []
 
+    // MARK: - Initializers
+
+    public init() { }
+
     // MARK: - Instance Methods
 
     internal func register(connection: EventConnection<T>) {
@@ -48,7 +52,7 @@ public final class Event<T> {
 
 // MARK: -
 
-public extension Event where T == Void {
+extension Event where T == Void {
 
     // MARK: - Instance Methods
 

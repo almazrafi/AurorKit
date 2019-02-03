@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension ContiguousArray {
+extension ContiguousArray {
 
     // MARK: - Instance Methods
 

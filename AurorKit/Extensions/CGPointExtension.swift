@@ -9,7 +9,7 @@
 import Foundation
 import CoreGraphics
 
-public extension CGPoint {
+extension CGPoint {
 
     // MARK: - Instance Properties
 

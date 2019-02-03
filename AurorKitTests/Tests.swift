@@ -9,11 +9,13 @@
 import Foundation
 import XCTest
 
-import AurorKit
+@testable import AurorKit
 
 class Tests: XCTestCase {
 
     // MARK: - Instance Methods
 
-    func test() { }
+    func test() {
+        XCTAssertTrue(true)
+    }
 }

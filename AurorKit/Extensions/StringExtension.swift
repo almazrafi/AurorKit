@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension String {
+extension String {
 
     // MARK: - Instance Methods
 

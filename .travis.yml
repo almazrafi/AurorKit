@@ -20,7 +20,7 @@ before_install:
   - pod repo update
 
 install:
-  - ./InstallSwiftlint.sh
+  - ./Bootstrap.sh
 
 script:
   - swiftlint --reporter junit

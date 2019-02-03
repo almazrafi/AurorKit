@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension Collection {
+extension Collection {
 
     // MARK: - Instance Subscripts
 

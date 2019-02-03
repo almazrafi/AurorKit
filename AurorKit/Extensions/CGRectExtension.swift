@@ -9,7 +9,7 @@
 import Foundation
 import CoreGraphics
 
-public extension CGRect {
+extension CGRect {
 
     // MARK: - Instance Properties
 

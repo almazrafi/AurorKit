@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension Data {
+extension Data {
 
     // MARK: - Instance Properties
 

@@ -9,7 +9,7 @@
 import Foundation
 import CoreGraphics
 
-public extension CGSize {
+extension CGSize {
 
     // MARK: - Instance Properties
 
