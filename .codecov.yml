@@ -10,5 +10,4 @@ coverage:
 
   ignore:
     - "AurorKitTests/Tests.swift"
-    - "AurorKitTests/**/*"
     
