@@ -18,3 +18,9 @@ matrix:
 
 before_install:
   - pod repo update
+
+install:
+  - ./Bootstrap.sh
+
+script:
+  - swiftlint --reporter junit

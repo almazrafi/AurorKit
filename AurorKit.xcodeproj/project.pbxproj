@@ -196,6 +196,7 @@
 		C0E9FD7021F253A8009C453F /* AurorKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AurorKit.h; sourceTree = "<group>"; };
 		C0E9FD7121F253A8009C453F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0E9FD7621F253A8009C453F /* AurorKit Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AurorKit Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C294FBE62203D98B00ECCB4E /* Bootstrap.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = Bootstrap.sh; sourceTree = "<group>"; };
 		D023EA186ECF76C7D5EC6690 /* Pods-Tools Tests iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tools Tests iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tools Tests iOS/Pods-Tools Tests iOS.release.xcconfig"; sourceTree = "<group>"; };
 		D36F6A818A8A1DA9E5CE5E34 /* Pods-AurorKit macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit macOS/Pods-AurorKit macOS.release.xcconfig"; sourceTree = "<group>"; };
 		D6414EEBC854146F383353DF /* Pods-AurorKit Tests iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit Tests iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit Tests iOS/Pods-AurorKit Tests iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -318,6 +319,7 @@
 				DC06566D72A556AAB638D1C7 /* Pods */,
 				DB79692F833E04AC6C64F6CE /* Frameworks */,
 				C000DF1021F3A29E001B535B /* AurorKit.podspec */,
+				C294FBE62203D98B00ECCB4E /* Bootstrap.sh */,
 				C0E9FD6521F24990009C453F /* LICENSE */,
 				C0E9FD6421F24990009C453F /* README.md */,
 			);
@@ -459,6 +461,7 @@
 				C080D0F021F66BD7003FBCF4 /* Sources */,
 				C080D0F121F66BD7003FBCF4 /* Frameworks */,
 				C080D0F221F66BD7003FBCF4 /* Resources */,
+				C2DF3E042200FC9D00C6ACB1 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -477,6 +480,7 @@
 				C0A6036321F680B9009EC42C /* Sources */,
 				C0A6036421F680B9009EC42C /* Frameworks */,
 				C0A6036521F680B9009EC42C /* Resources */,
+				C2DF3E062200FCBD00C6ACB1 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -497,6 +501,7 @@
 				C0AE177621F677E60070DD72 /* Sources */,
 				C0AE177721F677E60070DD72 /* Frameworks */,
 				C0AE177821F677E60070DD72 /* Resources */,
+				C2DF3E032200FC9200C6ACB1 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -516,6 +521,7 @@
 				C0AE179521F6793A0070DD72 /* Frameworks */,
 				C0AE179621F6793A0070DD72 /* Resources */,
 				E8C4476F852862F633685735 /* [CP] Embed Pods Frameworks */,
+				C2DF3E012200FC5200C6ACB1 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -536,6 +542,7 @@
 				C0E9FD6A21F253A7009C453F /* Sources */,
 				C0E9FD6B21F253A7009C453F /* Frameworks */,
 				C0E9FD6C21F253A7009C453F /* Resources */,
+				C2DF3E022200FC8500C6ACB1 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -555,6 +562,7 @@
 				C0E9FD7321F253A8009C453F /* Frameworks */,
 				C0E9FD7421F253A8009C453F /* Resources */,
 				9292AE8A60A5FD1CEAE83957 /* [CP] Embed Pods Frameworks */,
+				C2DF3E052200FCAD00C6ACB1 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -731,6 +739,114 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		C2DF3E012200FC5200C6ACB1 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -z \"$CI\" ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint\n  else\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n    exit 1\n  fi\nfi\n";
+		};
+		C2DF3E022200FC8500C6ACB1 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -z \"$CI\" ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint\n  else\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n    exit 1\n  fi\nfi\n";
+		};
+		C2DF3E032200FC9200C6ACB1 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -z \"$CI\" ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint\n  else\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n    exit 1\n  fi\nfi\n";
+		};
+		C2DF3E042200FC9D00C6ACB1 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -z \"$CI\" ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint\n  else\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n    exit 1\n  fi\nfi\n";
+		};
+		C2DF3E052200FCAD00C6ACB1 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -z \"$CI\" ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint\n  else\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n    exit 1\n  fi\nfi\n";
+		};
+		C2DF3E062200FCBD00C6ACB1 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -z \"$CI\" ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint\n  else\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n    exit 1\n  fi\nfi\n";
 		};
 		D0847FFCA128A5B9E4BDCF92 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1150,6 +1266,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1205,6 +1322,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
