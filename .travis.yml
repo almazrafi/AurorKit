@@ -29,5 +29,3 @@ install:
 
 script:
   - swiftlint --reporter junit
-  - pod lib lint --skip-tests
-  
