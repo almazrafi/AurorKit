@@ -9,7 +9,8 @@ Pod::Spec.new do |spec|
   spec.source = { :git => "https://github.com/almazrafi/AurorKit.git", :tag => "#{spec.version}" }
 
   spec.swift_version = '4.2'
-
+  spec.requires_arc = true
+  
   spec.ios.frameworks = 'Foundation', 'CoreGraphics', 'UIKit'
   spec.ios.deployment_target = "10.0"
 
@@ -21,8 +22,6 @@ Pod::Spec.new do |spec|
 
   spec.tvos.frameworks = 'Foundation', 'CoreGraphics', 'UIKit'
   spec.tvos.deployment_target = "10.0"
-
-  spec.default_subspec = 'Extensions'
 
   spec.subspec 'Extensions' do |extensions|
     extensions.source_files = "AurorKit/Extensions"
