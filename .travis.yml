@@ -23,14 +23,14 @@ script:
   - set -o pipefail
   - swift --version
 
-  - xcodebuild clean build test -workspace "$WORKSPACE" -scheme "$IOS_SCHEME" -destination "$IOS_DESTINATION" | xcpretty -c
+  - xcodebuild clean build test -workspace 'AurorKit.xcworkspace' -scheme 'AurorKit iOS' -destination 'platform=iOS Simulator,OS=12.1,name=iPhone XS' | xcpretty -c
   - bash <(curl -s https://codecov.io/bash) -cF ios -J 'AurorKit'
 
-  - xcodebuild clean build test -workspace "$WORKSPACE" -scheme "$TVOS_SCHEME" -destination "$TVOS_DESTINATION" | xcpretty -c
-  - bash <(curl -s https://codecov.io/bash) -cF tvos -J 'AurorKit'
-
-  - xcodebuild clean build test -workspace "$WORKSPACE" -scheme "$MACOS_SCHEME" -destination "$MACOS_DESTINATION" | xcpretty -c
+  - xcodebuild clean build test -workspace 'AurorKit.xcworkspace' -scheme 'AurorKit macOS' -destination 'platform=macOS' | xcpretty -c
   - bash <(curl -s https://codecov.io/bash) -cF osx -J 'AurorKit'
+
+  - xcodebuild clean build test -workspace "AurorKit.xcworkspace" -scheme 'AurorKit tvOS' -destination 'platform=tvOS Simulator,OS=12.1,name=Apple TV 4K' | xcpretty -c
+  - bash <(curl -s https://codecov.io/bash) -cF tvos -J 'AurorKit'
 
   - swiftlint --reporter junit
 
