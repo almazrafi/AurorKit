@@ -9,5 +9,5 @@ coverage:
     changes: true
 
   ignore:
-    - "AurorKitTests/Tests.swift"
-    
+    - "AurorKitTests"
+    - "Pods"
