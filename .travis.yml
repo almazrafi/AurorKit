@@ -1,31 +1,39 @@
 language: objective-c
 osx_image: xcode10.1
-xcode_workspace: AurorKit.xcworkspace
 
-matrix:
-  include:
-    - xcode_scheme: AurorKit iOS
-      xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone XS
-      xcode_sdk: iphoneos12.1
+env:
+  global:
+    - WORKSPACE='AurorKit.xcworkspace'
 
-    - xcode_scheme: AurorKit macOS
-      xcode_destination: platform=macOS
-      xcode_sdk: macosx10.14
+    - IOS_SCHEME='AurorKit iOS'
+    - MACOS_SCHEME='AurorKit macOS'
+    - TVOS_SCHEME='AurorKit tvOS'
 
-    - xcode_scheme: AurorKit tvOS
-      xcode_destination: platform=tvOS Simulator,OS=12.1,name=Apple TV 4K
-      xcode_sdk: appletvos12.1
+    - IOS_DESTINATION='platform=iOS Simulator,OS=12.1,name=iPhone XS'
+    - MACOS_DESTINATION='platform=macOS'
+    - TVOS_DESTINATION='platform=tvOS Simulator,OS=12.1,name=Apple TV 4K'
 
 before_install:
   - pod repo update
-
-after_success:
-    - bash <(curl -s https://codecov.io/bash) -cF ios -J 'AurorKit'
-    - bash <(curl -s https://codecov.io/bash) -cF osx -J 'AurorKit'
-    - bash <(curl -s https://codecov.io/bash) -cF tvos -J 'AurorKit'
 
 install:
   - ./Bootstrap.sh
 
 script:
+  - set -o pipefail
+  - swift --version
+
+  - xcodebuild clean build test -workspace "$WORKSPACE" -scheme "$IOS_SCHEME" -destination "$IOS_DESTINATION" | xcpretty -c
+  - bash <(curl -s https://codecov.io/bash) -cF ios -J 'AurorKit'
+
+  - xcodebuild clean build test -workspace "$WORKSPACE" -scheme "$TVOS_SCHEME" -destination "$TVOS_DESTINATION" | xcpretty -c
+  - bash <(curl -s https://codecov.io/bash) -cF tvos -J 'AurorKit'
+
+  - xcodebuild clean build test -workspace "$WORKSPACE" -scheme "$MACOS_SCHEME" -destination "$MACOS_DESTINATION" | xcpretty -c
+  - bash <(curl -s https://codecov.io/bash) -cF osx -J 'AurorKit'
+
   - swiftlint --reporter junit
+
+branches:
+  only:
+    - master
