@@ -197,6 +197,10 @@
 		C0E9FD7121F253A8009C453F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0E9FD7621F253A8009C453F /* AurorKit Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AurorKit Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C294FBE62203D98B00ECCB4E /* Bootstrap.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = Bootstrap.sh; sourceTree = "<group>"; };
+		C2CD9CEA22103DF100EBB05B /* .codecov.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .codecov.yml; sourceTree = "<group>"; };
+		C2CD9CEB22103DF100EBB05B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		C2CD9CEC22103DF100EBB05B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		C2CD9CED22103DF100EBB05B /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		D023EA186ECF76C7D5EC6690 /* Pods-Tools Tests iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tools Tests iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tools Tests iOS/Pods-Tools Tests iOS.release.xcconfig"; sourceTree = "<group>"; };
 		D36F6A818A8A1DA9E5CE5E34 /* Pods-AurorKit macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit macOS/Pods-AurorKit macOS.release.xcconfig"; sourceTree = "<group>"; };
 		D6414EEBC854146F383353DF /* Pods-AurorKit Tests iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit Tests iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit Tests iOS/Pods-AurorKit Tests iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -318,6 +322,10 @@
 				C0A94B1221F2049800FC4146 /* Products */,
 				DC06566D72A556AAB638D1C7 /* Pods */,
 				DB79692F833E04AC6C64F6CE /* Frameworks */,
+				C2CD9CEA22103DF100EBB05B /* .codecov.yml */,
+				C2CD9CEB22103DF100EBB05B /* .gitignore */,
+				C2CD9CEC22103DF100EBB05B /* .swiftlint.yml */,
+				C2CD9CED22103DF100EBB05B /* .travis.yml */,
 				C000DF1021F3A29E001B535B /* AurorKit.podspec */,
 				C294FBE62203D98B00ECCB4E /* Bootstrap.sh */,
 				C0E9FD6521F24990009C453F /* LICENSE */,
@@ -1119,7 +1127,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_TESTABILITY = NO;
+				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = AurorKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1151,6 +1159,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = AurorKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
