@@ -1,18 +1,6 @@
 language: objective-c
 osx_image: xcode10.1
 
-env:
-  global:
-    - WORKSPACE='AurorKit.xcworkspace'
-
-    - IOS_SCHEME='AurorKit iOS'
-    - MACOS_SCHEME='AurorKit macOS'
-    - TVOS_SCHEME='AurorKit tvOS'
-
-    - IOS_DESTINATION='platform=iOS Simulator,OS=12.1,name=iPhone XS'
-    - MACOS_DESTINATION='platform=macOS'
-    - TVOS_DESTINATION='platform=tvOS Simulator,OS=12.1,name=Apple TV 4K'
-
 before_install:
   - pod repo update
 
@@ -22,6 +10,7 @@ install:
 script:
   - set -o pipefail
   - swift --version
+  - pod install
 
   - xcodebuild clean build test -workspace 'AurorKit.xcworkspace' -scheme 'AurorKit iOS' -destination 'platform=iOS Simulator,OS=12.1,name=iPhone XS' | xcpretty -c
   - bash <(curl -s https://codecov.io/bash) -cF ios -J 'AurorKit'
