@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
   spec.name = "AurorKit"
   spec.version = "0.0.3"
   spec.summary = "Swift extensions and tools"
-  
+
   spec.homepage = "https://github.com/almazrafi/AurorKit"
   spec.license = { :type => 'MIT', :file => 'LICENSE' }
   spec.author = { "Almaz Ibragimov" => "almazrafi@gmail.com" }
@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
   spec.swift_version = '4.2'
   spec.requires_arc = true
-  
+
   spec.ios.frameworks = 'Foundation', 'CoreGraphics', 'UIKit'
   spec.ios.deployment_target = "10.0"
 
@@ -31,13 +31,19 @@ Pod::Spec.new do |spec|
       "AurorKit/Extensions/UIColorExtension.swift",
       "AurorKit/Extensions/UIEdgeInsetsExtension.swift",
       "AurorKit/Extensions/UIImageExtension.swift",
+      "AurorKit/Extensions/UIViewBorderExtension.swift",
+      "AurorKit/Extensions/UIViewControllerExtension.swift",
       "AurorKit/Extensions/UIViewExtension.swift",
+      "AurorKit/Extensions/UIViewShadowExtension.swift",
       "AurorKit/Extensions/UIWindowExtension.swift"
     ]
 
     extensions.watchos.exclude_files = [
       "AurorKit/Extensions/NSLayoutConstraintExtension.swift",
+      "AurorKit/Extensions/UIViewBorderExtension.swift",
+      "AurorKit/Extensions/UIViewControllerExtension.swift",
       "AurorKit/Extensions/UIViewExtension.swift",
+      "AurorKit/Extensions/UIViewShadowExtension.swift",
       "AurorKit/Extensions/UIWindowExtension.swift"
     ]
   end

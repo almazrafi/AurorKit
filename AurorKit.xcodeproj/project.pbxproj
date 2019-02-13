@@ -14,7 +14,6 @@
 		C0252D5521F3A35E00F41A26 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0252D5421F3A35E00F41A26 /* ArrayExtension.swift */; };
 		C0252D5721F3A5AC00F41A26 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0252D5621F3A5AC00F41A26 /* DataExtension.swift */; };
 		C0252D5C21F3BDF300F41A26 /* DataExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0252D5821F3A9D600F41A26 /* DataExtensionTests.swift */; };
-		C0252D5E21F3BEAA00F41A26 /* FloatingPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0252D5D21F3BEAA00F41A26 /* FloatingPointExtension.swift */; };
 		C0252D6021F3BEED00F41A26 /* FloatingPointExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0252D5F21F3BEED00F41A26 /* FloatingPointExtensionTests.swift */; };
 		C0252D6421F3D0A300F41A26 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0252D6321F3D0A300F41A26 /* StringExtensionTests.swift */; };
 		C0252D6521F3D0A900F41A26 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0252D6121F3C37B00F41A26 /* StringExtension.swift */; };
@@ -98,6 +97,23 @@
 		C0AFE92021F4F63500A7005D /* UIColorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AFE91F21F4F63500A7005D /* UIColorExtensionTests.swift */; };
 		C0E9FD7721F253A8009C453F /* AurorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E9FD6E21F253A7009C453F /* AurorKit.framework */; };
 		C0E9FD7E21F253A8009C453F /* AurorKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C0E9FD7021F253A8009C453F /* AurorKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2B8D8DB22108C3600C67D84 /* FloatingPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0252D5D21F3BEAA00F41A26 /* FloatingPointExtension.swift */; };
+		C2B8D8DD2210D62100C67D84 /* UIViewBorderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B8D8DC2210D62100C67D84 /* UIViewBorderExtension.swift */; };
+		C2B8D8DE2210D63F00C67D84 /* UIViewBorderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B8D8DC2210D62100C67D84 /* UIViewBorderExtension.swift */; };
+		C2B8D8E02210D71400C67D84 /* UIViewShadowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B8D8DF2210D71400C67D84 /* UIViewShadowExtension.swift */; };
+		C2B8D8E22210EB6100C67D84 /* ComparableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B8D8E12210EB6100C67D84 /* ComparableExtension.swift */; };
+		C2B8D8E32210EBD100C67D84 /* ComparableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B8D8E12210EB6100C67D84 /* ComparableExtension.swift */; };
+		C2B8D8E42210EBD200C67D84 /* ComparableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B8D8E12210EB6100C67D84 /* ComparableExtension.swift */; };
+		C2B8D8E62210EBEB00C67D84 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B8D8E52210EBEB00C67D84 /* UIViewControllerExtension.swift */; };
+		C2B8D8E72210EBEB00C67D84 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B8D8E52210EBEB00C67D84 /* UIViewControllerExtension.swift */; };
+		C2B8D8E82210EBF100C67D84 /* UIViewShadowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B8D8DF2210D71400C67D84 /* UIViewShadowExtension.swift */; };
+		C2E865EE22136CAD002DD5D4 /* UIViewBorderExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E865ED22136CAD002DD5D4 /* UIViewBorderExtensionTests.swift */; };
+		C2E865F12213705B002DD5D4 /* UIViewShadowExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E865F02213705B002DD5D4 /* UIViewShadowExtensionTests.swift */; };
+		C2E865F422137071002DD5D4 /* UIViewControllerExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E865F322137071002DD5D4 /* UIViewControllerExtensionTests.swift */; };
+		C2E865F722138022002DD5D4 /* Matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E865F622138022002DD5D4 /* Matchers.swift */; };
+		C2E865F9221384E5002DD5D4 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C2E865F8221384E5002DD5D4 /* .swiftlint.yml */; };
+		C2E865FB22138DB0002DD5D4 /* ComparableExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E865FA22138DB0002DD5D4 /* ComparableExtensionTests.swift */; };
+		C2E865FC22139EB0002DD5D4 /* ComparableExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E865FA22138DB0002DD5D4 /* ComparableExtensionTests.swift */; };
 		C6A1CA08751D7C17FC4D3CBA /* Pods_AurorKit_Tests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DF386D7694E2F925587C3C /* Pods_AurorKit_Tests_iOS.framework */; };
 		F4A633FEA053DC2DC949EC22 /* Pods_AurorKit_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB4E7007CB44FF38238EC0B /* Pods_AurorKit_macOS.framework */; };
 /* End PBXBuildFile section */
@@ -197,10 +213,20 @@
 		C0E9FD7121F253A8009C453F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0E9FD7621F253A8009C453F /* AurorKit Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AurorKit Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C294FBE62203D98B00ECCB4E /* Bootstrap.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = Bootstrap.sh; sourceTree = "<group>"; };
+		C2B8D8DC2210D62100C67D84 /* UIViewBorderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewBorderExtension.swift; sourceTree = "<group>"; };
+		C2B8D8DF2210D71400C67D84 /* UIViewShadowExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewShadowExtension.swift; sourceTree = "<group>"; };
+		C2B8D8E12210EB6100C67D84 /* ComparableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparableExtension.swift; sourceTree = "<group>"; };
+		C2B8D8E52210EBEB00C67D84 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		C2CD9CEA22103DF100EBB05B /* .codecov.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .codecov.yml; sourceTree = "<group>"; };
 		C2CD9CEB22103DF100EBB05B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C2CD9CEC22103DF100EBB05B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C2CD9CED22103DF100EBB05B /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		C2E865ED22136CAD002DD5D4 /* UIViewBorderExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewBorderExtensionTests.swift; sourceTree = "<group>"; };
+		C2E865F02213705B002DD5D4 /* UIViewShadowExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewShadowExtensionTests.swift; sourceTree = "<group>"; };
+		C2E865F322137071002DD5D4 /* UIViewControllerExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensionTests.swift; sourceTree = "<group>"; };
+		C2E865F622138022002DD5D4 /* Matchers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matchers.swift; sourceTree = "<group>"; };
+		C2E865F8221384E5002DD5D4 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		C2E865FA22138DB0002DD5D4 /* ComparableExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparableExtensionTests.swift; sourceTree = "<group>"; };
 		D023EA186ECF76C7D5EC6690 /* Pods-Tools Tests iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tools Tests iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tools Tests iOS/Pods-Tools Tests iOS.release.xcconfig"; sourceTree = "<group>"; };
 		D36F6A818A8A1DA9E5CE5E34 /* Pods-AurorKit macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit macOS/Pods-AurorKit macOS.release.xcconfig"; sourceTree = "<group>"; };
 		D6414EEBC854146F383353DF /* Pods-AurorKit Tests iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit Tests iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit Tests iOS/Pods-AurorKit Tests iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -276,6 +302,7 @@
 				C05A655121F35AA70038EC55 /* CGRectExtension.swift */,
 				C05A655321F35AF80038EC55 /* CGSizeExtension.swift */,
 				C05A653F21F343C30038EC55 /* CollectionExtension.swift */,
+				C2B8D8E12210EB6100C67D84 /* ComparableExtension.swift */,
 				C05A654521F353DA0038EC55 /* ContiguousArrayExtension.swift */,
 				C0252D5621F3A5AC00F41A26 /* DataExtension.swift */,
 				C0252D5D21F3BEAA00F41A26 /* FloatingPointExtension.swift */,
@@ -285,6 +312,9 @@
 				C0AFE91D21F4F29600A7005D /* UIColorExtension.swift */,
 				C0252D7221F3E2D800F41A26 /* UIEdgeInsetsExtension.swift */,
 				C0252D7721F3E43F00F41A26 /* UIImageExtension.swift */,
+				C2B8D8DC2210D62100C67D84 /* UIViewBorderExtension.swift */,
+				C2B8D8E52210EBEB00C67D84 /* UIViewControllerExtension.swift */,
+				C2B8D8DF2210D71400C67D84 /* UIViewShadowExtension.swift */,
 				C0336CE821F4B293006A182C /* UIViewExtension.swift */,
 				C0336CEE21F4B955006A182C /* UIWindowExtension.swift */,
 			);
@@ -299,6 +329,7 @@
 				C05A655821F3686C0038EC55 /* CGRectExtensionTests.swift */,
 				C05A655521F35D220038EC55 /* CGSizeExtensionTests.swift */,
 				C05A655B21F392DB0038EC55 /* CollectionExtensionTests.swift */,
+				C2E865FA22138DB0002DD5D4 /* ComparableExtensionTests.swift */,
 				C05A656021F399DE0038EC55 /* ContiguousArrayExtensionTests.swift */,
 				C0252D5821F3A9D600F41A26 /* DataExtensionTests.swift */,
 				C0252D5F21F3BEED00F41A26 /* FloatingPointExtensionTests.swift */,
@@ -308,7 +339,10 @@
 				C0AFE91F21F4F63500A7005D /* UIColorExtensionTests.swift */,
 				C0252D7421F3E33000F41A26 /* UIEdgeInsetsExtensionTests.swift */,
 				C0252D7921F3E4F200F41A26 /* UIImageExtensionTests.swift */,
+				C2E865ED22136CAD002DD5D4 /* UIViewBorderExtensionTests.swift */,
+				C2E865F322137071002DD5D4 /* UIViewControllerExtensionTests.swift */,
 				C0336CEA21F4B2D9006A182C /* UIViewExtensionTests.swift */,
+				C2E865F02213705B002DD5D4 /* UIViewShadowExtensionTests.swift */,
 				C0336CF021F4B9F2006A182C /* UIWindowExtensionTests.swift */,
 			);
 			path = Extensions;
@@ -371,7 +405,9 @@
 			children = (
 				C0E9FD6221F2496A009C453F /* Events */,
 				C05A653C21F3420E0038EC55 /* Extensions */,
+				C2E865F8221384E5002DD5D4 /* .swiftlint.yml */,
 				C0A94B2721F2056400FC4146 /* Info.plist */,
+				C2E865F622138022002DD5D4 /* Matchers.swift */,
 				C0A6037221F6825C009EC42C /* Tests.swift */,
 			);
 			path = AurorKitTests;
@@ -488,7 +524,6 @@
 				C0A6036321F680B9009EC42C /* Sources */,
 				C0A6036421F680B9009EC42C /* Frameworks */,
 				C0A6036521F680B9009EC42C /* Resources */,
-				C2DF3E062200FCBD00C6ACB1 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -529,7 +564,6 @@
 				C0AE179521F6793A0070DD72 /* Frameworks */,
 				C0AE179621F6793A0070DD72 /* Resources */,
 				E8C4476F852862F633685735 /* [CP] Embed Pods Frameworks */,
-				C2DF3E012200FC5200C6ACB1 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -570,7 +604,6 @@
 				C0E9FD7321F253A8009C453F /* Frameworks */,
 				C0E9FD7421F253A8009C453F /* Resources */,
 				9292AE8A60A5FD1CEAE83957 /* [CP] Embed Pods Frameworks */,
-				C2DF3E052200FCAD00C6ACB1 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -674,6 +707,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2E865F9221384E5002DD5D4 /* .swiftlint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -748,24 +782,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C2DF3E012200FC5200C6ACB1 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ -z \"$CI\" ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint\n  else\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n    exit 1\n  fi\nfi\n";
-		};
 		C2DF3E022200FC8500C6ACB1 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -782,7 +798,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ -z \"$CI\" ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint\n  else\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n    exit 1\n  fi\nfi\n";
+			shellScript = "if [ -z \"$CI\" ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint --no-cache\n  else\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n    exit 1\n  fi\nfi\n";
 		};
 		C2DF3E032200FC9200C6ACB1 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -800,7 +816,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ -z \"$CI\" ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint\n  else\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n    exit 1\n  fi\nfi\n";
+			shellScript = "if [ -z \"$CI\" ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint --no-cache\n  else\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n    exit 1\n  fi\nfi\n";
 		};
 		C2DF3E042200FC9D00C6ACB1 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -818,43 +834,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ -z \"$CI\" ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint\n  else\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n    exit 1\n  fi\nfi\n";
-		};
-		C2DF3E052200FCAD00C6ACB1 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ -z \"$CI\" ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint\n  else\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n    exit 1\n  fi\nfi\n";
-		};
-		C2DF3E062200FCBD00C6ACB1 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ -z \"$CI\" ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint\n  else\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n    exit 1\n  fi\nfi\n";
+			shellScript = "if [ -z \"$CI\" ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint --no-cache\n  else\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n    exit 1\n  fi\nfi\n";
 		};
 		D0847FFCA128A5B9E4BDCF92 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -978,14 +958,18 @@
 				C080D10021F66C64003FBCF4 /* CGRectExtension.swift in Sources */,
 				C080D10A21F66C77003FBCF4 /* UIEdgeInsetsExtension.swift in Sources */,
 				C080D10921F66C77003FBCF4 /* UIColorExtension.swift in Sources */,
+				C2B8D8E42210EBD200C67D84 /* ComparableExtension.swift in Sources */,
 				C080D10D21F66C77003FBCF4 /* UIWindowExtension.swift in Sources */,
+				C2B8D8E72210EBEB00C67D84 /* UIViewControllerExtension.swift in Sources */,
 				C080D10221F66C6A003FBCF4 /* CollectionExtension.swift in Sources */,
 				C080D10721F66C77003FBCF4 /* RangeReplaceableCollectionExtension.swift in Sources */,
 				C080D0FE21F66C5F003FBCF4 /* ArrayExtension.swift in Sources */,
 				C080D10121F66C68003FBCF4 /* CGSizeExtension.swift in Sources */,
 				C080D10621F66C77003FBCF4 /* NSLayoutConstraintExtension.swift in Sources */,
 				C080D10C21F66C77003FBCF4 /* UIViewExtension.swift in Sources */,
+				C2B8D8DE2210D63F00C67D84 /* UIViewBorderExtension.swift in Sources */,
 				C080D0FD21F66C5B003FBCF4 /* EventConnection.swift in Sources */,
+				C2B8D8E82210EBF100C67D84 /* UIViewShadowExtension.swift in Sources */,
 				C080D10321F66C6D003FBCF4 /* ContiguousArrayExtension.swift in Sources */,
 				C080D0FF21F66C62003FBCF4 /* CGPointExtension.swift in Sources */,
 				C080D10421F66C70003FBCF4 /* DataExtension.swift in Sources */,
@@ -1016,6 +1000,7 @@
 				C0AE178321F678520070DD72 /* EventConnection.swift in Sources */,
 				C0AE178921F6785A0070DD72 /* ContiguousArrayExtension.swift in Sources */,
 				C0AE178521F6785A0070DD72 /* CGPointExtension.swift in Sources */,
+				C2B8D8E32210EBD100C67D84 /* ComparableExtension.swift in Sources */,
 				C0AE178A21F6785A0070DD72 /* DataExtension.swift in Sources */,
 				C0AE178B21F6785A0070DD72 /* FloatingPointExtension.swift in Sources */,
 				C0AE178E21F6785A0070DD72 /* StringExtension.swift in Sources */,
@@ -1038,6 +1023,7 @@
 				C0AE17AB21F679EB0070DD72 /* ContiguousArrayExtensionTests.swift in Sources */,
 				C0AE17A721F679EB0070DD72 /* CGPointExtensionTests.swift in Sources */,
 				C0A6037721F682D4009EC42C /* Tests.swift in Sources */,
+				C2E865FC22139EB0002DD5D4 /* ComparableExtensionTests.swift in Sources */,
 				C0AE17AD21F679EB0070DD72 /* FloatingPointExtensionTests.swift in Sources */,
 				C0AE17A621F679EB0070DD72 /* ArrayExtensionTests.swift in Sources */,
 			);
@@ -1050,20 +1036,24 @@
 				C05A654021F343C30038EC55 /* CollectionExtension.swift in Sources */,
 				C05A653621F26D5B0038EC55 /* EventConnection.swift in Sources */,
 				C05A655421F35AF80038EC55 /* CGSizeExtension.swift in Sources */,
+				C2B8D8E22210EB6100C67D84 /* ComparableExtension.swift in Sources */,
 				C0252D5521F3A35E00F41A26 /* ArrayExtension.swift in Sources */,
 				C05A654321F3450D0038EC55 /* RangeReplaceableCollectionExtension.swift in Sources */,
 				C0AFE91E21F4F29600A7005D /* UIColorExtension.swift in Sources */,
+				C2B8D8E02210D71400C67D84 /* UIViewShadowExtension.swift in Sources */,
 				C05A653521F26D590038EC55 /* Event.swift in Sources */,
 				C0336CE921F4B293006A182C /* UIViewExtension.swift in Sources */,
+				C2B8D8DB22108C3600C67D84 /* FloatingPointExtension.swift in Sources */,
 				C0252D7121F3DCD100F41A26 /* NSLayoutConstraintExtension.swift in Sources */,
+				C2B8D8DD2210D62100C67D84 /* UIViewBorderExtension.swift in Sources */,
 				C05A655221F35AA70038EC55 /* CGRectExtension.swift in Sources */,
 				C0252D7821F3E43F00F41A26 /* UIImageExtension.swift in Sources */,
 				C05A654621F353DA0038EC55 /* ContiguousArrayExtension.swift in Sources */,
 				C0252D6521F3D0A900F41A26 /* StringExtension.swift in Sources */,
-				C0252D5E21F3BEAA00F41A26 /* FloatingPointExtension.swift in Sources */,
 				C0336CEF21F4B955006A182C /* UIWindowExtension.swift in Sources */,
 				C05A654921F354C50038EC55 /* CGPointExtension.swift in Sources */,
 				C0252D7621F3E33500F41A26 /* UIEdgeInsetsExtension.swift in Sources */,
+				C2B8D8E62210EBEB00C67D84 /* UIViewControllerExtension.swift in Sources */,
 				C0252D5721F3A5AC00F41A26 /* DataExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1073,9 +1063,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C05A656321F39A9B0038EC55 /* RangeReplaceableCollectionExtensionTests.swift in Sources */,
+				C2E865F722138022002DD5D4 /* Matchers.swift in Sources */,
 				C05A653821F282330038EC55 /* EventConnectionTests.swift in Sources */,
+				C2E865F422137071002DD5D4 /* UIViewControllerExtensionTests.swift in Sources */,
 				C05A655721F35FF40038EC55 /* CGSizeExtensionTests.swift in Sources */,
 				C05A653421F26C3C0038EC55 /* EventTests.swift in Sources */,
+				C2E865F12213705B002DD5D4 /* UIViewShadowExtensionTests.swift in Sources */,
 				C0252D7A21F3E4F200F41A26 /* UIImageExtensionTests.swift in Sources */,
 				C05A655F21F3951A0038EC55 /* CollectionExtensionTests.swift in Sources */,
 				C0252D6421F3D0A300F41A26 /* StringExtensionTests.swift in Sources */,
@@ -1084,6 +1077,7 @@
 				C0252D6021F3BEED00F41A26 /* FloatingPointExtensionTests.swift in Sources */,
 				C05A656121F399DE0038EC55 /* ContiguousArrayExtensionTests.swift in Sources */,
 				C05A654E21F355340038EC55 /* ArrayExtensionTests.swift in Sources */,
+				C2E865EE22136CAD002DD5D4 /* UIViewBorderExtensionTests.swift in Sources */,
 				C05A655A21F368830038EC55 /* CGRectExtensionTests.swift in Sources */,
 				C0AFE92021F4F63500A7005D /* UIColorExtensionTests.swift in Sources */,
 				C0336CF121F4B9F2006A182C /* UIWindowExtensionTests.swift in Sources */,
@@ -1091,6 +1085,7 @@
 				C0A6037521F682D3009EC42C /* Tests.swift in Sources */,
 				C0336CED21F4B42A006A182C /* UIViewExtensionTests.swift in Sources */,
 				C0252D7021F3DCCD00F41A26 /* NSLayoutConstraintTests.swift in Sources */,
+				C2E865FB22138DB0002DD5D4 /* ComparableExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

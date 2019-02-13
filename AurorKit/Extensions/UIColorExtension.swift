@@ -42,30 +42,92 @@ extension UIColor {
         self.init(white: CGFloat(whiteByte) / 255.0, alpha: alpha)
     }
 
-    public convenience init(argbHEX: UInt32) {
-        self.init(redByte: UInt8((argbHEX >> 16) & 255),
-                  greenByte: UInt8((argbHEX >> 8) & 255),
-                  blueByte: UInt8(argbHEX & 255),
-                  alphaByte: UInt8((argbHEX >> 24) & 255))
+    public convenience init?(argbHexString hexString: String) {
+        guard hexString.hasPrefix("#") else {
+            return nil
+        }
+
+        let scanner = Scanner(string: hexString)
+
+        scanner.scanLocation = 1
+        scanner.caseSensitive = false
+
+        var hex: UInt32 = 0
+
+        guard scanner.scanHexInt32(&hex) else {
+            return nil
+        }
+
+        self.init(argbHex: hex)
     }
 
-    public convenience init(rgbHEX: UInt32) {
-        self.init(redByte: UInt8((rgbHEX >> 16) & 255),
-                  greenByte: UInt8((rgbHEX >> 8) & 255),
-                  blueByte: UInt8(rgbHEX & 255))
+    public convenience init?(rgbaHexString hexString: String) {
+        guard hexString.hasPrefix("#") else {
+            return nil
+        }
+
+        let scanner = Scanner(string: hexString)
+
+        scanner.scanLocation = 1
+        scanner.caseSensitive = false
+
+        var hex: UInt32 = 0
+
+        guard scanner.scanHexInt32(&hex) else {
+            return nil
+        }
+
+        self.init(rgbaHex: hex)
+    }
+
+    public convenience init?(rgbHexString hexString: String) {
+        guard hexString.hasPrefix("#") else {
+            return nil
+        }
+
+        let scanner = Scanner(string: hexString)
+
+        scanner.scanLocation = 1
+        scanner.caseSensitive = false
+
+        var hex: UInt32 = 0
+
+        guard scanner.scanHexInt32(&hex) else {
+            return nil
+        }
+
+        self.init(rgbHex: hex)
+    }
+
+    public convenience init(argbHex hex: UInt32) {
+        self.init(redByte: UInt8((hex >> 16) & 255),
+                  greenByte: UInt8((hex >> 8) & 255),
+                  blueByte: UInt8(hex & 255),
+                  alphaByte: UInt8((hex >> 24) & 255))
+    }
+
+    public convenience init(rgbaHex hex: UInt32) {
+        self.init(redByte: UInt8((hex >> 24) & 255),
+                  greenByte: UInt8((hex >> 16) & 255),
+                  blueByte: UInt8((hex >> 8) & 255),
+                  alphaByte: UInt8(hex & 255))
+    }
+
+    public convenience init(rgbHex hex: UInt32) {
+        self.init(redByte: UInt8((hex >> 16) & 255),
+                  greenByte: UInt8((hex >> 8) & 255),
+                  blueByte: UInt8(hex & 255))
     }
 
     // MARK: - Instance Properties
 
-    public var argbHEXString: String {
-        var red: CGFloat = 0
-        var green: CGFloat = 0
-        var blue: CGFloat = 0
-        var alpha: CGFloat = 0
+    public var argbHexString: String {
+        var red: CGFloat = 0.0
+        var green: CGFloat = 0.0
+        var blue: CGFloat = 0.0
+        var alpha: CGFloat = 0.0
 
-        guard self.getRed(&red, green: &green, blue: &blue, alpha: &alpha) else {
-            return "#00000000"
-        }
+        self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
 
         if alpha < 1.0 - CGFloat.leastNonzeroMagnitude {
             return String(format: "#%02lX%02lX%02lX%02lX",
@@ -81,15 +143,13 @@ extension UIColor {
         }
     }
 
-    public var rgbaHEXString: String {
-        var red: CGFloat = 0
-        var green: CGFloat = 0
-        var blue: CGFloat = 0
-        var alpha: CGFloat = 0
+    public var rgbaHexString: String {
+        var red: CGFloat = 0.0
+        var green: CGFloat = 0.0
+        var blue: CGFloat = 0.0
+        var alpha: CGFloat = 0.0
 
-        guard self.getRed(&red, green: &green, blue: &blue, alpha: &alpha) else {
-            return "#00000000"
-        }
+        self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
 
         if alpha < 1.0 - CGFloat.leastNonzeroMagnitude {
             return String(format: "#%02lX%02lX%02lX%02lX",
@@ -105,15 +165,27 @@ extension UIColor {
         }
     }
 
-    public var argbHEX: UInt32 {
-        var red: CGFloat = 0
-        var green: CGFloat = 0
-        var blue: CGFloat = 0
-        var alpha: CGFloat = 0
+    public var rgbHexString: String {
+        var red: CGFloat = 0.0
+        var green: CGFloat = 0.0
+        var blue: CGFloat = 0.0
+        var alpha: CGFloat = 0.0
 
-        guard self.getRed(&red, green: &green, blue: &blue, alpha: &alpha) else {
-            return 0
-        }
+        self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+
+        return String(format: "#%02lX%02lX%02lX",
+                      Int(red * 255.0),
+                      Int(green * 255.0),
+                      Int(blue * 255.0))
+    }
+
+    public var argbHex: UInt32 {
+        var red: CGFloat = 0.0
+        var green: CGFloat = 0.0
+        var blue: CGFloat = 0.0
+        var alpha: CGFloat = 0.0
+
+        self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
 
         let alphaByte: UInt32
 
@@ -130,15 +202,13 @@ extension UIColor {
         return alphaByte | redByte | greenByte | blueByte
     }
 
-    public var rgbaHEX: UInt32 {
-        var red: CGFloat = 0
-        var green: CGFloat = 0
-        var blue: CGFloat = 0
-        var alpha: CGFloat = 0
+    public var rgbaHex: UInt32 {
+        var red: CGFloat = 0.0
+        var green: CGFloat = 0.0
+        var blue: CGFloat = 0.0
+        var alpha: CGFloat = 0.0
 
-        guard self.getRed(&red, green: &green, blue: &blue, alpha: &alpha) else {
-            return 0
-        }
+        self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
 
         let redByte = UInt32(red * 255.0) << 24
         let greenByte = UInt32(green * 255.0) << 16
@@ -153,5 +223,20 @@ extension UIColor {
         }
 
         return redByte | greenByte | blueByte | alphaByte
+    }
+
+    public var rgbHex: UInt32 {
+        var red: CGFloat = 0.0
+        var green: CGFloat = 0.0
+        var blue: CGFloat = 0.0
+        var alpha: CGFloat = 0.0
+
+        self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+
+        let redByte = UInt32(red * 255.0) << 16
+        let greenByte = UInt32(green * 255.0) << 8
+        let blueByte = UInt32(blue * 255.0)
+
+        return redByte | greenByte | blueByte
     }
 }

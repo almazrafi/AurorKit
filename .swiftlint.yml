@@ -9,6 +9,7 @@ disabled_rules:
   - explicit_type_interface
   - extension_access_modifier
   - fatal_error_message
+  - file_name # doesn't work as it should
   - force_cast
   - force_unwrapping
   - function_default_parameter_at_end
@@ -31,6 +32,7 @@ disabled_rules:
   - trailing_closure
   - unused_closure_parameter
   - vertical_whitespace_opening_braces # should ignore braces after type declarations
+
 
 opt_in_rules:
   - anyobject_protocol
@@ -337,7 +339,7 @@ file_length:
 file_name:
   severity: error
   prefix_pattern: ''
-  suffix_pattern: 'Extensions?|\\+.*'
+  suffix_pattern: '(([A-Z][A-z]+)Extension)?'
 
 first_where:
   severity: error
@@ -486,8 +488,8 @@ nesting:
     warning: 1
     error: 1
   statement_level:
-    warning: 2
-    error: 2
+    warning: 3
+    error: 3
 
 no_extension_access_modifier:
   severity: error

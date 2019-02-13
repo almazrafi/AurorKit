@@ -18,20 +18,18 @@ class DataExtensionTests: QuickSpec {
     // MARK: - Instance Methods
 
     override func spec() {
-        context("Instance Properties", {
-            describe(".hexEncoded", {
-                it("should return an empty string", closure: {
-                    let data = Data()
+        describe(".hexEncoded") {
+            it("should return an empty string") {
+                let data = Data()
 
-                    expect(data.hexEncoded).to(beEmpty())
-                })
+                expect(data.hexEncoded).to(beEmpty())
+            }
 
-                it("should return the data as a HEX string", closure: {
-                    let data = Data([0, 1, 10, 16, 128, 255])
+            it("should return the data as a HEX string") {
+                let data = Data([0, 1, 10, 16, 128, 255])
 
-                    expect(data.hexEncoded).to(equal("00010a1080ff"))
-                })
-            })
-        })
+                expect(data.hexEncoded).to(equal("00010a1080ff"))
+            }
+        }
     }
 }

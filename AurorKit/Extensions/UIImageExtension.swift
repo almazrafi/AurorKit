@@ -10,6 +10,15 @@ import UIKit
 
 extension UIImage {
 
+    // MARK: - Instance Properties
+
+    public var alignmentRect: CGRect {
+        return CGRect(x: self.alignmentRectInsets.left,
+                      y: self.alignmentRectInsets.top,
+                      width: self.size.width - self.alignmentRectInsets.left - self.alignmentRectInsets.right,
+                      height: self.size.height - self.alignmentRectInsets.top - self.alignmentRectInsets.bottom)
+    }
+
     // MARK: - Instance Methods
 
     public final func scaled(to size: CGSize) -> UIImage? {
