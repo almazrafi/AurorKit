@@ -13,6 +13,6 @@ extension UIViewController {
     // MARK: - Instance Properties
 
     public var isVisible: Bool {
-        return viewIfLoaded?.window != nil
+        return !(self.viewIfLoaded?.window?.isHidden ?? true)
     }
 }

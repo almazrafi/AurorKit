@@ -23,17 +23,17 @@ func equalColor(_ expectedColor: UIColor?) -> Predicate<UIColor> {
             return PredicateResult(status: .fail, message: message)
 
         case let (expectedColor?, color?):
-            var red: CGFloat = 0
-            var green: CGFloat = 0
-            var blue: CGFloat = 0
-            var alpha: CGFloat = 0
+            var red: CGFloat = 0.0
+            var green: CGFloat = 0.0
+            var blue: CGFloat = 0.0
+            var alpha: CGFloat = 0.0
 
             color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
 
-            var expectedRed: CGFloat = 0
-            var expectedGreen: CGFloat = 0
-            var expectedBlue: CGFloat = 0
-            var expectedAlpha: CGFloat = 0
+            var expectedRed: CGFloat = 0.0
+            var expectedGreen: CGFloat = 0.0
+            var expectedBlue: CGFloat = 0.0
+            var expectedAlpha: CGFloat = 0.0
 
             expectedColor.getRed(&expectedRed, green: &expectedGreen, blue: &expectedBlue, alpha: &expectedAlpha)
 
