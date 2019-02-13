@@ -18,46 +18,48 @@ class UIWindowExtensionTests: QuickSpec {
     // MARK: - Instance Methods
 
     override func spec() {
-        var rootViewController: UIViewController!
-        var modalViewController: UIViewController!
-
         var window: UIWindow!
 
-        beforeEach({
-            rootViewController = UITabBarController()
-            modalViewController = UIViewController()
-
+        beforeEach {
             window = UIWindow(frame: UIScreen.main.bounds)
-        })
 
-        context("Instance Properties", {
-            describe(".topViewController", {
-                it("should return nil", closure: {
+            window.isHidden = false
+        }
+
+        describe(".topViewController") {
+            context("when window has no root view controller") {
+                it("should return nil") {
                     expect(window.topViewController).to(beNil())
-                })
+                }
+            }
 
-                it("should return root view controller", closure: {
+            context("when window has root view controller") {
+                var rootViewController: UIViewController!
+
+                beforeEach {
+                    rootViewController = UIViewController()
+
                     window.rootViewController = rootViewController
+                }
 
+                it("should return root view controller") {
                     expect(window.topViewController).to(beIdenticalTo(rootViewController))
-                })
+                }
 
-                it("should return modal view controller", closure: {
-                    window.rootViewController = rootViewController
+                context("when modal view controller is presented") {
+                    var modalViewController: UIViewController!
 
-                    rootViewController.present(modalViewController, animated: true)
+                    beforeEach {
+                        modalViewController = UIViewController()
 
-                    expect(window.topViewController).toEventually(beIdenticalTo(rootViewController))
-                })
+                        rootViewController.present(modalViewController, animated: true)
+                    }
 
-                it("should return modal view controller", closure: {
-                    window.rootViewController = rootViewController
-
-                    rootViewController.present(modalViewController, animated: false)
-
-                    expect(window.topViewController).toEventually(beIdenticalTo(rootViewController))
-                })
-            })
-        })
+                    it("should return first modal view controller") {
+                        expect(window.topViewController).toEventually(beIdenticalTo(modalViewController))
+                    }
+                }
+            }
+        }
     }
 }

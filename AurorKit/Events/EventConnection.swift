@@ -25,12 +25,12 @@ public final class EventConnection<T> {
 
     // MARK: - Initializers
 
-    internal init(event: Event<T>, receiver: AnyObject, handler: @escaping Event<T>.Handler, isActive: Bool = true) {
+    internal init(event: Event<T>, receiver: AnyObject, handler: @escaping Event<T>.Handler, activated: Bool = true) {
         self.event = event
         self.receiver = receiver
         self.handler = handler
 
-        if isActive {
+        if activated {
             self.event?.register(connection: self)
         }
     }
