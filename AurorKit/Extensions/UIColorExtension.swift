@@ -122,10 +122,10 @@ extension UIColor {
     // MARK: - Instance Properties
 
     public var argbHexString: String {
-        var red: CGFloat = 0
-        var green: CGFloat = 0
-        var blue: CGFloat = 0
-        var alpha: CGFloat = 0
+        var red: CGFloat = 0.0
+        var green: CGFloat = 0.0
+        var blue: CGFloat = 0.0
+        var alpha: CGFloat = 0.0
 
         self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
 
@@ -144,10 +144,10 @@ extension UIColor {
     }
 
     public var rgbaHexString: String {
-        var red: CGFloat = 0
-        var green: CGFloat = 0
-        var blue: CGFloat = 0
-        var alpha: CGFloat = 0
+        var red: CGFloat = 0.0
+        var green: CGFloat = 0.0
+        var blue: CGFloat = 0.0
+        var alpha: CGFloat = 0.0
 
         self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
 
@@ -166,10 +166,10 @@ extension UIColor {
     }
 
     public var rgbHexString: String {
-        var red: CGFloat = 0
-        var green: CGFloat = 0
-        var blue: CGFloat = 0
-        var alpha: CGFloat = 0
+        var red: CGFloat = 0.0
+        var green: CGFloat = 0.0
+        var blue: CGFloat = 0.0
+        var alpha: CGFloat = 0.0
 
         self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
 
@@ -180,10 +180,10 @@ extension UIColor {
     }
 
     public var argbHex: UInt32 {
-        var red: CGFloat = 0
-        var green: CGFloat = 0
-        var blue: CGFloat = 0
-        var alpha: CGFloat = 0
+        var red: CGFloat = 0.0
+        var green: CGFloat = 0.0
+        var blue: CGFloat = 0.0
+        var alpha: CGFloat = 0.0
 
         self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
 
@@ -203,10 +203,10 @@ extension UIColor {
     }
 
     public var rgbaHex: UInt32 {
-        var red: CGFloat = 0
-        var green: CGFloat = 0
-        var blue: CGFloat = 0
-        var alpha: CGFloat = 0
+        var red: CGFloat = 0.0
+        var green: CGFloat = 0.0
+        var blue: CGFloat = 0.0
+        var alpha: CGFloat = 0.0
 
         self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
 
@@ -226,10 +226,10 @@ extension UIColor {
     }
 
     public var rgbHex: UInt32 {
-        var red: CGFloat = 0
-        var green: CGFloat = 0
-        var blue: CGFloat = 0
-        var alpha: CGFloat = 0
+        var red: CGFloat = 0.0
+        var green: CGFloat = 0.0
+        var blue: CGFloat = 0.0
+        var alpha: CGFloat = 0.0
 
         self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
 
