@@ -109,12 +109,11 @@
 		C2B8D8E82210EBF100C67D84 /* UIViewShadowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B8D8DF2210D71400C67D84 /* UIViewShadowExtension.swift */; };
 		C2E865EE22136CAD002DD5D4 /* UIViewBorderExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E865ED22136CAD002DD5D4 /* UIViewBorderExtensionTests.swift */; };
 		C2E865F12213705B002DD5D4 /* UIViewShadowExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E865F02213705B002DD5D4 /* UIViewShadowExtensionTests.swift */; };
-		C2E865F22213705B002DD5D4 /* UIViewShadowExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E865F02213705B002DD5D4 /* UIViewShadowExtensionTests.swift */; };
 		C2E865F422137071002DD5D4 /* UIViewControllerExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E865F322137071002DD5D4 /* UIViewControllerExtensionTests.swift */; };
-		C2E865F522137071002DD5D4 /* UIViewControllerExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E865F322137071002DD5D4 /* UIViewControllerExtensionTests.swift */; };
 		C2E865F722138022002DD5D4 /* Matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E865F622138022002DD5D4 /* Matchers.swift */; };
 		C2E865F9221384E5002DD5D4 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C2E865F8221384E5002DD5D4 /* .swiftlint.yml */; };
 		C2E865FB22138DB0002DD5D4 /* ComparableExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E865FA22138DB0002DD5D4 /* ComparableExtensionTests.swift */; };
+		C2E865FC22139EB0002DD5D4 /* ComparableExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E865FA22138DB0002DD5D4 /* ComparableExtensionTests.swift */; };
 		C6A1CA08751D7C17FC4D3CBA /* Pods_AurorKit_Tests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DF386D7694E2F925587C3C /* Pods_AurorKit_Tests_iOS.framework */; };
 		F4A633FEA053DC2DC949EC22 /* Pods_AurorKit_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB4E7007CB44FF38238EC0B /* Pods_AurorKit_macOS.framework */; };
 /* End PBXBuildFile section */
@@ -985,9 +984,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2E865F22213705B002DD5D4 /* UIViewShadowExtensionTests.swift in Sources */,
 				C0A6037621F682D3009EC42C /* Tests.swift in Sources */,
-				C2E865F522137071002DD5D4 /* UIViewControllerExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1026,6 +1023,7 @@
 				C0AE17AB21F679EB0070DD72 /* ContiguousArrayExtensionTests.swift in Sources */,
 				C0AE17A721F679EB0070DD72 /* CGPointExtensionTests.swift in Sources */,
 				C0A6037721F682D4009EC42C /* Tests.swift in Sources */,
+				C2E865FC22139EB0002DD5D4 /* ComparableExtensionTests.swift in Sources */,
 				C0AE17AD21F679EB0070DD72 /* FloatingPointExtensionTests.swift in Sources */,
 				C0AE17A621F679EB0070DD72 /* ArrayExtensionTests.swift in Sources */,
 			);
