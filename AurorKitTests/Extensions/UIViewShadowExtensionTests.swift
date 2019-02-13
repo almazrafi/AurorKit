@@ -42,17 +42,31 @@ class UIViewShadowExtensionTests: QuickSpec {
             }
 
             it("should set shadow properly") {
-                view.border = UIView.Border(width: 1.23, color: UIColor(red: 0.12, green: 0.34, blue: 0.56))
+                view.shadow = UIView.Shadow(offset: CGSize(width: 1.23, height: 4.56),
+                                            radius: 3.21,
+                                            color: UIColor(red: 0.12, green: 0.34, blue: 0.56),
+                                            opacity: 0.789,
+                                            shouldRasterize: true)
 
-                expect(view.layer.borderWidth).to(equal(1.23))
-                expect(view.layer.borderColor).to(equal(UIColor(red: 0.12, green: 0.34, blue: 0.56).cgColor))
+                expect(view.layer.shadowOffset).to(equal(CGSize(width: 1.23, height: 4.56)))
+                expect(view.layer.shadowRadius).to(equal(3.21))
+                expect(view.layer.shadowColor).to(equal(UIColor(red: 0.12, green: 0.34, blue: 0.56).cgColor))
+                expect(view.layer.shadowOpacity).to(equal(0.789))
+                expect(view.layer.shouldRasterize).to(equal(true))
             }
 
             it("should set shadow properly") {
-                view.border = UIView.Border(width: 0.0, color: nil)
+                view.shadow = UIView.Shadow(offset: CGSize.zero,
+                                            radius: 0.0,
+                                            color: nil,
+                                            opacity: 0.0,
+                                            shouldRasterize: false)
 
-                expect(view.layer.borderWidth).to(equal(0.0))
-                expect(view.layer.borderColor).to(beNil())
+                expect(view.layer.shadowOffset).to(equal(CGSize.zero))
+                expect(view.layer.shadowRadius).to(equal(0.0))
+                expect(view.layer.shadowColor).to(beNil())
+                expect(view.layer.shadowOpacity).to(equal(0.0))
+                expect(view.layer.shouldRasterize).to(equal(false))
             }
         }
     }
