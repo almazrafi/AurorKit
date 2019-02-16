@@ -19,19 +19,18 @@ class EventConnectionTests: QuickSpec {
 
     override func spec() {
         var event: Event<Int>!
-        var eventHandler: MockEventHandler<Int>!
-        var eventConnection: EventConnection<Int>!
+        var eventHandler: EventHandlerMock<Int>!
 
         beforeEach {
             event = Event<Int>()
-            eventHandler = MockEventHandler<Int>()
+            eventHandler = EventHandlerMock<Int>()
         }
 
         describe(".init(event:, receiver:, handler:, isActive:)") {
             it("should initialize properly") {
-                eventConnection = EventConnection<Int>(event: event,
-                                                       receiver: self,
-                                                       handler: eventHandler.handler)
+                let eventConnection = EventConnection<Int>(event: event,
+                                                           receiver: self,
+                                                           handler: eventHandler.handler)
 
                 expect(eventConnection.event).to(beIdenticalTo(event))
                 expect(eventConnection.receiver).to(beIdenticalTo(self))
@@ -39,20 +38,20 @@ class EventConnectionTests: QuickSpec {
             }
 
             it("should initialize as inactive") {
-                eventConnection = EventConnection<Int>(event: event,
-                                                       receiver: self,
-                                                       handler: eventHandler.handler,
-                                                       activated: false)
+                let eventConnection = EventConnection<Int>(event: event,
+                                                           receiver: self,
+                                                           handler: eventHandler.handler,
+                                                           activated: false)
 
                 expect(eventConnection.isActive).to(beFalse())
                 expect(event.connections.count).to(equal(0))
             }
 
             it("should initialize as active") {
-                eventConnection = EventConnection<Int>(event: event,
-                                                       receiver: self,
-                                                       handler: eventHandler.handler,
-                                                       activated: true)
+                let eventConnection = EventConnection<Int>(event: event,
+                                                           receiver: self,
+                                                           handler: eventHandler.handler,
+                                                           activated: true)
 
                 expect(eventConnection.isActive).to(beTrue())
                 expect(event.connections.count).to(equal(1))
@@ -61,6 +60,8 @@ class EventConnectionTests: QuickSpec {
         }
 
         context("when it is initialized") {
+            var eventConnection: EventConnection<Int>!
+
             beforeEach {
                 eventConnection = EventConnection<Int>(event: event,
                                                        receiver: self,

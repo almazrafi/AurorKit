@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = "AurorKit"
-  spec.version = "0.0.3"
+  spec.version = "0.0.4"
   spec.summary = "Swift extensions and tools"
 
   spec.homepage = "https://github.com/almazrafi/AurorKit"
@@ -50,5 +50,21 @@ Pod::Spec.new do |spec|
 
   spec.subspec 'Events' do |events|
     events.source_files = "AurorKit/Events"
+  end
+
+  spec.subspec 'Log' do |log|
+    log.source_files = "AurorKit/Log"
+
+    log.macos.exclude_files = [
+      "AurorKit/Log/LoggedNavigationController.swift",
+      "AurorKit/Log/LoggedPageViewController.swift",
+      "AurorKit/Log/LoggedTabBarController.swift",
+      "AurorKit/Log/LoggedTableViewController.swift",
+      "AurorKit/Log/LoggedViewController.swift",
+    ]
+    
+    log.pod_target_xcconfig = {
+      'OTHER_SWIFT_FLAGS[config=Debug]' => '-DLOGGING',
+    }
   end
 end

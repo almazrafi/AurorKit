@@ -127,13 +127,13 @@ class UIColorExtensionTests: QuickSpec {
                                                alpha: 0.0)))
             }
 
-            it("should not be initialized") {
+            it("should not initialize with invalid hex string") {
                 let color = UIColor(argbHexString: "%12345678")
 
                 expect(color).to(beNil())
             }
 
-            it("should not be initialized") {
+            it("should not initialize with invalid hex string") {
                 let color = UIColor(argbHexString: "#qwerty")
 
                 expect(color).to(beNil())
@@ -159,13 +159,13 @@ class UIColorExtensionTests: QuickSpec {
                                                alpha: 52.0 / 255.0)))
             }
 
-            it("should not be initialized") {
+            it("should not initialize with invalid Hex string") {
                 let color = UIColor(rgbaHexString: "%12345678")
 
                 expect(color).to(beNil())
             }
 
-            it("should not be initialized") {
+            it("should not initialize with invalid Hex string") {
                 let color = UIColor(rgbaHexString: "#qwerty")
 
                 expect(color).to(beNil())
@@ -200,13 +200,13 @@ class UIColorExtensionTests: QuickSpec {
                                                alpha: 1.0)))
             }
 
-            it("should not be initialized") {
+            it("should not initialize with invalid Hex string") {
                 let color = UIColor(rgbHexString: "%12345678")
 
                 expect(color).to(beNil())
             }
 
-            it("should not be initialized") {
+            it("should not initialize with invalid Hex string") {
                 let color = UIColor(rgbHexString: "#qwerty")
 
                 expect(color).to(beNil())

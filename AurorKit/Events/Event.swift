@@ -24,13 +24,13 @@ public final class Event<T> {
 
     // MARK: - Instance Methods
 
-    internal func register(connection: EventConnection<T>) {
+    internal func registerConnection(_ connection: EventConnection<T>) {
         if !self.connections.contains(where: { $0 === connection }) {
             self.connections.append(connection)
         }
     }
 
-    internal func unregister(connection: EventConnection<T>) {
+    internal func unregisterConnection(_ connection: EventConnection<T>) {
         self.connections.removeAll(where: { $0 === connection })
     }
 

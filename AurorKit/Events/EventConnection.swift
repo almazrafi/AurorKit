@@ -31,7 +31,7 @@ public final class EventConnection<T> {
         self.handler = handler
 
         if activated {
-            self.event?.register(connection: self)
+            self.event?.registerConnection(self)
         }
     }
 
@@ -46,10 +46,10 @@ public final class EventConnection<T> {
     // MARK: -
 
     public func deactivate() {
-        self.event?.unregister(connection: self)
+        self.event?.unregisterConnection(self)
     }
 
     public func activate() {
-        self.event?.register(connection: self)
+        self.event?.registerConnection(self)
     }
 }
