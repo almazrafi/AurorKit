@@ -16,7 +16,7 @@ public enum Log {
 
         // MARK: - Type Properties
 
-        static let defaultDateFormat = "HH:mm:ss.SSSS"
+        static let defaultDateFormat = "[HH:mm:ss.SSSS]"
 
         static let lowLayerLabel = "<*  >"
         static let mediumLayerLabel = "<** >"
@@ -50,7 +50,7 @@ public enum Log {
                               date: @autoclosure () -> Date) {
         #if LOGGING
             let body = sender().map({ "\(String(describing: type(of: $0))): \(text())" }) ?? text()
-            let line = "[\(self.dateFormatter.string(from: date()))] \(layer()) \(body)"
+            let line = "\(self.dateFormatter.string(from: date())) \(layer()) \(body)"
 
             for printer in printers {
                 printer.print(line)

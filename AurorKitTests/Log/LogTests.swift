@@ -63,107 +63,101 @@ class LogTests: QuickSpec {
             }
         }
 
-        describe(".low(:, from:, date:)") {
+        context("when it has printer") {
+            var date: Date!
+            var dateFormatter: DateFormatter!
+
+            beforeSuite {
+                date = Date()
+                dateFormatter = DateFormatter()
+
+                dateFormatter.dateFormat = "[HH:mm:ss.SSSS]"
+            }
+
             beforeEach {
-                Log.dateFormat = "HH:mm:ss.SSSS"
+                Log.dateFormat = "[HH:mm:ss.SSSS]"
 
                 Log.registerPrinter(printer)
             }
 
-            it("should call the printer with correct parameters") {
-                let date = Date(timeIntervalSinceReferenceDate: 123.0)
+            describe(".low(:, from:, date:)") {
+                it("should call the printer with correct parameters") {
+                    let dateString = dateFormatter.string(from: date)
 
-                Log.low("Bla bla bla", from: self, date: date)
+                    Log.low("Something happened", from: self, date: date)
 
-                expect(printer.printCallCount).to(equal(1))
-                expect(printer.printParameters).to(equal("[03:02:03.0000] <*  > LogTests: Bla bla bla"))
+                    expect(printer.printCallCount).to(equal(1))
+                    expect(printer.printParameters).to(equal("\(dateString) <*  > LogTests: Something happened"))
+                }
+
+                it("should call the printer with correct parameters") {
+                    let dateString = dateFormatter.string(from: date)
+
+                    Log.low("Something happened", from: nil, date: date)
+
+                    expect(printer.printCallCount).to(equal(1))
+                    expect(printer.printParameters).to(equal("\(dateString) <*  > Something happened"))
+                }
             }
 
-            it("should call the printer with correct parameters") {
-                let date = Date(timeIntervalSinceReferenceDate: 0.0)
+            describe(".medium(:, from:, date:)") {
+                it("should call the printer with correct parameters") {
+                    let dateString = dateFormatter.string(from: date)
 
-                Log.low("Bla bla bla", from: nil, date: date)
+                    Log.medium("Something happened", from: self, date: date)
 
-                expect(printer.printCallCount).to(equal(1))
-                expect(printer.printParameters).to(equal("[03:00:00.0000] <*  > Bla bla bla"))
-            }
-        }
+                    expect(printer.printCallCount).to(equal(1))
+                    expect(printer.printParameters).to(equal("\(dateString) <** > LogTests: Something happened"))
+                }
 
-        describe(".medium(:, from:, date:)") {
-            beforeEach {
-                Log.dateFormat = "HH:mm:ss.SSSS"
+                it("should call the printer with correct parameters") {
+                    let dateString = dateFormatter.string(from: date)
 
-                Log.registerPrinter(printer)
-            }
+                    Log.medium("Something happened", from: nil, date: date)
 
-            it("should call the printer with correct parameters") {
-                let date = Date(timeIntervalSinceReferenceDate: 123.0)
-
-                Log.medium("Bla bla bla", from: self, date: date)
-
-                expect(printer.printCallCount).to(equal(1))
-                expect(printer.printParameters).to(equal("[03:02:03.0000] <** > LogTests: Bla bla bla"))
+                    expect(printer.printCallCount).to(equal(1))
+                    expect(printer.printParameters).to(equal("\(dateString) <** > Something happened"))
+                }
             }
 
-            it("should call the printer with correct parameters") {
-                let date = Date(timeIntervalSinceReferenceDate: 0.0)
+            describe(".high(:, from:, date:)") {
+                it("should call the printer with correct parameters") {
+                    let dateString = dateFormatter.string(from: date)
 
-                Log.medium("Bla bla bla", from: nil, date: date)
+                    Log.high("Something happened", from: self, date: date)
 
-                expect(printer.printCallCount).to(equal(1))
-                expect(printer.printParameters).to(equal("[03:00:00.0000] <** > Bla bla bla"))
-            }
-        }
+                    expect(printer.printCallCount).to(equal(1))
+                    expect(printer.printParameters).to(equal("\(dateString) <***> LogTests: Something happened"))
+                }
 
-        describe(".high(:, from:, date:)") {
-            beforeEach {
-                Log.dateFormat = "HH:mm:ss.SSSS"
+                it("should call the printer with correct parameters") {
+                    let dateString = dateFormatter.string(from: date)
 
-                Log.registerPrinter(printer)
-            }
+                    Log.high("Something happened", from: nil, date: date)
 
-            it("should call the printer with correct parameters") {
-                let date = Date(timeIntervalSinceReferenceDate: 123.0)
-
-                Log.high("Bla bla bla", from: self, date: date)
-
-                expect(printer.printCallCount).to(equal(1))
-                expect(printer.printParameters).to(equal("[03:02:03.0000] <***> LogTests: Bla bla bla"))
+                    expect(printer.printCallCount).to(equal(1))
+                    expect(printer.printParameters).to(equal("\(dateString) <***> Something happened"))
+                }
             }
 
-            it("should call the printer with correct parameters") {
-                let date = Date(timeIntervalSinceReferenceDate: 0.0)
+            describe(".extra(:, from:, date:)") {
+                it("should call the printer with correct parameters") {
+                    let dateString = dateFormatter.string(from: date)
 
-                Log.high("Bla bla bla", from: nil, date: date)
+                    Log.extra("Something happened", from: self, date: date)
 
-                expect(printer.printCallCount).to(equal(1))
-                expect(printer.printParameters).to(equal("[03:00:00.0000] <***> Bla bla bla"))
-            }
-        }
+                    expect(printer.printCallCount).to(equal(1))
+                    expect(printer.printParameters).to(equal("\(dateString) <---> LogTests: Something happened"))
+                }
 
-        describe(".extra(:, from:, date:)") {
-            beforeEach {
-                Log.dateFormat = "HH:mm:ss.SSSS"
+                it("should call the printer with correct parameters") {
+                    let dateString = dateFormatter.string(from: date)
 
-                Log.registerPrinter(printer)
-            }
+                    Log.extra("Something happened", from: nil, date: date)
 
-            it("should call the printer with correct parameters") {
-                let date = Date(timeIntervalSinceReferenceDate: 123.0)
-
-                Log.extra("Bla bla bla", from: self, date: date)
-
-                expect(printer.printCallCount).to(equal(1))
-                expect(printer.printParameters).to(equal("[03:02:03.0000] <---> LogTests: Bla bla bla"))
-            }
-
-            it("should call the printer with correct parameters") {
-                let date = Date(timeIntervalSinceReferenceDate: 0.0)
-
-                Log.extra("Bla bla bla", from: nil, date: date)
-
-                expect(printer.printCallCount).to(equal(1))
-                expect(printer.printParameters).to(equal("[03:00:00.0000] <---> Bla bla bla"))
+                    expect(printer.printCallCount).to(equal(1))
+                    expect(printer.printParameters).to(equal("\(dateString) <---> Something happened"))
+                }
             }
         }
     }

@@ -121,17 +121,17 @@ class LogFilePrinterTests: QuickSpec {
                 }
 
                 it("should write the line to the content") {
-                    printer?.print("Bla bla bla")
+                    printer?.print("Something happened")
 
-                    expect(printer?.content).to(equal("Tests Log\nBla bla bla\n"))
+                    expect(printer?.content).to(equal("Tests Log\nSomething happened\n"))
                 }
 
                 it("should write the line to the file") {
-                    printer?.print("Bla bla bla")
+                    printer?.print("Something happened")
 
                     expect(printer.flatMap({ printer in
                         return try? String(contentsOfFile: printer.filePath, encoding: .utf8)
-                    })).to(equal("Tests Log\nBla bla bla\n"))
+                    })).to(equal("Tests Log\nSomething happened\n"))
                 }
             }
 
@@ -144,17 +144,17 @@ class LogFilePrinterTests: QuickSpec {
 
                 describe(".print(:)") {
                     it("should write line to the content") {
-                        printer?.print("Bla bla bla")
+                        printer?.print("Something happened")
 
-                        expect(printer?.content).to(equal("Bla bla bla\n"))
+                        expect(printer?.content).to(equal("Something happened\n"))
                     }
 
                     it("should write line to the file") {
-                        printer?.print("Bla bla bla")
+                        printer?.print("Something happened")
 
                         expect(printer.flatMap({ printer in
                             return try? String(contentsOfFile: printer.filePath, encoding: .utf8)
-                        })).to(equal("Bla bla bla\n"))
+                        })).to(equal("Something happened\n"))
                     }
                 }
             }
@@ -167,9 +167,8 @@ class LogFilePrinterTests: QuickSpec {
                 beforeEach {
                     printer = LogFilePrinter(encoding: .utf8, fileHeader: "Tests Log", fileName: "Tests.log")
 
-                    printer?.print("Bla 1")
-                    printer?.print("Bla 2")
-                    printer?.print("Bla 3")
+                    printer?.print("Something happened")
+                    printer?.print("Something else happened")
                 }
 
                 it("should rewrite the content with the header") {
@@ -195,9 +194,8 @@ class LogFilePrinterTests: QuickSpec {
                 }
 
                 beforeEach {
-                    printer?.print("Bla 1")
-                    printer?.print("Bla 2")
-                    printer?.print("Bla 3")
+                    printer?.print("Something happened")
+                    printer?.print("Something else happened")
                 }
 
                 it("should rewrite the content with the header") {
