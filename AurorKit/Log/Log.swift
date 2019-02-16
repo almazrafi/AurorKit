@@ -26,7 +26,13 @@ public enum Log {
 
     // MARK: - Type Properties
 
-    private static let dateFormatter = DateFormatter(dateFormat: Constants.defaultDateFormat)
+    private static let dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+
+        dateFormatter.dateFormat = Constants.defaultDateFormat
+
+        return dateFormatter
+    }()
 
     // MARK: -
 
