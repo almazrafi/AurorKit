@@ -32,6 +32,12 @@ class LogFilePrinterTests: QuickSpec {
                     expect(printer).to(beNil())
                 }
 
+                it("should not initialize with invalid file name") {
+                    let printer = LogFilePrinter(encoding: .utf8, fileHeader: "Tests Log", fileName: "Log/Tests.log")
+
+                    expect(printer).to(beNil())
+                }
+
                 it("should initialize properly") {
                     let printer = LogFilePrinter(encoding: .ascii, fileHeader: "Tests Log", fileName: "Tests.log")
 

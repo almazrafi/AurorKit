@@ -25,22 +25,22 @@ public class LogFilePrinter: LogPrinter {
     // MARK: - Initializers
 
     public init?(encoding: String.Encoding = .utf8, fileHeader: String = "", fileName: String) {
-        guard let documentURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-            return nil
-        }
+        let documentURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
 
         self.encoding = encoding
 
         self.fileHeader = fileHeader
         self.fileName = fileName
-        self.filePath = documentURL.appendingPathComponent(fileName).path
-
-        var isDirectory: ObjCBool = false
+        self.filePath = documentURL?.appendingPathComponent(fileName).path ?? fileName
 
         do {
-            try FileManager.default.createDirectory(at: documentURL,
-                                                    withIntermediateDirectories: true,
-                                                    attributes: nil)
+            if let documentURL = documentURL {
+                try FileManager.default.createDirectory(at: documentURL,
+                                                        withIntermediateDirectories: true,
+                                                        attributes: nil)
+            }
+
+            var isDirectory: ObjCBool = false
 
             if FileManager.default.fileExists(atPath: self.filePath, isDirectory: &isDirectory) {
                 guard !isDirectory.boolValue else {
