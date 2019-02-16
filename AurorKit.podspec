@@ -63,12 +63,12 @@ Pod::Spec.new do |spec|
       "AurorKit/Log/ViewControllers/LoggedViewController.swift"
     ]
 
-    extensions.watchos.exclude_files = [
+    log.watchos.exclude_files = [
       "AurorKit/Log/ViewControllers/LoggedNavigationController.swift",
       "AurorKit/Log/ViewControllers/LoggedPageViewController.swift",
       "AurorKit/Log/ViewControllers/LoggedTabBarController.swift",
       "AurorKit/Log/ViewControllers/LoggedTableViewController.swift",
-      "AurorKit/Log/ViewControllers/LoggedViewController.swift",
+      "AurorKit/Log/ViewControllers/LoggedViewController.swift"
     ]
   end
 end
