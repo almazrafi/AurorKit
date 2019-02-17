@@ -50,6 +50,7 @@ public enum Log {
 
     // MARK: - Type Methods
 
+    @inline(__always)
     private static func print(layer: @autoclosure () -> String,
                               text: @autoclosure () -> String,
                               sender: @autoclosure () -> Any?,
