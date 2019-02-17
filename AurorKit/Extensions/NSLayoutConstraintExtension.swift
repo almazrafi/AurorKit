@@ -12,7 +12,7 @@ extension NSLayoutConstraint {
 
     // MARK: - Instance Properties
 
-    @IBInspectable public final var preciseConstant: Int {
+    @IBInspectable public var preciseConstant: Int {
         get {
             return Int(self.constant * UIScreen.main.scale)
         }

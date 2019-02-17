@@ -8,7 +8,7 @@
 
 import Foundation
 
-public final class Event<T> {
+public class Event<T> {
 
     // MARK: - Nested Types
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class LoggedNavigationController: UINavigationController {
+open class LoggedNavigationController: UINavigationController {
 
     // MARK: - Initializers
 
@@ -18,37 +18,37 @@ public class LoggedNavigationController: UINavigationController {
 
     // MARK: - Instance Methods
 
-    public override func didReceiveMemoryWarning() {
+    open override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 
         Log.high("didReceiveMemoryWarning()", from: self)
     }
 
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
 
         Log.high("viewDidLoad()", from: self)
     }
 
-    public override func viewWillAppear(_ animated: Bool) {
+    open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         Log.high("viewWillAppear(animated: \(animated))", from: self)
     }
 
-    public override func viewDidAppear(_ animated: Bool) {
+    open override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
         Log.high("viewDidAppear(animated: \(animated))", from: self)
     }
 
-    public override func viewWillDisappear(_ animated: Bool) {
+    open override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
         Log.high("viewWillDisappear(animated: \(animated))", from: self)
     }
 
-    public override func viewDidDisappear(_ animated: Bool) {
+    open override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
 
         Log.high("viewDidDisappear(animated: \(animated))", from: self)

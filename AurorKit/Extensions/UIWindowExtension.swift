@@ -12,7 +12,7 @@ extension UIWindow {
 
     // MARK: - Instance Properties
 
-    public final var topViewController: UIViewController? {
+    public var topViewController: UIViewController? {
         guard let rootViewController = self.rootViewController else {
             return nil
         }

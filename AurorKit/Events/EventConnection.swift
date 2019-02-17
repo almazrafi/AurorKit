@@ -8,7 +8,7 @@
 
 import Foundation
 
-public final class EventConnection<T> {
+public class EventConnection<T> {
 
     // MARK: - Instance Properties
 
