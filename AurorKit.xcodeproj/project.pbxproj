@@ -186,23 +186,15 @@
 		02DF386D7694E2F925587C3C /* Pods_AurorKit_Tests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AurorKit_Tests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C62A792872FFA08D5778085 /* Pods_AurorKit_Tests_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AurorKit_Tests_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C808BE434147BC0C5E421A2 /* Pods_AurorKit_Tests_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AurorKit_Tests_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A1797C916E23EDF094082BC /* Pods-Tools Tests iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tools Tests iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tools Tests iOS/Pods-Tools Tests iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		30DE42F6E4165D37080648E4 /* Pods-AurorKit macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit macOS/Pods-AurorKit macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		419C987651E8C27EE4DC0711 /* Pods-AurorKit Tests iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit Tests iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit Tests iOS/Pods-AurorKit Tests iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		41E970DCF7C6C31014757D38 /* Pods-AurorKit tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit tvOS/Pods-AurorKit tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		4729FDF1840038709A92D52D /* Pods_Tools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D88DA49C686B691E290915B /* Pods-AurorKit iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit iOS/Pods-AurorKit iOS.release.xcconfig"; sourceTree = "<group>"; };
-		51838DBE8E0F632983485FE5 /* Pods-Tools iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tools iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tools iOS/Pods-Tools iOS.release.xcconfig"; sourceTree = "<group>"; };
-		53521E43618BBC71546FD3A0 /* Pods_ToolsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToolsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		673888F294850D16CD82D675 /* Pods-AurorKit Tests tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit Tests tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit Tests tvOS/Pods-AurorKit Tests tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		6D805ABE17E7A4C045DA5C2E /* Pods-AurorKit Tests macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit Tests macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit Tests macOS/Pods-AurorKit Tests macOS.release.xcconfig"; sourceTree = "<group>"; };
-		705A5036C99D0373556C95DF /* Pods-ToolsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToolsTests/Pods-ToolsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		85098C465C529153E35618D5 /* Pods_AurorKit_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AurorKit_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86F2C0ACD94EC7673833AE84 /* Pods-AurorKit Tests tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit Tests tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit Tests tvOS/Pods-AurorKit Tests tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		995185B164442F4E0C9198F0 /* Pods-AurorKit Tests macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit Tests macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit Tests macOS/Pods-AurorKit Tests macOS.debug.xcconfig"; sourceTree = "<group>"; };
-		A307A5D2709CCE5883715795 /* Pods-Tools iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tools iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tools iOS/Pods-Tools iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		A615379005C214C0E252ED2C /* Pods_Tools_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tools_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF8A3DA52A751CCAD383D67A /* Pods-Tools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tools.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tools/Pods-Tools.release.xcconfig"; sourceTree = "<group>"; };
 		C000DF1021F3A29E001B535B /* AurorKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AurorKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C0252D5421F3A35E00F41A26 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		C0252D5621F3A5AC00F41A26 /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
@@ -287,16 +279,12 @@
 		C2E865F622138022002DD5D4 /* Matchers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matchers.swift; sourceTree = "<group>"; };
 		C2E865F8221384E5002DD5D4 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C2E865FA22138DB0002DD5D4 /* ComparableExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparableExtensionTests.swift; sourceTree = "<group>"; };
-		D023EA186ECF76C7D5EC6690 /* Pods-Tools Tests iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tools Tests iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tools Tests iOS/Pods-Tools Tests iOS.release.xcconfig"; sourceTree = "<group>"; };
 		D36F6A818A8A1DA9E5CE5E34 /* Pods-AurorKit macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit macOS/Pods-AurorKit macOS.release.xcconfig"; sourceTree = "<group>"; };
 		D6414EEBC854146F383353DF /* Pods-AurorKit Tests iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit Tests iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit Tests iOS/Pods-AurorKit Tests iOS.release.xcconfig"; sourceTree = "<group>"; };
 		D747C59744FA10EC5ED9298D /* Pods-AurorKit tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit tvOS/Pods-AurorKit tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		D98F4AE16788C7D39A7C6C81 /* Pods_AurorKit_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AurorKit_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB4E7007CB44FF38238EC0B /* Pods_AurorKit_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AurorKit_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8BD169B3AA76E91FD1F2917 /* Pods_Tools_Tests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tools_Tests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC0C46562E338F44E3D9382E /* Pods-ToolsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToolsTests/Pods-ToolsTests.release.xcconfig"; sourceTree = "<group>"; };
 		FEDE77F67EE8D78875B43718 /* Pods-AurorKit iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit iOS/Pods-AurorKit iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		FEF0FEF9115ADB49FB89A315 /* Pods-Tools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tools.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tools/Pods-Tools.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -537,16 +525,12 @@
 		DB79692F833E04AC6C64F6CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4729FDF1840038709A92D52D /* Pods_Tools.framework */,
-				53521E43618BBC71546FD3A0 /* Pods_ToolsTests.framework */,
-				E8BD169B3AA76E91FD1F2917 /* Pods_Tools_Tests_iOS.framework */,
-				A615379005C214C0E252ED2C /* Pods_Tools_iOS.framework */,
-				02DF386D7694E2F925587C3C /* Pods_AurorKit_Tests_iOS.framework */,
 				85098C465C529153E35618D5 /* Pods_AurorKit_iOS.framework */,
-				D98F4AE16788C7D39A7C6C81 /* Pods_AurorKit_tvOS.framework */,
-				1C808BE434147BC0C5E421A2 /* Pods_AurorKit_Tests_tvOS.framework */,
 				DBB4E7007CB44FF38238EC0B /* Pods_AurorKit_macOS.framework */,
+				D98F4AE16788C7D39A7C6C81 /* Pods_AurorKit_tvOS.framework */,
+				02DF386D7694E2F925587C3C /* Pods_AurorKit_Tests_iOS.framework */,
 				0C62A792872FFA08D5778085 /* Pods_AurorKit_Tests_macOS.framework */,
+				1C808BE434147BC0C5E421A2 /* Pods_AurorKit_Tests_tvOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -554,14 +538,6 @@
 		DC06566D72A556AAB638D1C7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FEF0FEF9115ADB49FB89A315 /* Pods-Tools.debug.xcconfig */,
-				BF8A3DA52A751CCAD383D67A /* Pods-Tools.release.xcconfig */,
-				705A5036C99D0373556C95DF /* Pods-ToolsTests.debug.xcconfig */,
-				EC0C46562E338F44E3D9382E /* Pods-ToolsTests.release.xcconfig */,
-				2A1797C916E23EDF094082BC /* Pods-Tools Tests iOS.debug.xcconfig */,
-				D023EA186ECF76C7D5EC6690 /* Pods-Tools Tests iOS.release.xcconfig */,
-				A307A5D2709CCE5883715795 /* Pods-Tools iOS.debug.xcconfig */,
-				51838DBE8E0F632983485FE5 /* Pods-Tools iOS.release.xcconfig */,
 				419C987651E8C27EE4DC0711 /* Pods-AurorKit Tests iOS.debug.xcconfig */,
 				D6414EEBC854146F383353DF /* Pods-AurorKit Tests iOS.release.xcconfig */,
 				FEDE77F67EE8D78875B43718 /* Pods-AurorKit iOS.debug.xcconfig */,
