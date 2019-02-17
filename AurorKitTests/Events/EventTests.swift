@@ -20,11 +20,11 @@ class EventTests: QuickSpec {
     override func spec() {
         context("Event where T is Int") {
             var event: Event<Int>!
-            var eventHandler: MockEventHandler<Int>!
+            var eventHandler: EventHandlerMock<Int>!
 
             beforeEach {
                 event = Event<Int>()
-                eventHandler = MockEventHandler<Int>()
+                eventHandler = EventHandlerMock<Int>()
             }
 
             describe(".init()") {
@@ -42,7 +42,7 @@ class EventTests: QuickSpec {
 
                 describe(".register(connection:)") {
                     it("should re-register the connection") {
-                        event.register(connection: eventConnection)
+                        event.registerConnection(eventConnection)
 
                         expect(event.connections.count).to(equal(1))
                         expect(event.connections.first).to(beIdenticalTo(eventConnection))
@@ -51,7 +51,7 @@ class EventTests: QuickSpec {
 
                 describe(".unregister(connection:)") {
                     it("should unregister the connection") {
-                        event.unregister(connection: eventConnection)
+                        event.unregisterConnection(eventConnection)
 
                         expect(event.connections).toNot(containElementSatisfying({ $0 === eventConnection }))
                     }
@@ -105,11 +105,11 @@ class EventTests: QuickSpec {
 
         context("Event where T is Void") {
             var event: Event<Void>!
-            var eventHandler: MockEventHandler<Void>!
+            var eventHandler: EventHandlerMock<Void>!
 
             beforeEach {
                 event = Event<Void>()
-                eventHandler = MockEventHandler<Void>()
+                eventHandler = EventHandlerMock<Void>()
             }
 
             describe(".emit()") {
@@ -123,18 +123,5 @@ class EventTests: QuickSpec {
                 }
             }
         }
-    }
-}
-
-class MockEventHandler<T> {
-
-    // MARK: - Instance Properties
-
-    private(set) var handlerCallCount = 0
-    private(set) var handlerParameters: T?
-
-    private(set) lazy var handler: (T) -> Void = { data in
-        self.handlerCallCount += 1
-        self.handlerParameters = data
     }
 }

@@ -97,6 +97,32 @@
 		C0AFE92021F4F63500A7005D /* UIColorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AFE91F21F4F63500A7005D /* UIColorExtensionTests.swift */; };
 		C0E9FD7721F253A8009C453F /* AurorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E9FD6E21F253A7009C453F /* AurorKit.framework */; };
 		C0E9FD7E21F253A8009C453F /* AurorKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C0E9FD7021F253A8009C453F /* AurorKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C24E0AC52217272B0015EFA0 /* LogPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0AC42217272B0015EFA0 /* LogPrinter.swift */; };
+		C24E0AC7221732320015EFA0 /* LogConsolePrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0AC6221732320015EFA0 /* LogConsolePrinter.swift */; };
+		C24E0AC8221732320015EFA0 /* LogConsolePrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0AC6221732320015EFA0 /* LogConsolePrinter.swift */; };
+		C24E0AC9221732320015EFA0 /* LogConsolePrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0AC6221732320015EFA0 /* LogConsolePrinter.swift */; };
+		C24E0ACA221733960015EFA0 /* LogPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0AC42217272B0015EFA0 /* LogPrinter.swift */; };
+		C24E0ACB221733970015EFA0 /* LogPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0AC42217272B0015EFA0 /* LogPrinter.swift */; };
+		C24E0AD122174E870015EFA0 /* LogFilePrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0AD022174E870015EFA0 /* LogFilePrinter.swift */; };
+		C24E0AD222174E870015EFA0 /* LogFilePrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0AD022174E870015EFA0 /* LogFilePrinter.swift */; };
+		C24E0AD322174E870015EFA0 /* LogFilePrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0AD022174E870015EFA0 /* LogFilePrinter.swift */; };
+		C24E0AD6221763B00015EFA0 /* LogFilePrinterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0AD5221763B00015EFA0 /* LogFilePrinterTests.swift */; };
+		C24E0AD722176A7B0015EFA0 /* LogFilePrinterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0AD5221763B00015EFA0 /* LogFilePrinterTests.swift */; };
+		C24E0ADC22181D6F0015EFA0 /* LogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0ADB22181D6F0015EFA0 /* LogTests.swift */; };
+		C24E0ADD22181D6F0015EFA0 /* LogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0ADB22181D6F0015EFA0 /* LogTests.swift */; };
+		C24E0ADF221827F90015EFA0 /* EventHandlerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0ADE221827F90015EFA0 /* EventHandlerMock.swift */; };
+		C24E0AE0221827F90015EFA0 /* EventHandlerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0ADE221827F90015EFA0 /* EventHandlerMock.swift */; };
+		C24E0AE2221828360015EFA0 /* LogPrinterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0AE1221828360015EFA0 /* LogPrinterMock.swift */; };
+		C24E0AE3221828360015EFA0 /* LogPrinterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0AE1221828360015EFA0 /* LogPrinterMock.swift */; };
+		C2714E262218780100DB12B2 /* LoggedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E7BCF4221849950072B7EA /* LoggedViewController.swift */; };
+		C2B2712B22186C0D00F13C3C /* LoggedPageViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B2712722186B8700F13C3C /* LoggedPageViewControllerTests.swift */; };
+		C2B2712D22186C3000F13C3C /* LoggedTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B2712C22186C3000F13C3C /* LoggedTableViewControllerTests.swift */; };
+		C2B2712F2218715800F13C3C /* LoggedTabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B2712E2218715800F13C3C /* LoggedTabBarControllerTests.swift */; };
+		C2B27131221877AC00F13C3C /* LoggedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E7BCF4221849950072B7EA /* LoggedViewController.swift */; };
+		C2B27132221877E200F13C3C /* LoggedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E7BCFD22184BE00072B7EA /* LoggedNavigationController.swift */; };
+		C2B27133221877E500F13C3C /* LoggedPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E7BCFF22184DDF0072B7EA /* LoggedPageViewController.swift */; };
+		C2B27134221877E700F13C3C /* LoggedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E7BD0122184E1B0072B7EA /* LoggedTabBarController.swift */; };
+		C2B27135221877EA00F13C3C /* LoggedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E7BD0322184E600072B7EA /* LoggedTableViewController.swift */; };
 		C2B8D8DB22108C3600C67D84 /* FloatingPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0252D5D21F3BEAA00F41A26 /* FloatingPointExtension.swift */; };
 		C2B8D8DD2210D62100C67D84 /* UIViewBorderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B8D8DC2210D62100C67D84 /* UIViewBorderExtension.swift */; };
 		C2B8D8DE2210D63F00C67D84 /* UIViewBorderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B8D8DC2210D62100C67D84 /* UIViewBorderExtension.swift */; };
@@ -107,6 +133,20 @@
 		C2B8D8E62210EBEB00C67D84 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B8D8E52210EBEB00C67D84 /* UIViewControllerExtension.swift */; };
 		C2B8D8E72210EBEB00C67D84 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B8D8E52210EBEB00C67D84 /* UIViewControllerExtension.swift */; };
 		C2B8D8E82210EBF100C67D84 /* UIViewShadowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B8D8DF2210D71400C67D84 /* UIViewShadowExtension.swift */; };
+		C2DBE1E62216079300244739 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBE1E52216079300244739 /* Log.swift */; };
+		C2DBE1E72216079300244739 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBE1E52216079300244739 /* Log.swift */; };
+		C2DBE1E82216079300244739 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBE1E52216079300244739 /* Log.swift */; };
+		C2DBE20822160ECD00244739 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBE20722160ECD00244739 /* DateFormatterExtension.swift */; };
+		C2DBE20922160ECD00244739 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBE20722160ECD00244739 /* DateFormatterExtension.swift */; };
+		C2DBE20A22160ECD00244739 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBE20722160ECD00244739 /* DateFormatterExtension.swift */; };
+		C2DBE20F2216107500244739 /* DateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBE20B2216105100244739 /* DateFormatterTests.swift */; };
+		C2DBE2102216107600244739 /* DateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBE20B2216105100244739 /* DateFormatterTests.swift */; };
+		C2E7BCFC22184ADB0072B7EA /* LoggedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E7BCF722184A740072B7EA /* LoggedViewControllerTests.swift */; };
+		C2E7BCFE22184BE00072B7EA /* LoggedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E7BCFD22184BE00072B7EA /* LoggedNavigationController.swift */; };
+		C2E7BD0022184DDF0072B7EA /* LoggedPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E7BCFF22184DDF0072B7EA /* LoggedPageViewController.swift */; };
+		C2E7BD0222184E1B0072B7EA /* LoggedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E7BD0122184E1B0072B7EA /* LoggedTabBarController.swift */; };
+		C2E7BD0422184E600072B7EA /* LoggedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E7BD0322184E600072B7EA /* LoggedTableViewController.swift */; };
+		C2E7BD06221863A10072B7EA /* LoggedNavigationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E7BD05221863A10072B7EA /* LoggedNavigationControllerTests.swift */; };
 		C2E865EE22136CAD002DD5D4 /* UIViewBorderExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E865ED22136CAD002DD5D4 /* UIViewBorderExtensionTests.swift */; };
 		C2E865F12213705B002DD5D4 /* UIViewShadowExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E865F02213705B002DD5D4 /* UIViewShadowExtensionTests.swift */; };
 		C2E865F422137071002DD5D4 /* UIViewControllerExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E865F322137071002DD5D4 /* UIViewControllerExtensionTests.swift */; };
@@ -146,24 +186,16 @@
 		02DF386D7694E2F925587C3C /* Pods_AurorKit_Tests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AurorKit_Tests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C62A792872FFA08D5778085 /* Pods_AurorKit_Tests_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AurorKit_Tests_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C808BE434147BC0C5E421A2 /* Pods_AurorKit_Tests_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AurorKit_Tests_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A1797C916E23EDF094082BC /* Pods-Tools Tests iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tools Tests iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tools Tests iOS/Pods-Tools Tests iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		30DE42F6E4165D37080648E4 /* Pods-AurorKit macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit macOS/Pods-AurorKit macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		419C987651E8C27EE4DC0711 /* Pods-AurorKit Tests iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit Tests iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit Tests iOS/Pods-AurorKit Tests iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		41E970DCF7C6C31014757D38 /* Pods-AurorKit tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit tvOS/Pods-AurorKit tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		4729FDF1840038709A92D52D /* Pods_Tools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D88DA49C686B691E290915B /* Pods-AurorKit iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit iOS/Pods-AurorKit iOS.release.xcconfig"; sourceTree = "<group>"; };
-		51838DBE8E0F632983485FE5 /* Pods-Tools iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tools iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tools iOS/Pods-Tools iOS.release.xcconfig"; sourceTree = "<group>"; };
-		53521E43618BBC71546FD3A0 /* Pods_ToolsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToolsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		673888F294850D16CD82D675 /* Pods-AurorKit Tests tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit Tests tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit Tests tvOS/Pods-AurorKit Tests tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		6D805ABE17E7A4C045DA5C2E /* Pods-AurorKit Tests macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit Tests macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit Tests macOS/Pods-AurorKit Tests macOS.release.xcconfig"; sourceTree = "<group>"; };
-		705A5036C99D0373556C95DF /* Pods-ToolsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToolsTests/Pods-ToolsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		85098C465C529153E35618D5 /* Pods_AurorKit_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AurorKit_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86F2C0ACD94EC7673833AE84 /* Pods-AurorKit Tests tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit Tests tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit Tests tvOS/Pods-AurorKit Tests tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		995185B164442F4E0C9198F0 /* Pods-AurorKit Tests macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit Tests macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit Tests macOS/Pods-AurorKit Tests macOS.debug.xcconfig"; sourceTree = "<group>"; };
-		A307A5D2709CCE5883715795 /* Pods-Tools iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tools iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tools iOS/Pods-Tools iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		A615379005C214C0E252ED2C /* Pods_Tools_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tools_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF8A3DA52A751CCAD383D67A /* Pods-Tools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tools.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tools/Pods-Tools.release.xcconfig"; sourceTree = "<group>"; };
-		C000DF1021F3A29E001B535B /* AurorKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AurorKit.podspec; sourceTree = "<group>"; };
+		C000DF1021F3A29E001B535B /* AurorKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AurorKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C0252D5421F3A35E00F41A26 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		C0252D5621F3A5AC00F41A26 /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
 		C0252D5821F3A9D600F41A26 /* DataExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensionTests.swift; sourceTree = "<group>"; };
@@ -212,7 +244,17 @@
 		C0E9FD7021F253A8009C453F /* AurorKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AurorKit.h; sourceTree = "<group>"; };
 		C0E9FD7121F253A8009C453F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0E9FD7621F253A8009C453F /* AurorKit Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AurorKit Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C24E0AC42217272B0015EFA0 /* LogPrinter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogPrinter.swift; sourceTree = "<group>"; };
+		C24E0AC6221732320015EFA0 /* LogConsolePrinter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogConsolePrinter.swift; sourceTree = "<group>"; };
+		C24E0AD022174E870015EFA0 /* LogFilePrinter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFilePrinter.swift; sourceTree = "<group>"; };
+		C24E0AD5221763B00015EFA0 /* LogFilePrinterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFilePrinterTests.swift; sourceTree = "<group>"; };
+		C24E0ADB22181D6F0015EFA0 /* LogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTests.swift; sourceTree = "<group>"; };
+		C24E0ADE221827F90015EFA0 /* EventHandlerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHandlerMock.swift; sourceTree = "<group>"; };
+		C24E0AE1221828360015EFA0 /* LogPrinterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogPrinterMock.swift; sourceTree = "<group>"; };
 		C294FBE62203D98B00ECCB4E /* Bootstrap.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = Bootstrap.sh; sourceTree = "<group>"; };
+		C2B2712722186B8700F13C3C /* LoggedPageViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedPageViewControllerTests.swift; sourceTree = "<group>"; };
+		C2B2712C22186C3000F13C3C /* LoggedTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedTableViewControllerTests.swift; sourceTree = "<group>"; };
+		C2B2712E2218715800F13C3C /* LoggedTabBarControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedTabBarControllerTests.swift; sourceTree = "<group>"; };
 		C2B8D8DC2210D62100C67D84 /* UIViewBorderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewBorderExtension.swift; sourceTree = "<group>"; };
 		C2B8D8DF2210D71400C67D84 /* UIViewShadowExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewShadowExtension.swift; sourceTree = "<group>"; };
 		C2B8D8E12210EB6100C67D84 /* ComparableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparableExtension.swift; sourceTree = "<group>"; };
@@ -221,22 +263,28 @@
 		C2CD9CEB22103DF100EBB05B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C2CD9CEC22103DF100EBB05B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C2CD9CED22103DF100EBB05B /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		C2DBE1E52216079300244739 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		C2DBE20722160ECD00244739 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
+		C2DBE20B2216105100244739 /* DateFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterTests.swift; sourceTree = "<group>"; };
+		C2E7BCF4221849950072B7EA /* LoggedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedViewController.swift; sourceTree = "<group>"; };
+		C2E7BCF722184A740072B7EA /* LoggedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedViewControllerTests.swift; sourceTree = "<group>"; };
+		C2E7BCFD22184BE00072B7EA /* LoggedNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedNavigationController.swift; sourceTree = "<group>"; };
+		C2E7BCFF22184DDF0072B7EA /* LoggedPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedPageViewController.swift; sourceTree = "<group>"; };
+		C2E7BD0122184E1B0072B7EA /* LoggedTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedTabBarController.swift; sourceTree = "<group>"; };
+		C2E7BD0322184E600072B7EA /* LoggedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedTableViewController.swift; sourceTree = "<group>"; };
+		C2E7BD05221863A10072B7EA /* LoggedNavigationControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedNavigationControllerTests.swift; sourceTree = "<group>"; };
 		C2E865ED22136CAD002DD5D4 /* UIViewBorderExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewBorderExtensionTests.swift; sourceTree = "<group>"; };
 		C2E865F02213705B002DD5D4 /* UIViewShadowExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewShadowExtensionTests.swift; sourceTree = "<group>"; };
 		C2E865F322137071002DD5D4 /* UIViewControllerExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensionTests.swift; sourceTree = "<group>"; };
 		C2E865F622138022002DD5D4 /* Matchers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matchers.swift; sourceTree = "<group>"; };
 		C2E865F8221384E5002DD5D4 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C2E865FA22138DB0002DD5D4 /* ComparableExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparableExtensionTests.swift; sourceTree = "<group>"; };
-		D023EA186ECF76C7D5EC6690 /* Pods-Tools Tests iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tools Tests iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tools Tests iOS/Pods-Tools Tests iOS.release.xcconfig"; sourceTree = "<group>"; };
 		D36F6A818A8A1DA9E5CE5E34 /* Pods-AurorKit macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit macOS/Pods-AurorKit macOS.release.xcconfig"; sourceTree = "<group>"; };
 		D6414EEBC854146F383353DF /* Pods-AurorKit Tests iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit Tests iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit Tests iOS/Pods-AurorKit Tests iOS.release.xcconfig"; sourceTree = "<group>"; };
 		D747C59744FA10EC5ED9298D /* Pods-AurorKit tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit tvOS/Pods-AurorKit tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		D98F4AE16788C7D39A7C6C81 /* Pods_AurorKit_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AurorKit_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB4E7007CB44FF38238EC0B /* Pods_AurorKit_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AurorKit_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8BD169B3AA76E91FD1F2917 /* Pods_Tools_Tests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tools_Tests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC0C46562E338F44E3D9382E /* Pods-ToolsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToolsTests/Pods-ToolsTests.release.xcconfig"; sourceTree = "<group>"; };
 		FEDE77F67EE8D78875B43718 /* Pods-AurorKit iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurorKit iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AurorKit iOS/Pods-AurorKit iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		FEF0FEF9115ADB49FB89A315 /* Pods-Tools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tools.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tools/Pods-Tools.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +353,7 @@
 				C2B8D8E12210EB6100C67D84 /* ComparableExtension.swift */,
 				C05A654521F353DA0038EC55 /* ContiguousArrayExtension.swift */,
 				C0252D5621F3A5AC00F41A26 /* DataExtension.swift */,
+				C2DBE20722160ECD00244739 /* DateFormatterExtension.swift */,
 				C0252D5D21F3BEAA00F41A26 /* FloatingPointExtension.swift */,
 				C0252D6D21F3D92000F41A26 /* NSLayoutConstraintExtension.swift */,
 				C05A654221F3450D0038EC55 /* RangeReplaceableCollectionExtension.swift */,
@@ -332,6 +381,7 @@
 				C2E865FA22138DB0002DD5D4 /* ComparableExtensionTests.swift */,
 				C05A656021F399DE0038EC55 /* ContiguousArrayExtensionTests.swift */,
 				C0252D5821F3A9D600F41A26 /* DataExtensionTests.swift */,
+				C2DBE20B2216105100244739 /* DateFormatterTests.swift */,
 				C0252D5F21F3BEED00F41A26 /* FloatingPointExtensionTests.swift */,
 				C0252D6F21F3DCCD00F41A26 /* NSLayoutConstraintTests.swift */,
 				C05A656221F39A9B0038EC55 /* RangeReplaceableCollectionExtensionTests.swift */,
@@ -385,6 +435,7 @@
 			children = (
 				C0A94B1B21F204A500FC4146 /* Events */,
 				C05A653921F341C60038EC55 /* Extensions */,
+				C2DBE1E42216071500244739 /* Log */,
 				C0E9FD7121F253A8009C453F /* Info.plist */,
 				C0E9FD7021F253A8009C453F /* AurorKit.h */,
 			);
@@ -405,6 +456,7 @@
 			children = (
 				C0E9FD6221F2496A009C453F /* Events */,
 				C05A653C21F3420E0038EC55 /* Extensions */,
+				C24E0AD422175D450015EFA0 /* Log */,
 				C2E865F8221384E5002DD5D4 /* .swiftlint.yml */,
 				C0A94B2721F2056400FC4146 /* Info.plist */,
 				C2E865F622138022002DD5D4 /* Matchers.swift */,
@@ -416,25 +468,69 @@
 		C0E9FD6221F2496A009C453F /* Events */ = {
 			isa = PBXGroup;
 			children = (
-				C0E9FD6721F249D3009C453F /* EventTests.swift */,
 				C05A653721F282330038EC55 /* EventConnectionTests.swift */,
+				C24E0ADE221827F90015EFA0 /* EventHandlerMock.swift */,
+				C0E9FD6721F249D3009C453F /* EventTests.swift */,
 			);
 			path = Events;
+			sourceTree = "<group>";
+		};
+		C24E0AD422175D450015EFA0 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				C2E7BCFB22184AA00072B7EA /* ViewControllers */,
+				C24E0AD5221763B00015EFA0 /* LogFilePrinterTests.swift */,
+				C24E0AE1221828360015EFA0 /* LogPrinterMock.swift */,
+				C24E0ADB22181D6F0015EFA0 /* LogTests.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		C2DBE1E42216071500244739 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				C2E7BCFA22184A930072B7EA /* ViewControllers */,
+				C2DBE1E52216079300244739 /* Log.swift */,
+				C24E0AC6221732320015EFA0 /* LogConsolePrinter.swift */,
+				C24E0AD022174E870015EFA0 /* LogFilePrinter.swift */,
+				C24E0AC42217272B0015EFA0 /* LogPrinter.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		C2E7BCFA22184A930072B7EA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C2E7BCFD22184BE00072B7EA /* LoggedNavigationController.swift */,
+				C2E7BCFF22184DDF0072B7EA /* LoggedPageViewController.swift */,
+				C2E7BD0122184E1B0072B7EA /* LoggedTabBarController.swift */,
+				C2E7BD0322184E600072B7EA /* LoggedTableViewController.swift */,
+				C2E7BCF4221849950072B7EA /* LoggedViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C2E7BCFB22184AA00072B7EA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C2E7BD05221863A10072B7EA /* LoggedNavigationControllerTests.swift */,
+				C2B2712722186B8700F13C3C /* LoggedPageViewControllerTests.swift */,
+				C2B2712E2218715800F13C3C /* LoggedTabBarControllerTests.swift */,
+				C2B2712C22186C3000F13C3C /* LoggedTableViewControllerTests.swift */,
+				C2E7BCF722184A740072B7EA /* LoggedViewControllerTests.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		DB79692F833E04AC6C64F6CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4729FDF1840038709A92D52D /* Pods_Tools.framework */,
-				53521E43618BBC71546FD3A0 /* Pods_ToolsTests.framework */,
-				E8BD169B3AA76E91FD1F2917 /* Pods_Tools_Tests_iOS.framework */,
-				A615379005C214C0E252ED2C /* Pods_Tools_iOS.framework */,
-				02DF386D7694E2F925587C3C /* Pods_AurorKit_Tests_iOS.framework */,
 				85098C465C529153E35618D5 /* Pods_AurorKit_iOS.framework */,
-				D98F4AE16788C7D39A7C6C81 /* Pods_AurorKit_tvOS.framework */,
-				1C808BE434147BC0C5E421A2 /* Pods_AurorKit_Tests_tvOS.framework */,
 				DBB4E7007CB44FF38238EC0B /* Pods_AurorKit_macOS.framework */,
+				D98F4AE16788C7D39A7C6C81 /* Pods_AurorKit_tvOS.framework */,
+				02DF386D7694E2F925587C3C /* Pods_AurorKit_Tests_iOS.framework */,
 				0C62A792872FFA08D5778085 /* Pods_AurorKit_Tests_macOS.framework */,
+				1C808BE434147BC0C5E421A2 /* Pods_AurorKit_Tests_tvOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -442,14 +538,6 @@
 		DC06566D72A556AAB638D1C7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FEF0FEF9115ADB49FB89A315 /* Pods-Tools.debug.xcconfig */,
-				BF8A3DA52A751CCAD383D67A /* Pods-Tools.release.xcconfig */,
-				705A5036C99D0373556C95DF /* Pods-ToolsTests.debug.xcconfig */,
-				EC0C46562E338F44E3D9382E /* Pods-ToolsTests.release.xcconfig */,
-				2A1797C916E23EDF094082BC /* Pods-Tools Tests iOS.debug.xcconfig */,
-				D023EA186ECF76C7D5EC6690 /* Pods-Tools Tests iOS.release.xcconfig */,
-				A307A5D2709CCE5883715795 /* Pods-Tools iOS.debug.xcconfig */,
-				51838DBE8E0F632983485FE5 /* Pods-Tools iOS.release.xcconfig */,
 				419C987651E8C27EE4DC0711 /* Pods-AurorKit Tests iOS.debug.xcconfig */,
 				D6414EEBC854146F383353DF /* Pods-AurorKit Tests iOS.release.xcconfig */,
 				FEDE77F67EE8D78875B43718 /* Pods-AurorKit iOS.debug.xcconfig */,
@@ -956,22 +1044,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				C080D10021F66C64003FBCF4 /* CGRectExtension.swift in Sources */,
+				C24E0AD322174E870015EFA0 /* LogFilePrinter.swift in Sources */,
+				C24E0ACB221733970015EFA0 /* LogPrinter.swift in Sources */,
+				C2DBE1E82216079300244739 /* Log.swift in Sources */,
 				C080D10A21F66C77003FBCF4 /* UIEdgeInsetsExtension.swift in Sources */,
 				C080D10921F66C77003FBCF4 /* UIColorExtension.swift in Sources */,
+				C2714E262218780100DB12B2 /* LoggedViewController.swift in Sources */,
 				C2B8D8E42210EBD200C67D84 /* ComparableExtension.swift in Sources */,
 				C080D10D21F66C77003FBCF4 /* UIWindowExtension.swift in Sources */,
 				C2B8D8E72210EBEB00C67D84 /* UIViewControllerExtension.swift in Sources */,
 				C080D10221F66C6A003FBCF4 /* CollectionExtension.swift in Sources */,
 				C080D10721F66C77003FBCF4 /* RangeReplaceableCollectionExtension.swift in Sources */,
 				C080D0FE21F66C5F003FBCF4 /* ArrayExtension.swift in Sources */,
+				C2B27135221877EA00F13C3C /* LoggedTableViewController.swift in Sources */,
 				C080D10121F66C68003FBCF4 /* CGSizeExtension.swift in Sources */,
 				C080D10621F66C77003FBCF4 /* NSLayoutConstraintExtension.swift in Sources */,
+				C24E0AC9221732320015EFA0 /* LogConsolePrinter.swift in Sources */,
 				C080D10C21F66C77003FBCF4 /* UIViewExtension.swift in Sources */,
 				C2B8D8DE2210D63F00C67D84 /* UIViewBorderExtension.swift in Sources */,
+				C2B27134221877E700F13C3C /* LoggedTabBarController.swift in Sources */,
+				C2B27133221877E500F13C3C /* LoggedPageViewController.swift in Sources */,
+				C2DBE20A22160ECD00244739 /* DateFormatterExtension.swift in Sources */,
 				C080D0FD21F66C5B003FBCF4 /* EventConnection.swift in Sources */,
 				C2B8D8E82210EBF100C67D84 /* UIViewShadowExtension.swift in Sources */,
 				C080D10321F66C6D003FBCF4 /* ContiguousArrayExtension.swift in Sources */,
 				C080D0FF21F66C62003FBCF4 /* CGPointExtension.swift in Sources */,
+				C2B27132221877E200F13C3C /* LoggedNavigationController.swift in Sources */,
 				C080D10421F66C70003FBCF4 /* DataExtension.swift in Sources */,
 				C080D10521F66C72003FBCF4 /* FloatingPointExtension.swift in Sources */,
 				C080D10821F66C77003FBCF4 /* StringExtension.swift in Sources */,
@@ -993,14 +1091,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0AE178621F6785A0070DD72 /* CGRectExtension.swift in Sources */,
+				C24E0AD222174E870015EFA0 /* LogFilePrinter.swift in Sources */,
 				C0AE178821F6785A0070DD72 /* CollectionExtension.swift in Sources */,
+				C24E0ACA221733960015EFA0 /* LogPrinter.swift in Sources */,
+				C2DBE20922160ECD00244739 /* DateFormatterExtension.swift in Sources */,
 				C0AE178D21F6785A0070DD72 /* RangeReplaceableCollectionExtension.swift in Sources */,
 				C0AE178421F6785A0070DD72 /* ArrayExtension.swift in Sources */,
 				C0AE178721F6785A0070DD72 /* CGSizeExtension.swift in Sources */,
 				C0AE178321F678520070DD72 /* EventConnection.swift in Sources */,
 				C0AE178921F6785A0070DD72 /* ContiguousArrayExtension.swift in Sources */,
 				C0AE178521F6785A0070DD72 /* CGPointExtension.swift in Sources */,
+				C2DBE1E72216079300244739 /* Log.swift in Sources */,
 				C2B8D8E32210EBD100C67D84 /* ComparableExtension.swift in Sources */,
+				C24E0AC8221732320015EFA0 /* LogConsolePrinter.swift in Sources */,
 				C0AE178A21F6785A0070DD72 /* DataExtension.swift in Sources */,
 				C0AE178B21F6785A0070DD72 /* FloatingPointExtension.swift in Sources */,
 				C0AE178E21F6785A0070DD72 /* StringExtension.swift in Sources */,
@@ -1015,14 +1118,19 @@
 				C0AE17A921F679EB0070DD72 /* CGSizeExtensionTests.swift in Sources */,
 				C0AE17A821F679EB0070DD72 /* CGRectExtensionTests.swift in Sources */,
 				C0AE17A521F679E30070DD72 /* EventConnectionTests.swift in Sources */,
+				C24E0AE0221827F90015EFA0 /* EventHandlerMock.swift in Sources */,
+				C24E0AD6221763B00015EFA0 /* LogFilePrinterTests.swift in Sources */,
+				C24E0AE3221828360015EFA0 /* LogPrinterMock.swift in Sources */,
 				C0AE17AA21F679EB0070DD72 /* CollectionExtensionTests.swift in Sources */,
 				C0AE17B021F679EB0070DD72 /* StringExtensionTests.swift in Sources */,
 				C0AE17AC21F679EB0070DD72 /* DataExtensionTests.swift in Sources */,
 				C0AE17AF21F679EB0070DD72 /* RangeReplaceableCollectionExtensionTests.swift in Sources */,
+				C2DBE2102216107600244739 /* DateFormatterTests.swift in Sources */,
 				C0AE17A421F679E30070DD72 /* EventTests.swift in Sources */,
 				C0AE17AB21F679EB0070DD72 /* ContiguousArrayExtensionTests.swift in Sources */,
 				C0AE17A721F679EB0070DD72 /* CGPointExtensionTests.swift in Sources */,
 				C0A6037721F682D4009EC42C /* Tests.swift in Sources */,
+				C24E0ADD22181D6F0015EFA0 /* LogTests.swift in Sources */,
 				C2E865FC22139EB0002DD5D4 /* ComparableExtensionTests.swift in Sources */,
 				C0AE17AD21F679EB0070DD72 /* FloatingPointExtensionTests.swift in Sources */,
 				C0AE17A621F679EB0070DD72 /* ArrayExtensionTests.swift in Sources */,
@@ -1033,22 +1141,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C24E0AC52217272B0015EFA0 /* LogPrinter.swift in Sources */,
+				C2E7BD0222184E1B0072B7EA /* LoggedTabBarController.swift in Sources */,
+				C24E0AD122174E870015EFA0 /* LogFilePrinter.swift in Sources */,
 				C05A654021F343C30038EC55 /* CollectionExtension.swift in Sources */,
+				C2DBE1E62216079300244739 /* Log.swift in Sources */,
 				C05A653621F26D5B0038EC55 /* EventConnection.swift in Sources */,
+				C2B27131221877AC00F13C3C /* LoggedViewController.swift in Sources */,
 				C05A655421F35AF80038EC55 /* CGSizeExtension.swift in Sources */,
 				C2B8D8E22210EB6100C67D84 /* ComparableExtension.swift in Sources */,
 				C0252D5521F3A35E00F41A26 /* ArrayExtension.swift in Sources */,
 				C05A654321F3450D0038EC55 /* RangeReplaceableCollectionExtension.swift in Sources */,
 				C0AFE91E21F4F29600A7005D /* UIColorExtension.swift in Sources */,
+				C24E0AC7221732320015EFA0 /* LogConsolePrinter.swift in Sources */,
 				C2B8D8E02210D71400C67D84 /* UIViewShadowExtension.swift in Sources */,
 				C05A653521F26D590038EC55 /* Event.swift in Sources */,
 				C0336CE921F4B293006A182C /* UIViewExtension.swift in Sources */,
 				C2B8D8DB22108C3600C67D84 /* FloatingPointExtension.swift in Sources */,
 				C0252D7121F3DCD100F41A26 /* NSLayoutConstraintExtension.swift in Sources */,
 				C2B8D8DD2210D62100C67D84 /* UIViewBorderExtension.swift in Sources */,
+				C2E7BD0422184E600072B7EA /* LoggedTableViewController.swift in Sources */,
+				C2DBE20822160ECD00244739 /* DateFormatterExtension.swift in Sources */,
 				C05A655221F35AA70038EC55 /* CGRectExtension.swift in Sources */,
 				C0252D7821F3E43F00F41A26 /* UIImageExtension.swift in Sources */,
+				C2E7BCFE22184BE00072B7EA /* LoggedNavigationController.swift in Sources */,
 				C05A654621F353DA0038EC55 /* ContiguousArrayExtension.swift in Sources */,
+				C2E7BD0022184DDF0072B7EA /* LoggedPageViewController.swift in Sources */,
 				C0252D6521F3D0A900F41A26 /* StringExtension.swift in Sources */,
 				C0336CEF21F4B955006A182C /* UIWindowExtension.swift in Sources */,
 				C05A654921F354C50038EC55 /* CGPointExtension.swift in Sources */,
@@ -1064,26 +1182,36 @@
 			files = (
 				C05A656321F39A9B0038EC55 /* RangeReplaceableCollectionExtensionTests.swift in Sources */,
 				C2E865F722138022002DD5D4 /* Matchers.swift in Sources */,
+				C24E0AE2221828360015EFA0 /* LogPrinterMock.swift in Sources */,
 				C05A653821F282330038EC55 /* EventConnectionTests.swift in Sources */,
 				C2E865F422137071002DD5D4 /* UIViewControllerExtensionTests.swift in Sources */,
+				C2B2712F2218715800F13C3C /* LoggedTabBarControllerTests.swift in Sources */,
 				C05A655721F35FF40038EC55 /* CGSizeExtensionTests.swift in Sources */,
 				C05A653421F26C3C0038EC55 /* EventTests.swift in Sources */,
 				C2E865F12213705B002DD5D4 /* UIViewShadowExtensionTests.swift in Sources */,
 				C0252D7A21F3E4F200F41A26 /* UIImageExtensionTests.swift in Sources */,
 				C05A655F21F3951A0038EC55 /* CollectionExtensionTests.swift in Sources */,
+				C2E7BD06221863A10072B7EA /* LoggedNavigationControllerTests.swift in Sources */,
 				C0252D6421F3D0A300F41A26 /* StringExtensionTests.swift in Sources */,
 				C0252D5C21F3BDF300F41A26 /* DataExtensionTests.swift in Sources */,
+				C2E7BCFC22184ADB0072B7EA /* LoggedViewControllerTests.swift in Sources */,
+				C24E0ADF221827F90015EFA0 /* EventHandlerMock.swift in Sources */,
 				C05A655021F357060038EC55 /* CGPointExtensionTests.swift in Sources */,
 				C0252D6021F3BEED00F41A26 /* FloatingPointExtensionTests.swift in Sources */,
+				C24E0AD722176A7B0015EFA0 /* LogFilePrinterTests.swift in Sources */,
 				C05A656121F399DE0038EC55 /* ContiguousArrayExtensionTests.swift in Sources */,
 				C05A654E21F355340038EC55 /* ArrayExtensionTests.swift in Sources */,
 				C2E865EE22136CAD002DD5D4 /* UIViewBorderExtensionTests.swift in Sources */,
 				C05A655A21F368830038EC55 /* CGRectExtensionTests.swift in Sources */,
+				C2B2712D22186C3000F13C3C /* LoggedTableViewControllerTests.swift in Sources */,
 				C0AFE92021F4F63500A7005D /* UIColorExtensionTests.swift in Sources */,
+				C2B2712B22186C0D00F13C3C /* LoggedPageViewControllerTests.swift in Sources */,
 				C0336CF121F4B9F2006A182C /* UIWindowExtensionTests.swift in Sources */,
+				C24E0ADC22181D6F0015EFA0 /* LogTests.swift in Sources */,
 				C0252D7521F3E33000F41A26 /* UIEdgeInsetsExtensionTests.swift in Sources */,
 				C0A6037521F682D3009EC42C /* Tests.swift in Sources */,
 				C0336CED21F4B42A006A182C /* UIViewExtensionTests.swift in Sources */,
+				C2DBE20F2216107500244739 /* DateFormatterTests.swift in Sources */,
 				C0252D7021F3DCCD00F41A26 /* NSLayoutConstraintTests.swift in Sources */,
 				C2E865FB22138DB0002DD5D4 /* ComparableExtensionTests.swift in Sources */,
 			);
@@ -1134,6 +1262,7 @@
 				PRODUCT_NAME = AurorKit;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG LOGGING";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
@@ -1166,6 +1295,7 @@
 				PRODUCT_NAME = AurorKit;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = LOGGING;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
@@ -1190,6 +1320,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Aurors.AurorKit.Tests-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
@@ -1212,6 +1343,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Aurors.AurorKit.Tests-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
@@ -1362,6 +1494,7 @@
 				PRODUCT_NAME = AurorKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG LOGGING";
 				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1394,6 +1527,7 @@
 				PRODUCT_NAME = AurorKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = LOGGING;
 				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1416,10 +1550,12 @@
 					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Aurors.AurorKit.Tests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -1440,10 +1576,12 @@
 					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Aurors.AurorKit.Tests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
@@ -1471,6 +1609,7 @@
 				PRODUCT_NAME = AurorKit;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG LOGGING";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1501,6 +1640,7 @@
 				PRODUCT_NAME = AurorKit;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = LOGGING;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1521,8 +1661,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Aurors.AurorKit.Tests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1541,8 +1683,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Aurors.AurorKit.Tests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

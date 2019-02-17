@@ -66,14 +66,6 @@ class ComparableExtensionTests: QuickSpec {
 
                 expect(number).to(equal(123))
             }
-
-            it("should clamp the number properly") {
-                var number = 456
-
-                number.clampBetween(lowerBound: 789, upperBound: 123)
-
-                expect(number).to(equal(123))
-            }
         }
 
         describe(".clamp(to:)") {
@@ -159,12 +151,6 @@ class ComparableExtensionTests: QuickSpec {
 
             it("should return a properly clamped number") {
                 let number = 456.clampedBetween(lowerBound: 123, upperBound: 123)
-
-                expect(number).to(equal(123))
-            }
-
-            it("should return a properly clamped number") {
-                let number = 456.clampedBetween(lowerBound: 789, upperBound: 123)
 
                 expect(number).to(equal(123))
             }

@@ -21,7 +21,7 @@ extension UIImage {
 
     // MARK: - Instance Methods
 
-    public final func scaled(to size: CGSize) -> UIImage? {
+    public func scaled(to size: CGSize) -> UIImage? {
         UIGraphicsBeginImageContext(size)
 
         self.draw(in: CGRect(x: 0.0,
@@ -35,7 +35,7 @@ extension UIImage {
         return scaledImage
     }
 
-    public final func scaledToWidth(_ width: CGFloat) -> UIImage? {
+    public func scaledToWidth(_ width: CGFloat) -> UIImage? {
         guard self.size.width >= 1.0 else {
             return self.scaled(to: CGSize(width: width, height: width))
         }
@@ -46,7 +46,7 @@ extension UIImage {
                                       height: self.size.height * scaleFactor))
     }
 
-    public final func scaledToHeight(_ height: CGFloat) -> UIImage? {
+    public func scaledToHeight(_ height: CGFloat) -> UIImage? {
         guard self.size.height >= 1.0 else {
             return self.scaled(to: CGSize(width: height, height: height))
         }

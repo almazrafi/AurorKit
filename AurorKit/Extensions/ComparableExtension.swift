@@ -21,10 +21,10 @@ extension Comparable {
     }
 
     public func clampedBetween(lowerBound: Self, upperBound: Self) -> Self {
-        return min(max(self, lowerBound), upperBound)
+        return self.clamped(to: lowerBound...upperBound)
     }
 
     public func clamped(to range: ClosedRange<Self>) -> Self {
-        return self.clampedBetween(lowerBound: range.lowerBound, upperBound: range.upperBound)
+        return min(max(self, range.lowerBound), range.upperBound)
     }
 }

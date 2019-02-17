@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = "AurorKit"
-  spec.version = "0.0.3"
+  spec.version = "0.0.4"
   spec.summary = "Swift extensions and tools"
 
   spec.homepage = "https://github.com/almazrafi/AurorKit"
@@ -24,7 +24,7 @@ Pod::Spec.new do |spec|
   spec.tvos.deployment_target = "10.0"
 
   spec.subspec 'Extensions' do |extensions|
-    extensions.source_files = "AurorKit/Extensions"
+    extensions.source_files = "AurorKit/Extensions/**/*.swift"
 
     extensions.macos.exclude_files = [
       "AurorKit/Extensions/NSLayoutConstraintExtension.swift",
@@ -49,6 +49,26 @@ Pod::Spec.new do |spec|
   end
 
   spec.subspec 'Events' do |events|
-    events.source_files = "AurorKit/Events"
+    events.source_files = "AurorKit/Events/**/*.swift"
+  end
+
+  spec.subspec 'Log' do |log|
+    log.source_files = "AurorKit/Log/**/*.swift"
+
+    log.macos.exclude_files = [
+      "AurorKit/Log/ViewControllers/LoggedNavigationController.swift",
+      "AurorKit/Log/ViewControllers/LoggedPageViewController.swift",
+      "AurorKit/Log/ViewControllers/LoggedTabBarController.swift",
+      "AurorKit/Log/ViewControllers/LoggedTableViewController.swift",
+      "AurorKit/Log/ViewControllers/LoggedViewController.swift"
+    ]
+
+    log.watchos.exclude_files = [
+      "AurorKit/Log/ViewControllers/LoggedNavigationController.swift",
+      "AurorKit/Log/ViewControllers/LoggedPageViewController.swift",
+      "AurorKit/Log/ViewControllers/LoggedTabBarController.swift",
+      "AurorKit/Log/ViewControllers/LoggedTableViewController.swift",
+      "AurorKit/Log/ViewControllers/LoggedViewController.swift"
+    ]
   end
 end
