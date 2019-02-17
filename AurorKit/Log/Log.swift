@@ -54,7 +54,7 @@ public enum Log {
                               text: @autoclosure () -> String,
                               sender: @autoclosure () -> Any?,
                               date: @autoclosure () -> Date) {
-        #if LOGGING
+        #if DEBUG || LOGGING
             let body = sender().map({ "\(String(describing: type(of: $0))): \(text())" }) ?? text()
             let line = "\(self.dateFormatter.string(from: date())) \(layer()) \(body)"
 
