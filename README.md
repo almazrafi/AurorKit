@@ -34,7 +34,8 @@ end
 
 If you don't need all the features of AurorKit, you can also include only the necessary dependencies using submodules:
 - Extensions: `pod 'AurorKit/Extensions'`  
-- Events: `pod 'AurorKit/Events'`  
+- Events: `pod 'AurorKit/Events'`
+- Log: `pod 'AurorKit/Log'`
 
 Finally run the following command:
 ```bash
