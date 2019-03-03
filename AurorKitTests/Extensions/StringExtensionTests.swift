@@ -18,7 +18,7 @@ class StringExtensionTests: QuickSpec {
     // MARK: - Instance Methods
 
     override func spec() {
-        describe(".localized(tableName:, comment:)") {
+        describe(".localized(tableName:comment:)") {
             it("should return an empty string") {
                 let string = ""
 

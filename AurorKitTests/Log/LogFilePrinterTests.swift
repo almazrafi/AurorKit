@@ -18,7 +18,7 @@ class LogFilePrinterTests: QuickSpec {
     // MARK: - Instance Methods
 
     override func spec() {
-        describe(".init(encoding:, fileHeader:, fileName:)") {
+        describe(".init(encoding:fileHeader:fileName:)") {
             context("when the header is not empty") {
                 it("should not initialize with invalid file name") {
                     let printer = LogFilePrinter(encoding: .utf8, fileHeader: "Tests Log", fileName: "")
@@ -118,7 +118,7 @@ class LogFilePrinterTests: QuickSpec {
             }
         }
 
-        describe(".print(:)") {
+        describe(".print(_:)") {
             context("when the header is not empty") {
                 var printer: LogFilePrinter?
 
@@ -148,7 +148,7 @@ class LogFilePrinterTests: QuickSpec {
                     printer = LogFilePrinter(encoding: .utf8, fileHeader: "", fileName: "Tests.log")
                 }
 
-                describe(".print(:)") {
+                describe(".print(_:)") {
                     it("should write line to the content") {
                         printer?.print("Something happened")
 

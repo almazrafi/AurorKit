@@ -19,14 +19,14 @@ class EventConnectionTests: QuickSpec {
 
     override func spec() {
         var event: Event<Int>!
-        var eventHandler: EventHandlerMock<Int>!
+        var eventHandler: MockEventHandler<Int>!
 
         beforeEach {
             event = Event<Int>()
-            eventHandler = EventHandlerMock<Int>()
+            eventHandler = MockEventHandler<Int>()
         }
 
-        describe(".init(event:, receiver:, handler:, isActive:)") {
+        describe(".init(event:receiver:handler:isActive:)") {
             it("should initialize properly") {
                 let eventConnection = EventConnection<Int>(event: event,
                                                            receiver: self,
@@ -71,14 +71,14 @@ class EventConnectionTests: QuickSpec {
             describe(".emit(data:)") {
                 it("should not call the handler prematurely") {
                     expect(eventHandler.handlerCallCount).to(equal(0))
-                    expect(eventHandler.handlerParameters).to(beNil())
+                    expect(eventHandler.handlerArguments).to(beNil())
                 }
 
                 it("should call the handler with the correct data") {
                     eventConnection.emit(data: 123)
 
                     expect(eventHandler.handlerCallCount).to(equal(1))
-                    expect(eventHandler.handlerParameters).to(equal(123))
+                    expect(eventHandler.handlerArguments).to(equal(123))
                 }
             }
 

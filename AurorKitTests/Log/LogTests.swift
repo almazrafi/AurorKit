@@ -18,10 +18,10 @@ class LogTests: QuickSpec {
     // MARK: - Instance Methods
 
     override func spec() {
-        var printer: LogPrinterMock!
+        var printer: MockLogPrinter!
 
         beforeEach {
-            printer = LogPrinterMock()
+            printer = MockLogPrinter()
 
             Log.printers.forEach({ printer in
                 Log.unregisterPrinter(printer)
@@ -42,7 +42,7 @@ class LogTests: QuickSpec {
             }
         }
 
-        describe(".registerPrinter(:)") {
+        describe(".registerPrinter(_:)") {
             it("should register the printer") {
                 Log.registerPrinter(printer)
 
@@ -51,7 +51,7 @@ class LogTests: QuickSpec {
             }
         }
 
-        describe(".unregisterPrinter(:)") {
+        describe(".unregisterPrinter(_:)") {
             beforeEach {
                 Log.registerPrinter(printer)
             }
@@ -80,127 +80,127 @@ class LogTests: QuickSpec {
                 Log.registerPrinter(printer)
             }
 
-            describe(".low(:, from:, date:)") {
-                it("should call the printer with correct parameters") {
+            describe(".low(_:from:date:)") {
+                it("should call the printer with correct arguments") {
                     let dateString = dateFormatter.string(from: date)
 
                     Log.low("Something happened", from: self, date: date)
 
                     expect(printer.printCallCount).to(equal(1))
-                    expect(printer.printParameters).to(equal("\(dateString) <*  > LogTests: Something happened"))
+                    expect(printer.printArguments).to(equal("\(dateString) <*  > LogTests: Something happened"))
                 }
 
-                it("should call the printer with correct parameters") {
+                it("should call the printer with correct arguments") {
                     let dateString = dateFormatter.string(from: date)
 
                     Log.low("Something happened", from: nil, date: date)
 
                     expect(printer.printCallCount).to(equal(1))
-                    expect(printer.printParameters).to(equal("\(dateString) <*  > Something happened"))
+                    expect(printer.printArguments).to(equal("\(dateString) <*  > Something happened"))
                 }
             }
 
-            describe(".low(:, date:)") {
-                it("should call the printer with correct parameters") {
+            describe(".low(_:date:)") {
+                it("should call the printer with correct arguments") {
                     let dateString = dateFormatter.string(from: date)
 
                     Log.low("Something happened", date: date)
 
                     expect(printer.printCallCount).to(equal(1))
-                    expect(printer.printParameters).to(equal("\(dateString) <*  > Something happened"))
+                    expect(printer.printArguments).to(equal("\(dateString) <*  > Something happened"))
                 }
             }
 
-            describe(".medium(:, from:, date:)") {
-                it("should call the printer with correct parameters") {
+            describe(".medium(_:from:date:)") {
+                it("should call the printer with correct arguments") {
                     let dateString = dateFormatter.string(from: date)
 
                     Log.medium("Something happened", from: self, date: date)
 
                     expect(printer.printCallCount).to(equal(1))
-                    expect(printer.printParameters).to(equal("\(dateString) <** > LogTests: Something happened"))
+                    expect(printer.printArguments).to(equal("\(dateString) <** > LogTests: Something happened"))
                 }
 
-                it("should call the printer with correct parameters") {
+                it("should call the printer with correct arguments") {
                     let dateString = dateFormatter.string(from: date)
 
                     Log.medium("Something happened", from: nil, date: date)
 
                     expect(printer.printCallCount).to(equal(1))
-                    expect(printer.printParameters).to(equal("\(dateString) <** > Something happened"))
+                    expect(printer.printArguments).to(equal("\(dateString) <** > Something happened"))
                 }
             }
 
-            describe(".medium(:, date:)") {
-                it("should call the printer with correct parameters") {
+            describe(".medium(_:date:)") {
+                it("should call the printer with correct arguments") {
                     let dateString = dateFormatter.string(from: date)
 
                     Log.medium("Something happened", date: date)
 
                     expect(printer.printCallCount).to(equal(1))
-                    expect(printer.printParameters).to(equal("\(dateString) <** > Something happened"))
+                    expect(printer.printArguments).to(equal("\(dateString) <** > Something happened"))
                 }
             }
 
-            describe(".high(:, from:, date:)") {
-                it("should call the printer with correct parameters") {
+            describe(".high(_:from:date:)") {
+                it("should call the printer with correct arguments") {
                     let dateString = dateFormatter.string(from: date)
 
                     Log.high("Something happened", from: self, date: date)
 
                     expect(printer.printCallCount).to(equal(1))
-                    expect(printer.printParameters).to(equal("\(dateString) <***> LogTests: Something happened"))
+                    expect(printer.printArguments).to(equal("\(dateString) <***> LogTests: Something happened"))
                 }
 
-                it("should call the printer with correct parameters") {
+                it("should call the printer with correct arguments") {
                     let dateString = dateFormatter.string(from: date)
 
                     Log.high("Something happened", from: nil, date: date)
 
                     expect(printer.printCallCount).to(equal(1))
-                    expect(printer.printParameters).to(equal("\(dateString) <***> Something happened"))
+                    expect(printer.printArguments).to(equal("\(dateString) <***> Something happened"))
                 }
             }
 
-            describe(".high(:, date:)") {
-                it("should call the printer with correct parameters") {
+            describe(".high(_:date:)") {
+                it("should call the printer with correct arguments") {
                     let dateString = dateFormatter.string(from: date)
 
                     Log.high("Something happened", date: date)
 
                     expect(printer.printCallCount).to(equal(1))
-                    expect(printer.printParameters).to(equal("\(dateString) <***> Something happened"))
+                    expect(printer.printArguments).to(equal("\(dateString) <***> Something happened"))
                 }
             }
 
-            describe(".extra(:, from:, date:)") {
-                it("should call the printer with correct parameters") {
+            describe(".extra(_:from:date:)") {
+                it("should call the printer with correct arguments") {
                     let dateString = dateFormatter.string(from: date)
 
                     Log.extra("Something happened", from: self, date: date)
 
                     expect(printer.printCallCount).to(equal(1))
-                    expect(printer.printParameters).to(equal("\(dateString) <---> LogTests: Something happened"))
+                    expect(printer.printArguments).to(equal("\(dateString) <---> LogTests: Something happened"))
                 }
 
-                it("should call the printer with correct parameters") {
+                it("should call the printer with correct arguments") {
                     let dateString = dateFormatter.string(from: date)
 
                     Log.extra("Something happened", from: nil, date: date)
 
                     expect(printer.printCallCount).to(equal(1))
-                    expect(printer.printParameters).to(equal("\(dateString) <---> Something happened"))
+                    expect(printer.printArguments).to(equal("\(dateString) <---> Something happened"))
                 }
             }
 
-            describe(".extra(:, date:)") {
-                it("should call the printer with correct parameters") {
+            describe(".extra(_:date:)") {
+                it("should call the printer with correct arguments") {
                     let dateString = dateFormatter.string(from: date)
 
                     Log.extra("Something happened", date: date)
 
                     expect(printer.printCallCount).to(equal(1))
-                    expect(printer.printParameters).to(equal("\(dateString) <---> Something happened"))
+                    expect(printer.printArguments).to(equal("\(dateString) <---> Something happened"))
                 }
             }
         }

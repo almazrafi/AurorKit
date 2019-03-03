@@ -23,7 +23,6 @@ disabled_rules:
   - nimble_operator
   - notification_center_detachment
   - nslocalizedstring_key
-  - no_grouping_extension # should ignore Constrained Extensions
   - prefixed_toplevel_constant
   - prohibited_interface_builder
   - sorted_imports
@@ -107,6 +106,7 @@ opt_in_rules:
   - nesting
   - no_extension_access_modifier
   - no_fallthrough_only
+  - no_grouping_extension
   - number_separator
   - object_literal
   - opening_brace
@@ -363,8 +363,8 @@ generic_type_name:
     warning: 1
     error: 1
   max_length:
-    warning: 1
-    error: 1
+    warning: 20
+    error: 20
   validatesStartWithLowercase: true
   excluded:
     - 'T'

@@ -19,7 +19,7 @@ class CGRectExtensionTests: QuickSpec {
     // MARK: - Instance Methods
 
     override func spec() {
-        describe(".init(x:, y:, size:)") {
+        describe(".init(x:y:size:)") {
             it("should initialize properly") {
                 let rect = CGRect(x: CGFloat(1.2),
                                   y: CGFloat(3.4),
@@ -54,7 +54,7 @@ class CGRectExtensionTests: QuickSpec {
             }
         }
 
-        describe(".init(origin:, width:, height:)") {
+        describe(".init(origin:width:height:)") {
             it("should initialize properly") {
                 let rect = CGRect(origin: CGPoint(x: 1.2, y: 3.4),
                                   width: CGFloat(5.6),

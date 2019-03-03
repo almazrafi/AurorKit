@@ -110,10 +110,10 @@
 		C24E0AD722176A7B0015EFA0 /* LogFilePrinterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0AD5221763B00015EFA0 /* LogFilePrinterTests.swift */; };
 		C24E0ADC22181D6F0015EFA0 /* LogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0ADB22181D6F0015EFA0 /* LogTests.swift */; };
 		C24E0ADD22181D6F0015EFA0 /* LogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0ADB22181D6F0015EFA0 /* LogTests.swift */; };
-		C24E0ADF221827F90015EFA0 /* EventHandlerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0ADE221827F90015EFA0 /* EventHandlerMock.swift */; };
-		C24E0AE0221827F90015EFA0 /* EventHandlerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0ADE221827F90015EFA0 /* EventHandlerMock.swift */; };
-		C24E0AE2221828360015EFA0 /* LogPrinterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0AE1221828360015EFA0 /* LogPrinterMock.swift */; };
-		C24E0AE3221828360015EFA0 /* LogPrinterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0AE1221828360015EFA0 /* LogPrinterMock.swift */; };
+		C24E0ADF221827F90015EFA0 /* MockEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0ADE221827F90015EFA0 /* MockEventHandler.swift */; };
+		C24E0AE0221827F90015EFA0 /* MockEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0ADE221827F90015EFA0 /* MockEventHandler.swift */; };
+		C24E0AE2221828360015EFA0 /* MockLogPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0AE1221828360015EFA0 /* MockLogPrinter.swift */; };
+		C24E0AE3221828360015EFA0 /* MockLogPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E0AE1221828360015EFA0 /* MockLogPrinter.swift */; };
 		C2714E262218780100DB12B2 /* LoggedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E7BCF4221849950072B7EA /* LoggedViewController.swift */; };
 		C2B2712B22186C0D00F13C3C /* LoggedPageViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B2712722186B8700F13C3C /* LoggedPageViewControllerTests.swift */; };
 		C2B2712D22186C3000F13C3C /* LoggedTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B2712C22186C3000F13C3C /* LoggedTableViewControllerTests.swift */; };
@@ -249,8 +249,8 @@
 		C24E0AD022174E870015EFA0 /* LogFilePrinter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFilePrinter.swift; sourceTree = "<group>"; };
 		C24E0AD5221763B00015EFA0 /* LogFilePrinterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFilePrinterTests.swift; sourceTree = "<group>"; };
 		C24E0ADB22181D6F0015EFA0 /* LogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTests.swift; sourceTree = "<group>"; };
-		C24E0ADE221827F90015EFA0 /* EventHandlerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHandlerMock.swift; sourceTree = "<group>"; };
-		C24E0AE1221828360015EFA0 /* LogPrinterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogPrinterMock.swift; sourceTree = "<group>"; };
+		C24E0ADE221827F90015EFA0 /* MockEventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEventHandler.swift; sourceTree = "<group>"; };
+		C24E0AE1221828360015EFA0 /* MockLogPrinter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLogPrinter.swift; sourceTree = "<group>"; };
 		C294FBE62203D98B00ECCB4E /* Bootstrap.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = Bootstrap.sh; sourceTree = "<group>"; };
 		C2B2712722186B8700F13C3C /* LoggedPageViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedPageViewControllerTests.swift; sourceTree = "<group>"; };
 		C2B2712C22186C3000F13C3C /* LoggedTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedTableViewControllerTests.swift; sourceTree = "<group>"; };
@@ -436,6 +436,7 @@
 				C0A94B1B21F204A500FC4146 /* Events */,
 				C05A653921F341C60038EC55 /* Extensions */,
 				C2DBE1E42216071500244739 /* Log */,
+				C2E265752219B51D00B47EBC /* WebService */,
 				C0E9FD7121F253A8009C453F /* Info.plist */,
 				C0E9FD7021F253A8009C453F /* AurorKit.h */,
 			);
@@ -469,8 +470,8 @@
 			isa = PBXGroup;
 			children = (
 				C05A653721F282330038EC55 /* EventConnectionTests.swift */,
-				C24E0ADE221827F90015EFA0 /* EventHandlerMock.swift */,
 				C0E9FD6721F249D3009C453F /* EventTests.swift */,
+				C24E0ADE221827F90015EFA0 /* MockEventHandler.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -480,8 +481,8 @@
 			children = (
 				C2E7BCFB22184AA00072B7EA /* ViewControllers */,
 				C24E0AD5221763B00015EFA0 /* LogFilePrinterTests.swift */,
-				C24E0AE1221828360015EFA0 /* LogPrinterMock.swift */,
 				C24E0ADB22181D6F0015EFA0 /* LogTests.swift */,
+				C24E0AE1221828360015EFA0 /* MockLogPrinter.swift */,
 			);
 			path = Log;
 			sourceTree = "<group>";
@@ -496,6 +497,13 @@
 				C24E0AC42217272B0015EFA0 /* LogPrinter.swift */,
 			);
 			path = Log;
+			sourceTree = "<group>";
+		};
+		C2E265752219B51D00B47EBC /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WebService;
 			sourceTree = "<group>";
 		};
 		C2E7BCFA22184A930072B7EA /* ViewControllers */ = {
@@ -1118,9 +1126,9 @@
 				C0AE17A921F679EB0070DD72 /* CGSizeExtensionTests.swift in Sources */,
 				C0AE17A821F679EB0070DD72 /* CGRectExtensionTests.swift in Sources */,
 				C0AE17A521F679E30070DD72 /* EventConnectionTests.swift in Sources */,
-				C24E0AE0221827F90015EFA0 /* EventHandlerMock.swift in Sources */,
+				C24E0AE0221827F90015EFA0 /* MockEventHandler.swift in Sources */,
 				C24E0AD6221763B00015EFA0 /* LogFilePrinterTests.swift in Sources */,
-				C24E0AE3221828360015EFA0 /* LogPrinterMock.swift in Sources */,
+				C24E0AE3221828360015EFA0 /* MockLogPrinter.swift in Sources */,
 				C0AE17AA21F679EB0070DD72 /* CollectionExtensionTests.swift in Sources */,
 				C0AE17B021F679EB0070DD72 /* StringExtensionTests.swift in Sources */,
 				C0AE17AC21F679EB0070DD72 /* DataExtensionTests.swift in Sources */,
@@ -1182,7 +1190,7 @@
 			files = (
 				C05A656321F39A9B0038EC55 /* RangeReplaceableCollectionExtensionTests.swift in Sources */,
 				C2E865F722138022002DD5D4 /* Matchers.swift in Sources */,
-				C24E0AE2221828360015EFA0 /* LogPrinterMock.swift in Sources */,
+				C24E0AE2221828360015EFA0 /* MockLogPrinter.swift in Sources */,
 				C05A653821F282330038EC55 /* EventConnectionTests.swift in Sources */,
 				C2E865F422137071002DD5D4 /* UIViewControllerExtensionTests.swift in Sources */,
 				C2B2712F2218715800F13C3C /* LoggedTabBarControllerTests.swift in Sources */,
@@ -1195,7 +1203,7 @@
 				C0252D6421F3D0A300F41A26 /* StringExtensionTests.swift in Sources */,
 				C0252D5C21F3BDF300F41A26 /* DataExtensionTests.swift in Sources */,
 				C2E7BCFC22184ADB0072B7EA /* LoggedViewControllerTests.swift in Sources */,
-				C24E0ADF221827F90015EFA0 /* EventHandlerMock.swift in Sources */,
+				C24E0ADF221827F90015EFA0 /* MockEventHandler.swift in Sources */,
 				C05A655021F357060038EC55 /* CGPointExtensionTests.swift in Sources */,
 				C0252D6021F3BEED00F41A26 /* FloatingPointExtensionTests.swift in Sources */,
 				C24E0AD722176A7B0015EFA0 /* LogFilePrinterTests.swift in Sources */,

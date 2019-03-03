@@ -20,11 +20,11 @@ class EventTests: QuickSpec {
     override func spec() {
         context("Event where T is Int") {
             var event: Event<Int>!
-            var eventHandler: EventHandlerMock<Int>!
+            var eventHandler: MockEventHandler<Int>!
 
             beforeEach {
                 event = Event<Int>()
-                eventHandler = EventHandlerMock<Int>()
+                eventHandler = MockEventHandler<Int>()
             }
 
             describe(".init()") {
@@ -57,7 +57,7 @@ class EventTests: QuickSpec {
                     }
                 }
 
-                describe(".connect(_ receiver:, handler:)") {
+                describe(".connect(_ receiver:handler:)") {
                     it("should create a valid connection") {
                         expect(eventConnection.event).to(beIdenticalTo(event))
                         expect(eventConnection.receiver).to(beIdenticalTo(self))
@@ -81,7 +81,7 @@ class EventTests: QuickSpec {
                 describe(".emit(data:)") {
                     it("should not call the handler prematurely") {
                         expect(eventHandler.handlerCallCount).to(equal(0))
-                        expect(eventHandler.handlerParameters).to(beNil())
+                        expect(eventHandler.handlerArguments).to(beNil())
                     }
 
                     it("should not call the handler when the connection is deactivated") {
@@ -90,14 +90,14 @@ class EventTests: QuickSpec {
                         event.emit(data: 123)
 
                         expect(eventHandler.handlerCallCount).to(equal(0))
-                        expect(eventHandler.handlerParameters).to(beNil())
+                        expect(eventHandler.handlerArguments).to(beNil())
                     }
 
                     it("should call the handler with the correct data") {
                         event.emit(data: 123)
 
                         expect(eventHandler.handlerCallCount).to(equal(1))
-                        expect(eventHandler.handlerParameters).to(equal(123))
+                        expect(eventHandler.handlerArguments).to(equal(123))
                     }
                 }
             }
@@ -105,11 +105,11 @@ class EventTests: QuickSpec {
 
         context("Event where T is Void") {
             var event: Event<Void>!
-            var eventHandler: EventHandlerMock<Void>!
+            var eventHandler: MockEventHandler<Void>!
 
             beforeEach {
                 event = Event<Void>()
-                eventHandler = EventHandlerMock<Void>()
+                eventHandler = MockEventHandler<Void>()
             }
 
             describe(".emit()") {
@@ -119,7 +119,7 @@ class EventTests: QuickSpec {
                     event.emit()
 
                     expect(eventHandler.handlerCallCount).to(equal(1))
-                    expect(eventHandler.handlerParameters).toNot(beNil())
+                    expect(eventHandler.handlerArguments).toNot(beNil())
                 }
             }
         }
