@@ -255,9 +255,9 @@ convenience_type:
   severity: error
 
 cyclomatic_complexity:
-  warning: 10
-  error: 10
-  ignoresCaseStatements: false
+  warning: 16
+  error: 16
+  ignoresCaseStatements: true
 
 deployment_target:
   severity: error
@@ -501,8 +501,8 @@ no_grouping_extension:
 
 number_separator:
   severity: error
-  minimum_length: 0
-  minimum_fraction_length: 0
+  minimum_length: 5
+  minimum_fraction_length: 5
 
 object_literal:
   severity: error
