@@ -363,8 +363,8 @@ generic_type_name:
     warning: 1
     error: 1
   max_length:
-    warning: 1
-    error: 1
+    warning: 20
+    error: 20
   validatesStartWithLowercase: true
   excluded:
     - 'T'
