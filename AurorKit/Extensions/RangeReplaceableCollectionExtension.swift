@@ -17,7 +17,7 @@ extension RangeReplaceableCollection {
         return try self.index(where: predicate).map({ self.remove(at: $0) })
     }
 
-    public mutating func prepend<S>(contentsOf collection: S) where S: Collection, Self.Element == S.Element {
+    public mutating func prepend<T>(contentsOf collection: T) where T: Collection, Self.Element == T.Element {
         self.insert(contentsOf: collection, at: self.startIndex)
     }
 

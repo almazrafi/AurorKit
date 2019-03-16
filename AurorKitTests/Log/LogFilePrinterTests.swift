@@ -139,6 +139,16 @@ class LogFilePrinterTests: QuickSpec {
                         return try? String(contentsOfFile: printer.filePath, encoding: .utf8)
                     })).to(equal("Tests Log\nSomething happened\n"))
                 }
+
+                it("should write the header and the line if even the file does not exist") {
+                    if let filePath = printer?.filePath {
+                        try? FileManager.default.removeItem(atPath: filePath)
+                    }
+
+                    printer?.print("Something happened")
+
+                    expect(printer?.content).to(equal("Tests Log\nSomething happened\n"))
+                }
             }
 
             context("when the header is empty") {

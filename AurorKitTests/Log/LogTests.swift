@@ -43,7 +43,8 @@ class LogTests: QuickSpec {
         }
 
         describe(".registerPrinter(_:)") {
-            it("should register the printer") {
+            it("should register only unique printers") {
+                Log.registerPrinter(printer)
                 Log.registerPrinter(printer)
 
                 expect(Log.printers.count).to(equal(1))
@@ -111,6 +112,15 @@ class LogTests: QuickSpec {
                 }
             }
 
+            describe(".low(_:)") {
+                it("should call the printer with correct arguments") {
+                    Log.low("Something happened")
+
+                    expect(printer.printCallCount).to(equal(1))
+                    expect(printer.printArguments).to(endWith("<*  > Something happened"))
+                }
+            }
+
             describe(".medium(_:from:date:)") {
                 it("should call the printer with correct arguments") {
                     let dateString = dateFormatter.string(from: date)
@@ -139,6 +149,15 @@ class LogTests: QuickSpec {
 
                     expect(printer.printCallCount).to(equal(1))
                     expect(printer.printArguments).to(equal("\(dateString) <** > Something happened"))
+                }
+            }
+
+            describe(".medium(_:)") {
+                it("should call the printer with correct arguments") {
+                    Log.medium("Something happened")
+
+                    expect(printer.printCallCount).to(equal(1))
+                    expect(printer.printArguments).to(endWith("<** > Something happened"))
                 }
             }
 
@@ -173,6 +192,15 @@ class LogTests: QuickSpec {
                 }
             }
 
+            describe(".high(_:)") {
+                it("should call the printer with correct arguments") {
+                    Log.high("Something happened")
+
+                    expect(printer.printCallCount).to(equal(1))
+                    expect(printer.printArguments).to(endWith("<***> Something happened"))
+                }
+            }
+
             describe(".extra(_:from:date:)") {
                 it("should call the printer with correct arguments") {
                     let dateString = dateFormatter.string(from: date)
@@ -201,6 +229,15 @@ class LogTests: QuickSpec {
 
                     expect(printer.printCallCount).to(equal(1))
                     expect(printer.printArguments).to(equal("\(dateString) <---> Something happened"))
+                }
+            }
+
+            describe(".extra(_:)") {
+                it("should call the printer with correct arguments") {
+                    Log.extra("Something happened")
+
+                    expect(printer.printCallCount).to(equal(1))
+                    expect(printer.printArguments).to(endWith("<---> Something happened"))
                 }
             }
         }
