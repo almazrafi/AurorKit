@@ -18,7 +18,7 @@ class ComparableExtensionTests: QuickSpec {
     // MARK: - Instance Methods
 
     override func spec() {
-        describe(".clampBetween(lowerBound:, upperBound:)") {
+        describe(".clampBetween(lowerBound:upperBound:)") {
             it("should clamp the number properly") {
                 var number = 456
 
@@ -118,7 +118,7 @@ class ComparableExtensionTests: QuickSpec {
             }
         }
 
-        describe(".clampedBetween(lowerBound:, upperBound:)") {
+        describe(".clampedBetween(lowerBound:upperBound:)") {
             it("should return a properly clamped number") {
                 let number = 456.clampedBetween(lowerBound: 123, upperBound: 789)
 

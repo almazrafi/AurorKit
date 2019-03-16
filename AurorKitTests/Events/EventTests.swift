@@ -20,11 +20,11 @@ class EventTests: QuickSpec {
     override func spec() {
         context("Event where T is Int") {
             var event: Event<Int>!
-            var eventHandler: EventHandlerMock<Int>!
+            var eventReceiver: MockEventReceiver<Int>!
 
             beforeEach {
                 event = Event<Int>()
-                eventHandler = EventHandlerMock<Int>()
+                eventReceiver = MockEventReceiver<Int>()
             }
 
             describe(".init()") {
@@ -37,11 +37,12 @@ class EventTests: QuickSpec {
                 var eventConnection: EventConnection<Int>!
 
                 beforeEach {
-                    eventConnection = event.connect(self, handler: eventHandler.handler)
+                    eventConnection = event.connect(eventReceiver, handler: eventReceiver.handler)
                 }
 
                 describe(".register(connection:)") {
-                    it("should re-register the connection") {
+                    it("should register only unique connections") {
+                        event.registerConnection(eventConnection)
                         event.registerConnection(eventConnection)
 
                         expect(event.connections.count).to(equal(1))
@@ -57,10 +58,10 @@ class EventTests: QuickSpec {
                     }
                 }
 
-                describe(".connect(_ receiver:, handler:)") {
+                describe(".connect(_ receiver:handler:)") {
                     it("should create a valid connection") {
                         expect(eventConnection.event).to(beIdenticalTo(event))
-                        expect(eventConnection.receiver).to(beIdenticalTo(self))
+                        expect(eventConnection.receiver).to(beIdenticalTo(eventReceiver))
                         expect(eventConnection.isActive).to(beTrue())
                     }
 
@@ -72,16 +73,16 @@ class EventTests: QuickSpec {
 
                 describe(".disconnect(_ receiver:)") {
                     it("should unregister all connections of the receiver") {
-                        event.disconnect(self)
+                        event.disconnect(eventReceiver)
 
-                        expect(event.connections).toNot(containElementSatisfying({ $0.receiver === self }))
+                        expect(event.connections).toNot(containElementSatisfying({ $0.receiver === eventReceiver }))
                     }
                 }
 
                 describe(".emit(data:)") {
                     it("should not call the handler prematurely") {
-                        expect(eventHandler.handlerCallCount).to(equal(0))
-                        expect(eventHandler.handlerParameters).to(beNil())
+                        expect(eventReceiver.handlerCallCount).to(equal(0))
+                        expect(eventReceiver.handlerArguments).to(beNil())
                     }
 
                     it("should not call the handler when the connection is deactivated") {
@@ -89,15 +90,15 @@ class EventTests: QuickSpec {
 
                         event.emit(data: 123)
 
-                        expect(eventHandler.handlerCallCount).to(equal(0))
-                        expect(eventHandler.handlerParameters).to(beNil())
+                        expect(eventReceiver.handlerCallCount).to(equal(0))
+                        expect(eventReceiver.handlerArguments).to(beNil())
                     }
 
                     it("should call the handler with the correct data") {
                         event.emit(data: 123)
 
-                        expect(eventHandler.handlerCallCount).to(equal(1))
-                        expect(eventHandler.handlerParameters).to(equal(123))
+                        expect(eventReceiver.handlerCallCount).to(equal(1))
+                        expect(eventReceiver.handlerArguments).to(equal(123))
                     }
                 }
             }
@@ -105,21 +106,21 @@ class EventTests: QuickSpec {
 
         context("Event where T is Void") {
             var event: Event<Void>!
-            var eventHandler: EventHandlerMock<Void>!
+            var eventReceiver: MockEventReceiver<Void>!
 
             beforeEach {
                 event = Event<Void>()
-                eventHandler = EventHandlerMock<Void>()
+                eventReceiver = MockEventReceiver<Void>()
             }
 
             describe(".emit()") {
                 it("should call the handler with the correct data") {
-                    event.connect(self, handler: eventHandler.handler)
+                    event.connect(eventReceiver, handler: eventReceiver.handler)
 
                     event.emit()
 
-                    expect(eventHandler.handlerCallCount).to(equal(1))
-                    expect(eventHandler.handlerParameters).toNot(beNil())
+                    expect(eventReceiver.handlerCallCount).to(equal(1))
+                    expect(eventReceiver.handlerArguments).toNot(beNil())
                 }
             }
         }

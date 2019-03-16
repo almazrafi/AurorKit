@@ -18,7 +18,7 @@ class LogFilePrinterTests: QuickSpec {
     // MARK: - Instance Methods
 
     override func spec() {
-        describe(".init(encoding:, fileHeader:, fileName:)") {
+        describe(".init(encoding:fileHeader:fileName:)") {
             context("when the header is not empty") {
                 it("should not initialize with invalid file name") {
                     let printer = LogFilePrinter(encoding: .utf8, fileHeader: "Tests Log", fileName: "")
@@ -118,7 +118,7 @@ class LogFilePrinterTests: QuickSpec {
             }
         }
 
-        describe(".print(:)") {
+        describe(".print(_:)") {
             context("when the header is not empty") {
                 var printer: LogFilePrinter?
 
@@ -139,6 +139,16 @@ class LogFilePrinterTests: QuickSpec {
                         return try? String(contentsOfFile: printer.filePath, encoding: .utf8)
                     })).to(equal("Tests Log\nSomething happened\n"))
                 }
+
+                it("should write the header and the line if even the file does not exist") {
+                    if let filePath = printer?.filePath {
+                        try? FileManager.default.removeItem(atPath: filePath)
+                    }
+
+                    printer?.print("Something happened")
+
+                    expect(printer?.content).to(equal("Tests Log\nSomething happened\n"))
+                }
             }
 
             context("when the header is empty") {
@@ -148,7 +158,7 @@ class LogFilePrinterTests: QuickSpec {
                     printer = LogFilePrinter(encoding: .utf8, fileHeader: "", fileName: "Tests.log")
                 }
 
-                describe(".print(:)") {
+                describe(".print(_:)") {
                     it("should write line to the content") {
                         printer?.print("Something happened")
 

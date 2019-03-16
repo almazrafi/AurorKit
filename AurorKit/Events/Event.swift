@@ -50,7 +50,7 @@ public class Event<T> {
     }
 }
 
-// MARK: -
+// MARK: - Where T == Void
 
 extension Event where T == Void {
 

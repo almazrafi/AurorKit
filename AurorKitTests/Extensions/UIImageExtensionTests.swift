@@ -106,7 +106,7 @@ class UIImageExtensionTests: QuickSpec {
             }
         }
 
-        describe(".scaledToWidth(:)") {
+        describe(".scaledToWidth(_:)") {
             it("should return nil") {
                 let image = UIImage().scaledToWidth(0.0)
 
@@ -132,7 +132,7 @@ class UIImageExtensionTests: QuickSpec {
             }
         }
 
-        describe(".scaledToHeight(:)") {
+        describe(".scaledToHeight(_:)") {
             it("should return nil") {
                 let image = UIImage().scaledToHeight(0.0)
 

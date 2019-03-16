@@ -18,7 +18,7 @@ class UIColorExtensionTests: QuickSpec {
     // MARK: - Instance Methods
 
     override func spec() {
-        describe(".init(red:, green:, blue:)") {
+        describe(".init(red:green:blue:)") {
             it("should initialize properly") {
                 let color = UIColor(red: 0.0, green: 0.123, blue: 1.0)
 
@@ -46,7 +46,7 @@ class UIColorExtensionTests: QuickSpec {
             }
         }
 
-        describe(".init(redByte:, greenByte:, blueByte:, alphaByte:)") {
+        describe(".init(redByte:greenByte:blueByte:alphaByte:)") {
             it("should initialize properly") {
                 let color = UIColor(redByte: 0, greenByte: 123, blueByte: 255, alphaByte: 255)
 
@@ -54,7 +54,7 @@ class UIColorExtensionTests: QuickSpec {
             }
         }
 
-        describe(".init(redByte:, greenByte:, blueByte:, alpha:)") {
+        describe(".init(redByte:greenByte:blueByte:alpha:)") {
             it("should initialize properly") {
                 let color = UIColor(redByte: 0, greenByte: 123, blueByte: 255, alpha: 0.123)
 
@@ -68,7 +68,7 @@ class UIColorExtensionTests: QuickSpec {
             }
         }
 
-        describe(".init(whiteByte:, alphaByte:)") {
+        describe(".init(whiteByte:alphaByte:)") {
             it("should initialize properly") {
                 let color = UIColor(whiteByte: 0, alphaByte: 0)
 
@@ -88,7 +88,7 @@ class UIColorExtensionTests: QuickSpec {
             }
         }
 
-        describe(".init(whiteByte:, alpha:)") {
+        describe(".init(whiteByte:alpha:)") {
             it("should initialize properly") {
                 let color = UIColor(whiteByte: 0, alpha: 0.0)
 

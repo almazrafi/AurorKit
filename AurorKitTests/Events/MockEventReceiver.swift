@@ -1,5 +1,5 @@
 //
-//  EventHandlerMock.swift
+//  MockEventReceiver.swift
 //  AurorKit
 //
 //  Created by Almaz Ibragimov on 16/02/2019.
@@ -8,15 +8,15 @@
 
 import Foundation
 
-class EventHandlerMock<T> {
+class MockEventReceiver<T> {
 
     // MARK: - Instance Properties
 
     private(set) var handlerCallCount = 0
-    private(set) var handlerParameters: T?
+    private(set) var handlerArguments: T?
 
-    private(set) lazy var handler: (T) -> Void = { data in
+    private(set) lazy var handler: (T) -> Void = { [unowned self] data in
         self.handlerCallCount += 1
-        self.handlerParameters = data
+        self.handlerArguments = data
     }
 }

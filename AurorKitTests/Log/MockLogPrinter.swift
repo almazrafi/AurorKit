@@ -1,5 +1,5 @@
 //
-//  LogPrinterMock.swift
+//  MockLogPrinter.swift
 //  AurorKit
 //
 //  Created by Almaz Ibragimov on 16/02/2019.
@@ -9,18 +9,18 @@
 import Foundation
 import AurorKit
 
-class LogPrinterMock: LogPrinter {
+class MockLogPrinter: LogPrinter {
 
     // MARK: - Instance Properties
 
     private(set) var printCallCount = 0
-    private(set) var printParameters: String?
+    private(set) var printArguments: String?
 
     // MARK: - Instance Methods
 
     func print(_ line: String) {
         self.printCallCount += 1
-        self.printParameters = line
+        self.printArguments = line
 
         Swift.print(line)
     }

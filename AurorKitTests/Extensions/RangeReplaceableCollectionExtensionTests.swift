@@ -70,7 +70,7 @@ class RangeReplaceableCollectionExtensionTests: QuickSpec {
             }
         }
 
-        describe(".prepend(:)") {
+        describe(".prepend(_:)") {
             it("should prepend an element to the collection") {
                 var collection: [Int] = []
 

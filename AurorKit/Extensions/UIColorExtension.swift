@@ -129,18 +129,11 @@ extension UIColor {
 
         self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
 
-        if alpha < 1.0 - CGFloat.leastNonzeroMagnitude {
-            return String(format: "#%02lX%02lX%02lX%02lX",
-                          Int(alpha * 255.0),
-                          Int(red * 255.0),
-                          Int(green * 255.0),
-                          Int(blue * 255.0))
-        } else {
-            return String(format: "#FF%02lX%02lX%02lX",
-                          Int(red * 255.0),
-                          Int(green * 255.0),
-                          Int(blue * 255.0))
-        }
+        return String(format: "#%02lX%02lX%02lX%02lX",
+                      Int(alpha * 255.0),
+                      Int(red * 255.0),
+                      Int(green * 255.0),
+                      Int(blue * 255.0))
     }
 
     public var rgbaHexString: String {
@@ -151,18 +144,11 @@ extension UIColor {
 
         self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
 
-        if alpha < 1.0 - CGFloat.leastNonzeroMagnitude {
-            return String(format: "#%02lX%02lX%02lX%02lX",
-                          Int(red * 255.0),
-                          Int(green * 255.0),
-                          Int(blue * 255.0),
-                          Int(alpha * 255.0))
-        } else {
-            return String(format: "#%02lX%02lX%02lXFF",
-                          Int(red * 255.0),
-                          Int(green * 255.0),
-                          Int(blue * 255.0))
-        }
+        return String(format: "#%02lX%02lX%02lX%02lX",
+                      Int(red * 255.0),
+                      Int(green * 255.0),
+                      Int(blue * 255.0),
+                      Int(alpha * 255.0))
     }
 
     public var rgbHexString: String {

@@ -58,7 +58,7 @@ class CollectionExtensionTests: QuickSpec {
             }
         }
 
-        describe(".split(maxSplits:, by:)") {
+        describe(".split(maxSplits:by:)") {
             it("should return an empty collection") {
                 let collection = [Int]().split(maxSplits: 1, by: { $0 == $1 })
 

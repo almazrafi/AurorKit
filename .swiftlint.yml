@@ -8,6 +8,7 @@ disabled_rules:
   - explicit_enum_raw_value
   - explicit_type_interface
   - extension_access_modifier
+  - fallthrough
   - fatal_error_message
   - file_name # doesn't work as it should
   - force_cast
@@ -23,10 +24,12 @@ disabled_rules:
   - nimble_operator
   - notification_center_detachment
   - nslocalizedstring_key
-  - no_grouping_extension # should ignore Constrained Extensions
+  - nsobject_prefer_isequal
   - prefixed_toplevel_constant
   - prohibited_interface_builder
+  - required_deinit
   - sorted_imports
+  - strict_fileprivate
   - strong_iboutlet
   - toggle_bool
   - trailing_closure
@@ -70,7 +73,6 @@ opt_in_rules:
   - explicit_init
   - explicit_self # doesn't work as it should
   - explicit_top_level_acl # frameworks only
-  - fallthrough
   - file_header
   - file_length
   - file_name
@@ -107,6 +109,7 @@ opt_in_rules:
   - nesting
   - no_extension_access_modifier
   - no_fallthrough_only
+  - no_grouping_extension
   - number_separator
   - object_literal
   - opening_brace
@@ -124,6 +127,7 @@ opt_in_rules:
   - quick_discouraged_call
   - quick_discouraged_focused_test
   - quick_discouraged_pending_test
+  - reduce_boolean
   - redundant_discardable_let
   - redundant_nil_coalescing
   - redundant_objc_attribute
@@ -139,7 +143,6 @@ opt_in_rules:
   - sorted_first_last
   - statement_position
   - static_operator
-  - strict_fileprivate
   - superfluous_disable_command
   - switch_case_alignment
   - switch_case_on_newline
@@ -204,6 +207,7 @@ attributes:
     - '@discardableResult'
     - '@usableFromInline'
     - '@warn_unqualified_access'
+    - '@testable'
 
 block_based_kvo:
   severity: error
@@ -233,6 +237,7 @@ collection_alignment:
 
 colon:
   severity: error
+  flexibleRightSpacing: false
   apply_to_dictionaries: true
 
 comma:
@@ -255,9 +260,9 @@ convenience_type:
   severity: error
 
 cyclomatic_complexity:
-  warning: 10
-  error: 10
-  ignoresCaseStatements: false
+  warning: 16
+  error: 16
+  ignoresCaseStatements: true
 
 deployment_target:
   severity: error
@@ -316,9 +321,6 @@ explicit_self:
 explicit_top_level_acl:
   severity: error
 
-fallthrough:
-  severity: error
-
 file_header:
   severity: error
   required_pattern: |
@@ -360,8 +362,8 @@ function_parameter_count:
 
 generic_type_name:
   min_length:
-    warning: 1
-    error: 1
+    warning: 3
+    error: 3
   max_length:
     warning: 20
     error: 20
@@ -383,8 +385,9 @@ identifier_name:
     error: 40
   validates_start_with_lowercase: true
   excluded:
+    - 'url'
     - 'id'
-    - 'URL'
+    - 'at'
     - 'to'
     - 'a'
     - 'b'
@@ -501,8 +504,9 @@ no_grouping_extension:
 
 number_separator:
   severity: error
-  minimum_length: 0
-  minimum_fraction_length: 0
+  minimum_length: 5
+  minimum_fraction_length: 5
+  exclude_ranges: []
 
 object_literal:
   severity: error
@@ -522,6 +526,7 @@ overridden_super_call:
   severity: error
   included:
     - '*'
+  excluded: []
 
 override_in_extension:
   severity: error
@@ -559,6 +564,9 @@ quick_discouraged_focused_test:
 
 quick_discouraged_pending_test:
   severity: warning
+
+reduce_boolean:
+  severity: error
 
 redundant_discardable_let:
   severity: error
@@ -606,9 +614,6 @@ statement_position:
   statement_mode: 'default'
 
 static_operator:
-  severity: error
-
-strict_fileprivate:
   severity: error
 
 superfluous_disable_command:
@@ -678,10 +683,10 @@ unused_import:
 
 unused_optional_binding:
   severity: error
-  ignore_optional_try: falser
+  ignore_optional_try: false
 
 unused_private_declaration:
-  severity: warning
+  severity: error
 
 unused_setter_value:
   severity: error

@@ -40,6 +40,8 @@ public class EventConnection<T> {
     internal func emit(data: T) {
         if self.receiver != nil {
             self.handler(data)
+        } else {
+            self.deactivate()
         }
     }
 
