@@ -1,11 +1,3 @@
-//
-//  Matchers.swift
-//  AurorKit
-//
-//  Created by Almaz Ibragimov on 13/02/2019.
-//  Copyright © 2019 Aurors. All rights reserved.
-//
-
 import UIKit
 
 import Quick

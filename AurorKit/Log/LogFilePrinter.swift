@@ -1,11 +1,3 @@
-//
-//  LogFilePrinter.swift
-//  AurorKit
-//
-//  Created by Almaz Ibragimov on 15/02/2019.
-//  Copyright © 2019 Aurors. All rights reserved.
-//
-
 import Foundation
 
 public class LogFilePrinter: LogPrinter {
@@ -13,7 +5,7 @@ public class LogFilePrinter: LogPrinter {
     // MARK: - Instance Properties
 
     private var headerContent: String {
-        return self.fileHeader.isEmpty ? "" : "\(self.fileHeader)\n"
+        return fileHeader.isEmpty ? "" : "\(fileHeader)\n"
     }
 
     // MARK: -
@@ -25,13 +17,15 @@ public class LogFilePrinter: LogPrinter {
     public let filePath: String
 
     public var content: String? {
-        return try? String(contentsOfFile: self.filePath, encoding: self.encoding)
+        return try? String(contentsOfFile: filePath, encoding: encoding)
     }
 
     // MARK: - Initializers
 
     public init?(encoding: String.Encoding = .utf8, fileHeader: String = "", fileName: String) {
-        guard let documentURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+        let fileManager = FileManager.default
+
+        guard let documentURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else {
             return nil
         }
 
@@ -42,19 +36,19 @@ public class LogFilePrinter: LogPrinter {
         self.filePath = documentURL.appendingPathComponent(fileName).path
 
         do {
-            try FileManager.default.createDirectory(at: documentURL,
-                                                    withIntermediateDirectories: true,
-                                                    attributes: nil)
+            try fileManager.createDirectory(
+                at: documentURL,
+                withIntermediateDirectories: true,
+                attributes: nil
+            )
 
             var isDirectory: ObjCBool = false
 
-            if FileManager.default.fileExists(atPath: self.filePath, isDirectory: &isDirectory) {
-                guard !isDirectory.boolValue else {
-                    return nil
-                }
+            if fileManager.fileExists(atPath: filePath, isDirectory: &isDirectory), isDirectory.boolValue {
+                return nil
             }
 
-            try self.clear()
+            try clear()
         } catch {
             return nil
         }
@@ -63,12 +57,10 @@ public class LogFilePrinter: LogPrinter {
     // MARK: - Instance Methods
 
     public func print(_ line: String) {
-        let content = "\(self.content ?? self.headerContent)\(line)\n"
-
-        try? content.write(toFile: self.filePath, atomically: true, encoding: self.encoding)
+        try? "\(content ?? headerContent)\(line)\n".write(toFile: filePath, atomically: true, encoding: encoding)
     }
 
     public func clear() throws {
-        try self.headerContent.write(toFile: self.filePath, atomically: true, encoding: self.encoding)
+        try headerContent.write(toFile: filePath, atomically: true, encoding: encoding)
     }
 }
