@@ -1,57 +1,48 @@
-//
-//  EventConnection.swift
-//  AurorKit
-//
-//  Created by Almaz Ibragimov on 12/05/2018.
-//  Copyright © 2018 Aurors. All rights reserved.
-//
-
 import Foundation
 
-public class EventConnection<T> {
+public class EventConnection<Context> {
 
     // MARK: - Instance Properties
 
-    public private(set) weak var event: Event<T>?
-    public private(set) weak var receiver: AnyObject?
-
-    public var isActive: Bool {
-        return self.event?.connections.contains(where: { $0 === self }) ?? false
-    }
+    internal let handler: Event<Context>.Handler
 
     // MARK: -
 
-    internal let handler: Event<T>.Handler
+    public private(set) weak var event: Event<Context>?
+    public private(set) weak var receiver: AnyObject?
+
+    public var isActive: Bool {
+        return (receiver != nil) && (event?.connections.contains { $0 === self } == true)
+    }
 
     // MARK: - Initializers
 
-    internal init(event: Event<T>, receiver: AnyObject, handler: @escaping Event<T>.Handler, activated: Bool = true) {
-        self.event = event
-        self.receiver = receiver
+    internal init(event: Event<Context>, receiver: AnyObject, handler: @escaping Event<Context>.Handler) {
         self.handler = handler
 
-        if activated {
-            self.event?.registerConnection(self)
-        }
+        self.event = event
+        self.receiver = receiver
+
+        event.registerConnection(self)
     }
 
     // MARK: - Instance Methods
 
-    internal func emit(data: T) {
-        if self.receiver != nil {
-            self.handler(data)
+    internal func emit(_ context: Context) {
+        if receiver != nil {
+            handler(context)
         } else {
-            self.deactivate()
+            deactivate()
         }
     }
 
     // MARK: -
 
     public func deactivate() {
-        self.event?.unregisterConnection(self)
+        event?.unregisterConnection(self)
     }
 
     public func activate() {
-        self.event?.registerConnection(self)
+        event?.registerConnection(self)
     }
 }

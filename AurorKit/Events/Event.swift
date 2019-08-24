@@ -1,22 +1,14 @@
-//
-//  Event.swift
-//  AurorKit
-//
-//  Created by Almaz Ibragimov on 12/05/2018.
-//  Copyright © 2018 Aurors. All rights reserved.
-//
-
 import Foundation
 
-public class Event<T> {
+public class Event<Context> {
 
     // MARK: - Nested Types
 
-    public typealias Handler = ((T) -> Void)
+    public typealias Handler = ((_ context: Context) -> Void)
 
     // MARK: - Instance Properties
 
-    public private(set) var connections: [EventConnection<T>] = []
+    public private(set) var connections: [EventConnection<Context>] = []
 
     // MARK: - Initializers
 
@@ -24,39 +16,41 @@ public class Event<T> {
 
     // MARK: - Instance Methods
 
-    internal func registerConnection(_ connection: EventConnection<T>) {
-        if !self.connections.contains(where: { $0 === connection }) {
-            self.connections.append(connection)
+    internal func registerConnection(_ connection: EventConnection<Context>) {
+        if !connections.contains(where: { $0 === connection }) {
+            connections.append(connection)
         }
     }
 
-    internal func unregisterConnection(_ connection: EventConnection<T>) {
-        self.connections.removeAll(where: { $0 === connection })
+    internal func unregisterConnection(_ connection: EventConnection<Context>) {
+        connections.removeAll { $0 === connection }
     }
 
     @discardableResult
-    public func connect(_ receiver: AnyObject, handler: @escaping Handler) -> EventConnection<T> {
-        return EventConnection(event: self,
-                               receiver: receiver,
-                               handler: handler)
+    public func connect(_ receiver: AnyObject, handler: @escaping Handler) -> EventConnection<Context> {
+        return EventConnection(
+            event: self,
+            receiver: receiver,
+            handler: handler
+        )
     }
 
     public func disconnect(_ receiver: AnyObject) {
-        self.connections.removeAll(where: { $0.receiver === receiver })
+        connections.removeAll { $0.receiver === receiver }
     }
 
-    public func emit(data: T) {
-        self.connections.forEach({ $0.emit(data: data) })
+    public func emit(_ context: Context) {
+        connections.forEach { $0.emit(context) }
     }
 }
 
-// MARK: - Where T == Void
+// MARK: - where Context == Void
 
-extension Event where T == Void {
+extension Event where Context == Void {
 
     // MARK: - Instance Methods
 
     public func emit() {
-        self.emit(data: Void())
+        emit(Void())
     }
 }

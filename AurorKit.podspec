@@ -27,24 +27,36 @@ Pod::Spec.new do |spec|
     extensions.source_files = "AurorKit/Extensions/**/*.swift"
 
     extensions.macos.exclude_files = [
-      "AurorKit/Extensions/NSLayoutConstraintExtension.swift",
-      "AurorKit/Extensions/UIColorExtension.swift",
-      "AurorKit/Extensions/UIEdgeInsetsExtension.swift",
-      "AurorKit/Extensions/UIImageExtension.swift",
-      "AurorKit/Extensions/UIViewBorderExtension.swift",
-      "AurorKit/Extensions/UIViewControllerExtension.swift",
-      "AurorKit/Extensions/UIViewExtension.swift",
-      "AurorKit/Extensions/UIViewShadowExtension.swift",
-      "AurorKit/Extensions/UIWindowExtension.swift"
+      "AurorKit/Extensions/NSLayoutConstraint+Extensions.swift",
+      "AurorKit/Extensions/UIApplication+Extensions",
+      "AurorKit/Extensions/UIColor+Extensions.swift",
+      "AurorKit/Extensions/UIDevice+Extensions.swift",
+      "AurorKit/Extensions/UIEdgeInsets+Extensions.swift",
+      "AurorKit/Extensions/UIImage+Extensions.swift",
+      "AurorKit/Extensions/UINavigationController+Extensionsswift",
+      "AurorKit/Extensions/UIScreen+Extensions.swift",
+      "AurorKit/Extensions/UIStackView+Extensions.swift",
+      "AurorKit/Extensions/UIView+Border.swift",
+      "AurorKit/Extensions/UIView+Extensions.swift",
+      "AurorKit/Extensions/UIView+RoundedCorners.swift",
+      "AurorKit/Extensions/UIView+Shadow.swift",
+      "AurorKit/Extensions/UIViewController+Extensions.swift",
+      "AurorKit/Extensions/UIWindow+Extensions.swift"
     ]
 
     extensions.watchos.exclude_files = [
-      "AurorKit/Extensions/NSLayoutConstraintExtension.swift",
-      "AurorKit/Extensions/UIViewBorderExtension.swift",
-      "AurorKit/Extensions/UIViewControllerExtension.swift",
-      "AurorKit/Extensions/UIViewExtension.swift",
-      "AurorKit/Extensions/UIViewShadowExtension.swift",
-      "AurorKit/Extensions/UIWindowExtension.swift"
+      "AurorKit/Extensions/NSLayoutConstraint+Extensions.swift",
+      "AurorKit/Extensions/UIApplication+Extensions",
+      "AurorKit/Extensions/UIDevice+Extensions.swift",
+      "AurorKit/Extensions/UINavigationController+Extensionsswift",
+      "AurorKit/Extensions/UIScreen+Extensions.swift",
+      "AurorKit/Extensions/UIStackView+Extensions.swift",
+      "AurorKit/Extensions/UIView+Border.swift",
+      "AurorKit/Extensions/UIView+Extensions.swift",
+      "AurorKit/Extensions/UIView+Shadow.swift",
+      "AurorKit/Extensions/UIView+RoundedCorners.swift",
+      "AurorKit/Extensions/UIViewController+Extensions.swift",
+      "AurorKit/Extensions/UIWindow+Extensions.swift"
     ]
   end
 

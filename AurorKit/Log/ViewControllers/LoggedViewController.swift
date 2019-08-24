@@ -1,11 +1,3 @@
-//
-//  LoggedViewController.swift
-//  AurorKit
-//
-//  Created by Almaz Ibragimov on 01/01/2018.
-//  Copyright © 2019 Aurors. All rights reserved.
-//
-
 import UIKit
 
 open class LoggedViewController: UIViewController {
