@@ -13,7 +13,7 @@ coverage:
         threshold: 1.0%
 
   comment:
-    layout: reach, diff
+    layout: header
 
   ignore:
     - "AurorKitTests"
