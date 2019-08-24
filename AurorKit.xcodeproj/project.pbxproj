@@ -1078,7 +1078,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ -z \"$CI\" ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint --no-cache\n  else\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n    exit 1\n  fi\nfi\n";
+			shellScript = "if [ -z \"$SKIP_SWIFT_LINT\" ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint --no-cache\n  else\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n    exit 1\n  fi\nfi\n";
 		};
 		C2DF3E032200FC9200C6ACB1 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1096,7 +1096,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ -z \"$CI\" ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint --no-cache\n  else\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n    exit 1\n  fi\nfi\n";
+			shellScript = "if [ -z \"$SKIP_SWIFT_LINT\" ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint --no-cache\n  else\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n    exit 1\n  fi\nfi\n";
 		};
 		C2DF3E042200FC9D00C6ACB1 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1114,7 +1114,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ -z \"$CI\" ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint --no-cache\n  else\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n    exit 1\n  fi\nfi\n";
+			shellScript = "if [ -z \"$SKIP_SWIFT_LINT\" ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint --no-cache\n  else\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n    exit 1\n  fi\nfi\n";
 		};
 		D0847FFCA128A5B9E4BDCF92 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

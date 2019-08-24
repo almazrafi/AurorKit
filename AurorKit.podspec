@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = "AurorKit"
-  spec.version = "0.0.4"
+  spec.version = "0.1.0"
   spec.summary = "Swift extensions and tools"
 
   spec.homepage = "https://github.com/almazrafi/AurorKit"
@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   spec.author = { "Almaz Ibragimov" => "almazrafi@gmail.com" }
   spec.source = { :git => "https://github.com/almazrafi/AurorKit.git", :tag => "#{spec.version}" }
 
-  spec.swift_version = '4.2'
+  spec.swift_version = '5.0'
   spec.requires_arc = true
 
   spec.ios.frameworks = 'Foundation', 'CoreGraphics', 'UIKit'
