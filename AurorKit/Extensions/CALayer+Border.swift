@@ -1,3 +1,5 @@
+import QuartzCore
+
 #if canImport(UIKit)
     import UIKit
 
