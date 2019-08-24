@@ -12,6 +12,9 @@ coverage:
       default:
         threshold: 1.0%
 
+  comment:
+    layout: reach, diff
+
   ignore:
     - "AurorKitTests"
     - "Pods"
