@@ -40,7 +40,6 @@
 		C080D10B21F66C77003FBCF4 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0252D7721F3E43F00F41A26 /* UIImage+Extensions.swift */; };
 		C080D10E21F66C83003FBCF4 /* AurorKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C0E9FD7021F253A8009C453F /* AurorKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0A6036C21F680B9009EC42C /* AurorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C080D0F421F66BD7003FBCF4 /* AurorKit.framework */; };
-		C0A6037521F682D3009EC42C /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A6037221F6825C009EC42C /* Tests.swift */; };
 		C0AE178221F678520070DD72 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A94B1D21F204CA00FC4146 /* Event.swift */; };
 		C0AE178321F678520070DD72 /* EventConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A94B2E21F20E2A00FC4146 /* EventConnection.swift */; };
 		C0AE178421F6785A0070DD72 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0252D5421F3A35E00F41A26 /* Array+Extensions.swift */; };
@@ -150,6 +149,7 @@
 		C0C149F923115A3B001EB1E0 /* LogFilePrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C149E023115A3B001EB1E0 /* LogFilePrinter.swift */; };
 		C0C149FA23115A3B001EB1E0 /* LogFilePrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C149E023115A3B001EB1E0 /* LogFilePrinter.swift */; };
 		C0C149FB23115A3B001EB1E0 /* LogFilePrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C149E023115A3B001EB1E0 /* LogFilePrinter.swift */; };
+		C0CE86C62311FB4200E45655 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A6037221F6825C009EC42C /* Tests.swift */; };
 		C0E9FD7721F253A8009C453F /* AurorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E9FD6E21F253A7009C453F /* AurorKit.framework */; };
 		C0E9FD7E21F253A8009C453F /* AurorKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C0E9FD7021F253A8009C453F /* AurorKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0FA3E42231164C700238BDC /* ArrayExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05A654C21F355340038EC55 /* ArrayExtensionsTests.swift */; };
@@ -1281,6 +1281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0CE86C62311FB4200E45655 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1476,7 +1477,6 @@
 				C0FA3E8C231185CB00238BDC /* OptionalExtensionsTests.swift in Sources */,
 				C0FA3E8F2311874800238BDC /* StringExtensionsTests.swift in Sources */,
 				C0FA3E8E2311863200238BDC /* RangeReplaceableCollectionExtensionsTests.swift in Sources */,
-				C0A6037521F682D3009EC42C /* Tests.swift in Sources */,
 				C0FA3E812311820B00238BDC /* DataExtensionsTests.swift in Sources */,
 				C0FA3E86231182E400238BDC /* FloatingPointExtensionsTests.swift in Sources */,
 				C0FA3E9923118EE400238BDC /* UIViewControllerExtensionsTests.swift in Sources */,
