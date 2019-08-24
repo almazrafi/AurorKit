@@ -28,12 +28,12 @@ Pod::Spec.new do |spec|
 
     extensions.macos.exclude_files = [
       "AurorKit/Extensions/NSLayoutConstraint+Extensions.swift",
-      "AurorKit/Extensions/UIApplication+Extensions",
+      "AurorKit/Extensions/UIApplication+Extensions.swift",
       "AurorKit/Extensions/UIColor+Extensions.swift",
       "AurorKit/Extensions/UIDevice+Extensions.swift",
       "AurorKit/Extensions/UIEdgeInsets+Extensions.swift",
       "AurorKit/Extensions/UIImage+Extensions.swift",
-      "AurorKit/Extensions/UINavigationController+Extensionsswift",
+      "AurorKit/Extensions/UINavigationController+Extensions.swift",
       "AurorKit/Extensions/UIScreen+Extensions.swift",
       "AurorKit/Extensions/UIStackView+Extensions.swift",
       "AurorKit/Extensions/UIView+Border.swift",
@@ -46,9 +46,9 @@ Pod::Spec.new do |spec|
 
     extensions.watchos.exclude_files = [
       "AurorKit/Extensions/NSLayoutConstraint+Extensions.swift",
-      "AurorKit/Extensions/UIApplication+Extensions",
+      "AurorKit/Extensions/UIApplication+Extensions.swift",
       "AurorKit/Extensions/UIDevice+Extensions.swift",
-      "AurorKit/Extensions/UINavigationController+Extensionsswift",
+      "AurorKit/Extensions/UINavigationController+Extensions.swift",
       "AurorKit/Extensions/UIScreen+Extensions.swift",
       "AurorKit/Extensions/UIStackView+Extensions.swift",
       "AurorKit/Extensions/UIView+Border.swift",
@@ -65,6 +65,7 @@ Pod::Spec.new do |spec|
   end
 
   spec.subspec 'Log' do |log|
+    log.dependency 'AurorKit/Extensions'
     log.source_files = "AurorKit/Log/**/*.swift"
 
     log.macos.exclude_files = [
