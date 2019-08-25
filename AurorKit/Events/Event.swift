@@ -4,7 +4,7 @@ public class Event<Context> {
 
     // MARK: - Nested Types
 
-    public typealias Handler1 = ((_ context: Context) -> Void)
+    public typealias Handler = ((_ context: Context) -> Void)
 
     // MARK: - Instance Properties
 
@@ -12,7 +12,8 @@ public class Event<Context> {
 
     // MARK: - Initializers
 
-    public init() { }
+    public init()
+    { }
 
     // MARK: - Instance Methods
 
