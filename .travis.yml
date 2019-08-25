@@ -2,10 +2,6 @@ language: swift
 osx_image: xcode10.3
 rvm: 2.6.3
 
-cache:
-  - bundler
-  - cocoapods
-
 env:
   global:
     - LC_CTYPE=en_US.UTF-8
