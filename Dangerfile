@@ -9,7 +9,7 @@ def report_xcode_summary(platform:)
         end
     }
 
-    File.open(file_name, "w") do |file|
+    File.open(path, "w") do |file|
         file.puts JSON.pretty_generate(json)
     end
 
