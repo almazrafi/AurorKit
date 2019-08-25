@@ -4,17 +4,9 @@ coverage:
   range: 70...100
 
   status:
-    project:
-      default:
-        threshold: 1.0%
-    patch:
-      default:
-        threshold: 1.0%
-    changes: false
-
-  comment:
-    layout: "diff"
-    behavior: default
+    project: true
+    patch: true
+    changes: true
 
   ignore:
     - "AurorKitTests"
