@@ -8,14 +8,15 @@ coverage:
       default:
         target: auto
         threshold: 1.0%
-
     patch:
       default:
         target: auto
         threshold: 1.0%
+    changes: true
 
   comment:
     layout: header
+    behavior: default
 
   ignore:
     - "AurorKitTests"

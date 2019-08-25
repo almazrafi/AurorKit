@@ -391,7 +391,7 @@
 		C24E0ADB22181D6F0015EFA0 /* LogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTests.swift; sourceTree = "<group>"; };
 		C24E0ADE221827F90015EFA0 /* MockEventReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEventReceiver.swift; sourceTree = "<group>"; };
 		C24E0AE1221828360015EFA0 /* MockLogPrinter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLogPrinter.swift; sourceTree = "<group>"; };
-		C294FBE62203D98B00ECCB4E /* Bootstrap.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = Bootstrap.sh; sourceTree = "<group>"; };
+		C294FBE62203D98B00ECCB4E /* bootstrap.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = bootstrap.sh; sourceTree = "<group>"; };
 		C2B2712722186B8700F13C3C /* LoggedPageViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedPageViewControllerTests.swift; sourceTree = "<group>"; };
 		C2B2712C22186C3000F13C3C /* LoggedTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedTableViewControllerTests.swift; sourceTree = "<group>"; };
 		C2B2712E2218715800F13C3C /* LoggedTabBarControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedTabBarControllerTests.swift; sourceTree = "<group>"; };
@@ -577,7 +577,7 @@
 				C2CD9CEC22103DF100EBB05B /* .swiftlint.yml */,
 				C2CD9CED22103DF100EBB05B /* .travis.yml */,
 				C000DF1021F3A29E001B535B /* AurorKit.podspec */,
-				C294FBE62203D98B00ECCB4E /* Bootstrap.sh */,
+				C294FBE62203D98B00ECCB4E /* bootstrap.sh */,
 				C0E9FD6521F24990009C453F /* LICENSE */,
 				C0E9FD6421F24990009C453F /* README.md */,
 			);
