@@ -14,10 +14,10 @@ coverage:
       default:
         threshold: 1.0%
 
-  comment:
-    layout: "flags, files"
-    behavior: new
+comment:
+  layout: "flags, files"
+  behavior: new
 
-  ignore:
-    - "AurorKitTests"
-    - "Pods"
+ignore:
+  - "AurorKitTests"
+  - "Pods"

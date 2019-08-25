@@ -2,8 +2,9 @@
 [![Travis CI](https://travis-ci.org/almazrafi/AurorKit.svg?branch=master)](https://travis-ci.org/almazrafi/AurorKit)
 [![Codecov](https://codecov.io/gh/almazrafi/AurorKit/branch/master/graph/badge.svg)](https://codecov.io/gh/almazrafi/AurorKit)
 [![Cocoapods](https://img.shields.io/cocoapods/v/AurorKit.svg?style=flat)](http://cocoapods.org/pods/AurorKit)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-Compatible-brightgreen.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Platforms](https://img.shields.io/cocoapods/p/AurorKit.svg?style=flat)](https://developer.apple.com/discover/)
-[![Xcode](https://img.shields.io/badge/Xcode-10.3-blue.svg)](https://developer.apple.com/xcode)
+[![Xcode](https://img.shields.io/badge/Xcode-10.2-blue.svg)](https://developer.apple.com/xcode)
 [![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg)](https://swift.org)
 [![License](https://img.shields.io/github/license/almazrafi/AurorKit.svg?style=flat)](https://opensource.org/licenses/MIT)
 
@@ -41,6 +42,20 @@ Finally run the following command:
 ```bash
 $ pod install
 ```
+
+### Carthage
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. You can install Carthage with Homebrew using the following command:
+```bash
+$ brew update
+$ brew install carthage
+```
+
+To integrate AurorKit into your Xcode project using Carthage, specify it in your `Cartfile`:
+```ogdl
+github "almazrafi/AurorKit" ~> 0.1.0
+```
+
+Finally run `carthage update` to build the framework and drag the built `AurorKit.framework` into your Xcode project.
 
 ### Manually
 If you prefer not to use dependency managers, you can integrate AurorKit into your project manually by adding the [AurorKit](AurorKit) folder to your Xcode project.
