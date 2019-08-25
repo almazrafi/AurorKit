@@ -30,6 +30,7 @@ env:
     - SKIP_SWIFT_LINT=TRUE
 
 install:
+  - gem update bundler
   - bundle install --without=documentation
   - bundle exec pod repo update
   - bundle exec pod install
