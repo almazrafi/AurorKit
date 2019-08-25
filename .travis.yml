@@ -1,27 +1,55 @@
-language: objective-c
+language: swift
 osx_image: xcode10.3
 
-before_install:
-  - pod repo update
+rvm: 2.6.3
+gemfile: Gemfile
+
+cache:
+  - bundler
+  - cocoapods
+
+env:
+  global:
+    - LC_CTYPE=en_US.UTF-8
+    - LANG=en_US.UTF-8
+
+    - WORKSPACE='AurorKit.xcworkspace'
+
+    - IOS_SCHEME='AurorKit iOS'
+    - IOS_DESTINATION='platform=iOS Simulator,OS=12.1,name=iPhone XS'
+    - IOS_BUILD_LOG_PATH='xcodebuild-ios.json'
+
+    - MACOS_SCHEME='AurorKit macOS'
+    - MACOS_DESTINATION='platform=macOS'
+    - MACOS_BUILD_LOG_PATH='xcodebuild-macos.json'
+
+    - TVOS_SCHEME='AurorKit tvOS'
+    - TVOS_DESTINATION='platform=tvOS Simulator,OS=12.1,name=Apple TV 4K'
+    - TVOS_BUILD_LOG_PATH='xcodebuild-tvos.json'
+
+    - SKIP_SWIFT_LINT=TRUE
 
 install:
-  - ./Bootstrap.sh
+  - gem update bundler
+  - bundle install --without=documentation
+  - bundle exec pod repo update
+  - bundle exec pod install
 
 script:
   - set -o pipefail
   - swift --version
-  - pod install
 
-  - xcodebuild clean build test -workspace 'AurorKit.xcworkspace' -scheme 'AurorKit iOS' -destination 'platform=iOS Simulator,OS=12.1,name=iPhone XS' | xcpretty -c
+  - xcodebuild clean build test -workspace "$WORKSPACE" -scheme "$IOS_SCHEME" -destination "$IOS_DESTINATION" | XCPRETTY_JSON_FILE_OUTPUT="$IOS_BUILD_LOG_PATH" xcpretty -f `xcpretty-json-formatter`
   - bash <(curl -s https://codecov.io/bash) -cF ios -J 'AurorKit'
 
-  - xcodebuild clean build test -workspace 'AurorKit.xcworkspace' -scheme 'AurorKit macOS' -destination 'platform=macOS' | xcpretty -c
+  - xcodebuild clean build test -workspace "$WORKSPACE" -scheme "$MACOS_SCHEME" -destination "$MACOS_DESTINATION" | XCPRETTY_JSON_FILE_OUTPUT="$MACOS_BUILD_LOG_PATH" xcpretty -f `xcpretty-json-formatter`
   - bash <(curl -s https://codecov.io/bash) -cF osx -J 'AurorKit'
 
-  - xcodebuild clean build test -workspace "AurorKit.xcworkspace" -scheme 'AurorKit tvOS' -destination 'platform=tvOS Simulator,OS=12.1,name=Apple TV 4K' | xcpretty -c
+  - xcodebuild clean build test -workspace "$WORKSPACE" -scheme "$TVOS_SCHEME" -destination "$TVOS_DESTINATION" | XCPRETTY_JSON_FILE_OUTPUT="$TVOS_BUILD_LOG_PATH" xcpretty -f `xcpretty-json-formatter`
   - bash <(curl -s https://codecov.io/bash) -cF tvos -J 'AurorKit'
 
-  - swiftlint --reporter junit
+  - bundle exec pod lib lint --skip-tests --allow-warnings
+  - bundle exec danger --remove-previous-comments
 
 branches:
   only:

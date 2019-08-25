@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = "AurorKit"
-  spec.version = "0.0.4"
+  spec.version = "0.1.0"
   spec.summary = "Swift extensions and tools"
 
   spec.homepage = "https://github.com/almazrafi/AurorKit"
@@ -8,32 +8,37 @@ Pod::Spec.new do |spec|
   spec.author = { "Almaz Ibragimov" => "almazrafi@gmail.com" }
   spec.source = { :git => "https://github.com/almazrafi/AurorKit.git", :tag => "#{spec.version}" }
 
-  spec.swift_version = '4.2'
+  spec.swift_version = '5.0'
   spec.requires_arc = true
 
-  spec.ios.frameworks = 'Foundation', 'CoreGraphics', 'UIKit'
+  spec.ios.frameworks = 'Foundation'
   spec.ios.deployment_target = "10.0"
 
-  spec.osx.frameworks = 'Foundation', 'CoreGraphics'
+  spec.osx.frameworks = 'Foundation'
   spec.osx.deployment_target = "10.12"
 
-  spec.watchos.frameworks = 'Foundation', 'CoreGraphics', 'UIKit'
+  spec.watchos.frameworks = 'Foundation'
   spec.watchos.deployment_target = "3.0"
 
-  spec.tvos.frameworks = 'Foundation', 'CoreGraphics', 'UIKit'
+  spec.tvos.frameworks = 'Foundation'
   spec.tvos.deployment_target = "10.0"
 
   spec.subspec 'Extensions' do |extensions|
     extensions.source_files = "AurorKit/Extensions/**/*.swift"
 
+    extensions.ios.frameworks = 'QuartzCore', 'CoreGraphics', 'UIKit'
+    extensions.osx.frameworks = 'QuartzCore', 'CoreGraphics', 'AppKit'
+    extensions.watchos.frameworks = 'QuartzCore', 'CoreGraphics', 'UIKit'
+    extensions.tvos.frameworks = 'QuartzCore', 'CoreGraphics', 'UIKit'
+
     extensions.macos.exclude_files = [
       "AurorKit/Extensions/NSLayoutConstraint+Extensions.swift",
-      "AurorKit/Extensions/UIApplication+Extensions",
+      "AurorKit/Extensions/UIApplication+Extensions.swift",
       "AurorKit/Extensions/UIColor+Extensions.swift",
       "AurorKit/Extensions/UIDevice+Extensions.swift",
       "AurorKit/Extensions/UIEdgeInsets+Extensions.swift",
       "AurorKit/Extensions/UIImage+Extensions.swift",
-      "AurorKit/Extensions/UINavigationController+Extensionsswift",
+      "AurorKit/Extensions/UINavigationController+Extensions.swift",
       "AurorKit/Extensions/UIScreen+Extensions.swift",
       "AurorKit/Extensions/UIStackView+Extensions.swift",
       "AurorKit/Extensions/UIView+Border.swift",
@@ -45,10 +50,16 @@ Pod::Spec.new do |spec|
     ]
 
     extensions.watchos.exclude_files = [
+      "AurorKit/Extensions/CACornerMask+Extensions.swift",
+      "AurorKit/Extensions/CAGradientLayer+Direction.swift",
+      "AurorKit/Extensions/CAGradientLayer+Gradient.swift",
+      "AurorKit/Extensions/CALayer+Border.swift",
+      "AurorKit/Extensions/CALayer+RoundedCorners.swift",
+      "AurorKit/Extensions/CALayer+Shadow.swift",
       "AurorKit/Extensions/NSLayoutConstraint+Extensions.swift",
-      "AurorKit/Extensions/UIApplication+Extensions",
+      "AurorKit/Extensions/UIApplication+Extensions.swift",
       "AurorKit/Extensions/UIDevice+Extensions.swift",
-      "AurorKit/Extensions/UINavigationController+Extensionsswift",
+      "AurorKit/Extensions/UINavigationController+Extensions.swift",
       "AurorKit/Extensions/UIScreen+Extensions.swift",
       "AurorKit/Extensions/UIStackView+Extensions.swift",
       "AurorKit/Extensions/UIView+Border.swift",
@@ -66,6 +77,11 @@ Pod::Spec.new do |spec|
 
   spec.subspec 'Log' do |log|
     log.source_files = "AurorKit/Log/**/*.swift"
+
+    log.ios.frameworks = 'UIKit'
+    log.tvos.frameworks = 'UIKit'
+
+    log.dependency 'AurorKit/Extensions'
 
     log.macos.exclude_files = [
       "AurorKit/Log/ViewControllers/LoggedNavigationController.swift",

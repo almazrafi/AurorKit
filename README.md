@@ -3,8 +3,8 @@
 [![Codecov](https://codecov.io/gh/almazrafi/AurorKit/branch/master/graph/badge.svg)](https://codecov.io/gh/almazrafi/AurorKit)
 [![Cocoapods](https://img.shields.io/cocoapods/v/AurorKit.svg?style=flat)](http://cocoapods.org/pods/AurorKit)
 [![Platforms](https://img.shields.io/cocoapods/p/AurorKit.svg?style=flat)](https://developer.apple.com/discover/)
-[![Xcode](https://img.shields.io/badge/Xcode-10.0-blue.svg)](https://developer.apple.com/xcode)
-[![Swift](https://img.shields.io/badge/Swift-4.2-red.svg)](https://swift.org)
+[![Xcode](https://img.shields.io/badge/Xcode-10.3-blue.svg)](https://developer.apple.com/xcode)
+[![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg)](https://swift.org)
 [![License](https://img.shields.io/github/license/almazrafi/AurorKit.svg?style=flat)](https://opensource.org/licenses/MIT)
 
 AurorKit is a collection of tools and extensions to help you develop apps for iOS, macOS, watchOS and tvOS platforms.
@@ -12,8 +12,8 @@ AurorKit is a collection of tools and extensions to help you develop apps for iO
 
 ## Requirements
 - iOS 10.0+ / macOS 10.12+ / watchOS 3.0+ / tvOS 10.0+
-- Xcode 10.0+
-- Swift 4.2+
+- Xcode 10.2+
+- Swift 5.0+
 
 ## Installation
 ### CocoaPods
@@ -30,10 +30,10 @@ use_frameworks!
 target '<Your Target Name>' do
     pod 'AurorKit'
 end
-```  
+```
 
 If you don't need all the features of AurorKit, you can also include only the necessary dependencies using submodules:
-- Extensions: `pod 'AurorKit/Extensions'`  
+- Extensions: `pod 'AurorKit/Extensions'`
 - Events: `pod 'AurorKit/Events'`
 - Log: `pod 'AurorKit/Log'`
 

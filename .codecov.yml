@@ -5,15 +5,18 @@ coverage:
 
   status:
     project:
-      patch:
-        default:
-          threshold: 0.1%
+      default:
+        threshold: 1.0%
     patch:
+      default:
+        threshold: 1.0%
+    changes:
       default:
         threshold: 1.0%
 
   comment:
-    layout: header
+    layout: "flags, files"
+    behavior: new
 
   ignore:
     - "AurorKitTests"
