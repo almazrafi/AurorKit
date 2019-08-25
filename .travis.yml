@@ -49,7 +49,7 @@ script:
   - bash <(curl -s https://codecov.io/bash) -cF tvos -J 'AurorKit'
 
   # - bundle exec pod lib lint --skip-tests --allow-warnings
-  - bundle exec danger --new-comment
+  - bundle exec danger --remove-previous-comments
 
 branches:
   only:
