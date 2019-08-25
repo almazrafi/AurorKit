@@ -1,8 +1,6 @@
 language: swift
 osx_image: xcode10.3
-
 rvm: 2.6.3
-gemfile: Gemfile
 
 cache:
   - bundler
@@ -32,6 +30,7 @@ env:
 install:
   - gem update bundler
   - bundle install --without=documentation
+
   - brew update
   - brew outdated carthage || brew upgrade carthage
 
@@ -39,7 +38,7 @@ script:
   - set -o pipefail
   - swift --version
 
-  - carthage build
+  - carthage build --no-skip-current
 
   - xcodebuild clean build test -project "$PROJECT" -scheme "$IOS_SCHEME" -destination "$IOS_DESTINATION" | XCPRETTY_JSON_FILE_OUTPUT="$IOS_BUILD_LOG_PATH" xcpretty -f `xcpretty-json-formatter`
   - bash <(curl -s https://codecov.io/bash) -cF ios -J 'AurorKit'
