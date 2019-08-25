@@ -126,7 +126,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  cocoapods (= 1.7.5)
+  cocoapods
   danger
   danger-swiftlint
   danger-xcode_summary

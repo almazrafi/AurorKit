@@ -2,8 +2,8 @@
 
 readonly arguments=$@
 
-readonly update_gems_flag='--update-gems'
-readonly update_pods_flag='--update-pods'
+readonly update_gemfile_flag='--update-gemfile'
+readonly update_cartfile_flag='--update-cartfile'
 
 readonly project_path="$( pwd )"
 
@@ -28,7 +28,7 @@ readonly homebrew_style='\033[38;5;208m'
 readonly rbenv_style='\033[38;5;43m'
 readonly ruby_style='\033[38;5;89m'
 readonly bundler_style='\033[38;5;45m'
-readonly cocoapods_style='\033[38;5;161m'
+readonly carthage_style='\033[38;5;222m'
 readonly congratulations_style='\033[38;5;48m'
 
 cleanup() {
@@ -218,7 +218,7 @@ bundler_step() {
 gemfile_step() {
   echo ""
 
-  if [[ " ${arguments[*]} " == *" $update_gems_flag "* ]]; then
+  if [[ " ${arguments[*]} " == *" $update_gemfile_flag "* ]]; then
     echo "Updating ${ruby_style}Ruby gems${default_style} specified in Gemfile..."
     assert_failure 'bundle update'
   else
@@ -227,15 +227,40 @@ gemfile_step() {
   fi
 }
 
-podfile_step() {
+carthage_step() {
+  echo ""
+  echo "Checking ${carthage_style}Carthage${default_style} installation:"
+
+  if brew ls --versions carthage &> /dev/null; then
+    echo "  Carthage already installed. Updating..."
+    brew_outdated=$(brew outdated 2> /dev/null)
+    brew_outdated_exit_code=$?
+
+    if [ $brew_outdated_exit_code -ne 0 ]; then
+      echo "    Failed to find outdated formulae."
+      warning 'brew outdated' $brew_outdated_exit_code
+    else
+      if [[ $brew_outdated == *"carthage"* ]]; then
+        assert_failure 'brew upgrade carthage'
+      else
+        echo "    Already up-to-date."
+      fi
+    fi
+  else
+    echo "  Carthage not found. Installing..."
+    assert_failure 'brew install carthage'
+  fi
+}
+
+cartfile_step() {
   echo ""
 
-  if [[ " ${arguments[*]} " == *" $update_pods_flag "* ]]; then
-    echo "Updating ${cocoapods_style}Cocoapods${default_style} specified in Podfile..."
-    assert_failure 'bundle exec pod update'
+  if [[ " ${arguments[*]} " == *" $update_cartfile_flag "* ]]; then
+    echo "Updating ${carthage_style}Carthage${default_style} dependencies specified in Cartfile..."
+    assert_failure 'carthage update --use-submodules'
   else
-    echo "Installing ${cocoapods_style}Cocoapods${default_style} specified in Podfile..."
-    assert_failure 'bundle exec pod install'
+    echo "Building ${carthage_style}Carthage${default_style} dependencies specified in Cartfile..."
+    assert_failure 'carthage build'
   fi
 }
 
@@ -258,5 +283,6 @@ rbenv_step
 ruby_step
 bundler_step
 gemfile_step
-podfile_step
+carthage_step
+cartfile_step
 congratulations_step

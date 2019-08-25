@@ -13,7 +13,7 @@ env:
     - LC_CTYPE=en_US.UTF-8
     - LANG=en_US.UTF-8
 
-    - WORKSPACE='AurorKit.xcworkspace'
+    - PROJECT='AurorKit.xcodeproj'
 
     - IOS_SCHEME='AurorKit iOS'
     - IOS_DESTINATION='platform=iOS Simulator,OS=12.1,name=iPhone XS'
@@ -32,20 +32,22 @@ env:
 install:
   - gem update bundler
   - bundle install --without=documentation
-  - bundle exec pod repo update
-  - bundle exec pod install
+  - brew update
+  - brew outdated carthage || brew upgrade carthage
 
 script:
   - set -o pipefail
   - swift --version
 
-  - xcodebuild clean build test -workspace "$WORKSPACE" -scheme "$IOS_SCHEME" -destination "$IOS_DESTINATION" | XCPRETTY_JSON_FILE_OUTPUT="$IOS_BUILD_LOG_PATH" xcpretty -f `xcpretty-json-formatter`
+  - carthage build
+
+  - xcodebuild clean build test -project "$PROJECT" -scheme "$IOS_SCHEME" -destination "$IOS_DESTINATION" | XCPRETTY_JSON_FILE_OUTPUT="$IOS_BUILD_LOG_PATH" xcpretty -f `xcpretty-json-formatter`
   - bash <(curl -s https://codecov.io/bash) -cF ios -J 'AurorKit'
 
-  - xcodebuild clean build test -workspace "$WORKSPACE" -scheme "$MACOS_SCHEME" -destination "$MACOS_DESTINATION" | XCPRETTY_JSON_FILE_OUTPUT="$MACOS_BUILD_LOG_PATH" xcpretty -f `xcpretty-json-formatter`
+  - xcodebuild clean build test -project "$PROJECT" -scheme "$MACOS_SCHEME" -destination "$MACOS_DESTINATION" | XCPRETTY_JSON_FILE_OUTPUT="$MACOS_BUILD_LOG_PATH" xcpretty -f `xcpretty-json-formatter`
   - bash <(curl -s https://codecov.io/bash) -cF osx -J 'AurorKit'
 
-  - xcodebuild clean build test -workspace "$WORKSPACE" -scheme "$TVOS_SCHEME" -destination "$TVOS_DESTINATION" | XCPRETTY_JSON_FILE_OUTPUT="$TVOS_BUILD_LOG_PATH" xcpretty -f `xcpretty-json-formatter`
+  - xcodebuild clean build test -project "$PROJECT" -scheme "$TVOS_SCHEME" -destination "$TVOS_DESTINATION" | XCPRETTY_JSON_FILE_OUTPUT="$TVOS_BUILD_LOG_PATH" xcpretty -f `xcpretty-json-formatter`
   - bash <(curl -s https://codecov.io/bash) -cF tvos -J 'AurorKit'
 
   - bundle exec pod lib lint --skip-tests --allow-warnings
