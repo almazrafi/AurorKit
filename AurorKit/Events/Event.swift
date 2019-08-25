@@ -12,8 +12,7 @@ public class Event<Context> {
 
     // MARK: - Initializers
 
-    public init()
-    { }
+    public init() { }
 
     // MARK: - Instance Methods
 
