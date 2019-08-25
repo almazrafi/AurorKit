@@ -54,6 +54,4 @@ end
 target 'AurorKit Tests tvOS' do
     inherit! :search_paths
     platform :tvos, '10.0'
-
-    common_tests_pods
 end
