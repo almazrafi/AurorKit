@@ -150,6 +150,12 @@
 		C0C149FA23115A3B001EB1E0 /* LogFilePrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C149E023115A3B001EB1E0 /* LogFilePrinter.swift */; };
 		C0C149FB23115A3B001EB1E0 /* LogFilePrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C149E023115A3B001EB1E0 /* LogFilePrinter.swift */; };
 		C0CE86C62311FB4200E45655 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A6037221F6825C009EC42C /* Tests.swift */; };
+		C0CE86C72312CD1000E45655 /* CGColor+Matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FA3E6C231178D800238BDC /* CGColor+Matchers.swift */; };
+		C0CE86C82312CD1500E45655 /* CGPoint+Matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FA3E5223116D4E00238BDC /* CGPoint+Matchers.swift */; };
+		C0CE86C92312CD1500E45655 /* CGRect+Matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FA3E5823116DA700238BDC /* CGRect+Matchers.swift */; };
+		C0CE86CA2312CD1500E45655 /* CGSize+Matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FA3E5523116D8000238BDC /* CGSize+Matchers.swift */; };
+		C0CE86CB2312CD1500E45655 /* Equatable+Matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FA3E6223116FDD00238BDC /* Equatable+Matchers.swift */; };
+		C0CE86CC2312CD1500E45655 /* UIColor+Matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FA3E4C23116BFA00238BDC /* UIColor+Matchers.swift */; };
 		C0E9FD7721F253A8009C453F /* AurorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E9FD6E21F253A7009C453F /* AurorKit.framework */; };
 		C0E9FD7E21F253A8009C453F /* AurorKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C0E9FD7021F253A8009C453F /* AurorKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0FA3E42231164C700238BDC /* ArrayExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05A654C21F355340038EC55 /* ArrayExtensionsTests.swift */; };
@@ -800,6 +806,7 @@
 				C0A6036321F680B9009EC42C /* Sources */,
 				C0A6036421F680B9009EC42C /* Frameworks */,
 				C0A6036521F680B9009EC42C /* Resources */,
+				DB27D492361DC39DDAF9231A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1134,6 +1141,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DB27D492361DC39DDAF9231A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AurorKit Tests tvOS/Pods-AurorKit Tests tvOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AurorKit Tests tvOS/Pods-AurorKit Tests tvOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AurorKit Tests tvOS/Pods-AurorKit Tests tvOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E11BE9D12CE66A5113846121 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1281,6 +1305,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0CE86CC2312CD1500E45655 /* UIColor+Matchers.swift in Sources */,
+				C0CE86C72312CD1000E45655 /* CGColor+Matchers.swift in Sources */,
+				C0CE86CB2312CD1500E45655 /* Equatable+Matchers.swift in Sources */,
+				C0CE86C82312CD1500E45655 /* CGPoint+Matchers.swift in Sources */,
+				C0CE86CA2312CD1500E45655 /* CGSize+Matchers.swift in Sources */,
+				C0CE86C92312CD1500E45655 /* CGRect+Matchers.swift in Sources */,
 				C0CE86C62311FB4200E45655 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1511,6 +1541,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D747C59744FA10EC5ED9298D /* Pods-AurorKit tvOS.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1544,6 +1575,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 41E970DCF7C6C31014757D38 /* Pods-AurorKit tvOS.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

@@ -9,43 +9,51 @@ end
 
 use_frameworks!
 
+def common_pods
+end
+
+def common_tests_pods
+    common_pods
+
+    pod 'Quick'
+    pod 'Nimble'
+end
+
 target 'AurorKit iOS' do
-  platform :ios, '10.0'
+    platform :ios, '10.0'
+
+    common_pods
 end
 
 target 'AurorKit macOS' do
-  platform :macos, '10.12'
+    platform :macos, '10.12'
+
+    common_pods
 end
 
 target 'AurorKit tvOS' do
-  platform :tvos, '10.0'
+    platform :tvos, '10.0'
+
+    common_pods
 end
 
 target 'AurorKit Tests iOS' do
-  inherit! :search_paths
-  platform :ios, '10.0'
+    inherit! :search_paths
+    platform :ios, '10.0'
 
-  pod 'Quick'
-  pod 'Nimble'
+    common_tests_pods
 end
 
 target 'AurorKit Tests macOS' do
-  inherit! :search_paths
-  platform :macos, '10.12'
+    inherit! :search_paths
+    platform :macos, '10.12'
 
-  pod 'Quick'
-  pod 'Nimble'
+    common_tests_pods
 end
 
 target 'AurorKit Tests tvOS' do
-  inherit! :search_paths
-  platform :tvos, '10.0'
-end
+    inherit! :search_paths
+    platform :tvos, '10.0'
 
-post_install do |installer|
-  installer.pods_project.targets.each do |target|
-    target.build_configurations.each do |config|
-      config.build_settings['ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES'] = 'YES'
-    end
-  end
+    common_tests_pods
 end
