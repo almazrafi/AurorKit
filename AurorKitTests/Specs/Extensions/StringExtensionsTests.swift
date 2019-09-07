@@ -24,57 +24,7 @@ class StringExtensionsTests: QuickSpec {
             }
         }
 
-        describe(".prefix(count:)") {
-            it("should return an empty string") {
-                let string = ""
-
-                expect(string.prefix(count: -1)).to(beEmpty())
-            }
-
-            it("should return an empty string") {
-                let string = ""
-
-                expect(string.prefix(count: 0)).to(beEmpty())
-            }
-
-            it("should return an empty string") {
-                let string = ""
-
-                expect(string.prefix(count: 1)).to(beEmpty())
-            }
-
-            it("should return an empty string") {
-                let string = "123456"
-
-                expect(string.prefix(count: -1)).to(beEmpty())
-            }
-
-            it("should return an empty string") {
-                let string = "123456"
-
-                expect(string.prefix(count: 0)).to(beEmpty())
-            }
-
-            it("should return a string prefix") {
-                let string = "123456"
-
-                expect(string.prefix(count: 5)).to(equal("12345"))
-            }
-
-            it("should return a string prefix") {
-                let string = "123456"
-
-                expect(string.prefix(count: 6)).to(equal("123456"))
-            }
-
-            it("should return a string prefix") {
-                let string = "123456"
-
-                expect(string.prefix(count: 7)).to(equal("123456"))
-            }
-        }
-
-        describe(".suffix(count:)") {
+        describe(".suffix(from:)") {
             it("should return an empty string") {
                 let string = ""
 
