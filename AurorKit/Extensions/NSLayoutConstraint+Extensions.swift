@@ -1,3 +1,4 @@
+#if canImport(UIKit) && !os(watchOS) && !os(macOS)
 import UIKit
 
 extension NSLayoutConstraint {
@@ -9,3 +10,4 @@ extension NSLayoutConstraint {
         set { constant = CGFloat(newValue) / UIScreen.main.scale }
     }
 }
+#endif

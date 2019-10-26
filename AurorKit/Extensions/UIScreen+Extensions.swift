@@ -1,3 +1,4 @@
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 extension UIScreen {
@@ -8,3 +9,4 @@ extension UIScreen {
         return 1.0 / scale
     }
 }
+#endif

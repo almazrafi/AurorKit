@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 import Nimble
 
@@ -101,3 +102,4 @@ func beEquivalentTo(_ expectedColor: UIColor?) -> Predicate<CGColor> {
         }
     }
 }
+#endif

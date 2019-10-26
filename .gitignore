@@ -36,8 +36,10 @@ xcuserdata/
 timeline.xctimeline
 playground.xcworkspace
 
-# Swift Package Manager
-.build/
+# Swift Packages Manager
+Packages
+.build
+.swiftpm
 
 # CocoaPods
 Pods/

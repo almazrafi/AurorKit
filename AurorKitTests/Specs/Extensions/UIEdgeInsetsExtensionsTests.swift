@@ -1,5 +1,5 @@
+#if canImport(UIKit)
 import UIKit
-
 import Quick
 import Nimble
 
@@ -38,3 +38,4 @@ class UIEdgeInsetsExtensionsTests: QuickSpec {
         }
     }
 }
+#endif

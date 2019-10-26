@@ -1,3 +1,4 @@
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 extension UIViewController {
@@ -8,3 +9,4 @@ extension UIViewController {
         return viewIfLoaded?.window?.isHidden == false
     }
 }
+#endif

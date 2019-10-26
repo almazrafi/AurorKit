@@ -1,3 +1,4 @@
+#if canImport(QuartzCore) && canImport(CoreGraphics) && !os(watchOS)
 import QuartzCore
 import CoreGraphics
 
@@ -61,3 +62,4 @@ extension CAGradientLayer {
         self.gradient = gradient
     }
 }
+#endif

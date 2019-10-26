@@ -1,4 +1,4 @@
-import Foundation
+#if canImport(CoreGraphics)
 import CoreGraphics
 
 extension CGSize {
@@ -23,3 +23,4 @@ extension CGSize {
         self.init(width: side, height: side)
     }
 }
+#endif

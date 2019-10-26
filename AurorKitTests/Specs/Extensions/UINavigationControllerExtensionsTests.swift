@@ -1,5 +1,5 @@
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
-
 import Quick
 import Nimble
 
@@ -34,3 +34,4 @@ class UINavigationControllerExtensionsTests: QuickSpec {
         }
     }
 }
+#endif

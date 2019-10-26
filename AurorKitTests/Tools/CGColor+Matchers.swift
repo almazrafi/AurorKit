@@ -1,3 +1,4 @@
+#if canImport(CoreGraphics)
 import CoreGraphics
 import Nimble
 
@@ -37,3 +38,4 @@ func beEquivalentTo(_ expectedColor: CGColor?) -> Predicate<CGColor> {
         }
     }
 }
+#endif

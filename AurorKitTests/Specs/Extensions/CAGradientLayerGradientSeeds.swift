@@ -1,11 +1,15 @@
+#if canImport(QuartzCore) && canImport(CoreGraphics) && !os(watchOS)
+import QuartzCore
+import CoreGraphics
+
 #if canImport(UIKit)
-    import UIKit
+import UIKit
 
-    private typealias Color = UIColor
+private typealias Color = UIColor
 #elseif canImport(AppKit)
-    import AppKit
+import AppKit
 
-    private typealias Color = NSColor
+private typealias Color = NSColor
 #endif
 
 import AurorKit
@@ -24,3 +28,4 @@ enum CAGradientLayerGradientSeeds {
         ]
     )
 }
+#endif

@@ -1,3 +1,4 @@
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 extension UIStackView {
@@ -28,3 +29,4 @@ extension UIStackView {
         insertArrangedSubview(view, at: arrangedSubviewIndex)
     }
 }
+#endif

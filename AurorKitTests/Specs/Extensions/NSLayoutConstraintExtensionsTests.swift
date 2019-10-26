@@ -1,5 +1,5 @@
+#if canImport(UIKit) && !os(watchOS) && !os(macOS)
 import UIKit
-
 import Quick
 import Nimble
 
@@ -35,3 +35,4 @@ class NSLayoutConstraintExtensionsTests: QuickSpec {
         }
     }
 }
+#endif

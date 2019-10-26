@@ -1,5 +1,7 @@
+#if canImport(QuartzCore) && canImport(CoreGraphics) && !os(watchOS)
 import QuartzCore
 import CoreGraphics
+
 import AurorKit
 
 @available(iOS 11.0, macOS 10.13, tvOS 11.0, *)
@@ -12,3 +14,4 @@ enum CALayerRoundedCornersSeeds {
         mask: [.layerMinXMinYCorner, .layerMaxXMaxYCorner]
     )
 }
+#endif

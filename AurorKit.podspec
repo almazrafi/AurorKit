@@ -30,45 +30,6 @@ Pod::Spec.new do |spec|
     extensions.osx.frameworks = 'QuartzCore', 'CoreGraphics', 'AppKit'
     extensions.watchos.frameworks = 'QuartzCore', 'CoreGraphics', 'UIKit'
     extensions.tvos.frameworks = 'QuartzCore', 'CoreGraphics', 'UIKit'
-
-    extensions.macos.exclude_files = [
-      "AurorKit/Extensions/NSLayoutConstraint+Extensions.swift",
-      "AurorKit/Extensions/UIApplication+Extensions.swift",
-      "AurorKit/Extensions/UIColor+Extensions.swift",
-      "AurorKit/Extensions/UIDevice+Extensions.swift",
-      "AurorKit/Extensions/UIEdgeInsets+Extensions.swift",
-      "AurorKit/Extensions/UIImage+Extensions.swift",
-      "AurorKit/Extensions/UINavigationController+Extensions.swift",
-      "AurorKit/Extensions/UIScreen+Extensions.swift",
-      "AurorKit/Extensions/UIStackView+Extensions.swift",
-      "AurorKit/Extensions/UIView+Border.swift",
-      "AurorKit/Extensions/UIView+Extensions.swift",
-      "AurorKit/Extensions/UIView+RoundedCorners.swift",
-      "AurorKit/Extensions/UIView+Shadow.swift",
-      "AurorKit/Extensions/UIViewController+Extensions.swift",
-      "AurorKit/Extensions/UIWindow+Extensions.swift"
-    ]
-
-    extensions.watchos.exclude_files = [
-      "AurorKit/Extensions/CACornerMask+Extensions.swift",
-      "AurorKit/Extensions/CAGradientLayer+Direction.swift",
-      "AurorKit/Extensions/CAGradientLayer+Gradient.swift",
-      "AurorKit/Extensions/CALayer+Border.swift",
-      "AurorKit/Extensions/CALayer+RoundedCorners.swift",
-      "AurorKit/Extensions/CALayer+Shadow.swift",
-      "AurorKit/Extensions/NSLayoutConstraint+Extensions.swift",
-      "AurorKit/Extensions/UIApplication+Extensions.swift",
-      "AurorKit/Extensions/UIDevice+Extensions.swift",
-      "AurorKit/Extensions/UINavigationController+Extensions.swift",
-      "AurorKit/Extensions/UIScreen+Extensions.swift",
-      "AurorKit/Extensions/UIStackView+Extensions.swift",
-      "AurorKit/Extensions/UIView+Border.swift",
-      "AurorKit/Extensions/UIView+Extensions.swift",
-      "AurorKit/Extensions/UIView+Shadow.swift",
-      "AurorKit/Extensions/UIView+RoundedCorners.swift",
-      "AurorKit/Extensions/UIViewController+Extensions.swift",
-      "AurorKit/Extensions/UIWindow+Extensions.swift"
-    ]
   end
 
   spec.subspec 'Events' do |events|
@@ -82,21 +43,5 @@ Pod::Spec.new do |spec|
     log.tvos.frameworks = 'UIKit'
 
     log.dependency 'AurorKit/Extensions'
-
-    log.macos.exclude_files = [
-      "AurorKit/Log/ViewControllers/LoggedNavigationController.swift",
-      "AurorKit/Log/ViewControllers/LoggedPageViewController.swift",
-      "AurorKit/Log/ViewControllers/LoggedTabBarController.swift",
-      "AurorKit/Log/ViewControllers/LoggedTableViewController.swift",
-      "AurorKit/Log/ViewControllers/LoggedViewController.swift"
-    ]
-
-    log.watchos.exclude_files = [
-      "AurorKit/Log/ViewControllers/LoggedNavigationController.swift",
-      "AurorKit/Log/ViewControllers/LoggedPageViewController.swift",
-      "AurorKit/Log/ViewControllers/LoggedTabBarController.swift",
-      "AurorKit/Log/ViewControllers/LoggedTableViewController.swift",
-      "AurorKit/Log/ViewControllers/LoggedViewController.swift"
-    ]
   end
 end

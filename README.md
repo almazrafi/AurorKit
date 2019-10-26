@@ -57,6 +57,35 @@ github "almazrafi/AurorKit" ~> 0.1.0
 
 Finally run `carthage update` to build the framework and drag the built `AurorKit.framework` into your Xcode project.
 
+### Swift Package Manager
+
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
+
+To integrate AurorKit into your Xcode project using Swift Package Manager, add the following as a dependency to your `Package.swift`:
+```swift
+.package(url: "https://github.com/almazrafi/AurorKit.git", from: "0.1.0")
+```
+and then specify `"AurorKit"` as a dependency of the Target in which you wish to use AurorKit.
+
+Here's an example `Package.swift`:
+```swift
+// swift-tools-version:5.0
+import PackageDescription
+
+let package = Package(
+    name: "MyPackage",
+    products: [
+        .library(name: "MyPackage", targets: ["MyPackage"])
+    ],
+    dependencies: [
+        .package(url: "https://github.com/almazrafi/AurorKit.git", from: "0.1.0")
+    ],
+    targets: [
+        .target(name: "MyPackage", dependencies: ["AurorKit"])
+    ]
+)
+```
+
 ### Manually
 If you prefer not to use dependency managers, you can integrate AurorKit into your project manually by adding the [AurorKit](AurorKit) folder to your Xcode project.
 

@@ -1,6 +1,6 @@
+#if canImport(QuartzCore) && canImport(CoreGraphics) && !os(watchOS)
 import QuartzCore
 import CoreGraphics
-
 import Quick
 import Nimble
 
@@ -73,3 +73,4 @@ class CAGradientLayerGradientExtensionTests: QuickSpec {
         }
     }
 }
+#endif

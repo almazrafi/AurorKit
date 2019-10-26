@@ -1,3 +1,4 @@
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 extension UINavigationController {
@@ -11,3 +12,4 @@ extension UINavigationController {
         )
     }
 }
+#endif
