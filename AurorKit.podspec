@@ -32,6 +32,10 @@ Pod::Spec.new do |spec|
     extensions.tvos.frameworks = 'QuartzCore', 'CoreGraphics', 'UIKit'
   end
 
+  spec.subspec 'Device' do |extensions|
+    extensions.source_files = "AurorKit/Device/**/*.swift"
+  end
+
   spec.subspec 'Events' do |events|
     events.source_files = "AurorKit/Events/**/*.swift"
   end
