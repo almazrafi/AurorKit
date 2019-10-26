@@ -1,5 +1,5 @@
 language: swift
-osx_image: xcode10.3
+osx_image: xcode11
 
 rvm: 2.6.3
 gemfile: Gemfile
@@ -16,7 +16,7 @@ env:
     - PROJECT='AurorKit.xcodeproj'
 
     - IOS_SCHEME='AurorKit iOS'
-    - IOS_DESTINATION='platform=iOS Simulator,OS=12.1,name=iPhone XS'
+    - IOS_DESTINATION='platform=iOS Simulator,OS=13.0,name=iPhone 11'
     - IOS_BUILD_LOG_PATH='xcodebuild-ios.json'
 
     - MACOS_SCHEME='AurorKit macOS'
@@ -24,7 +24,7 @@ env:
     - MACOS_BUILD_LOG_PATH='xcodebuild-macos.json'
 
     - TVOS_SCHEME='AurorKit tvOS'
-    - TVOS_DESTINATION='platform=tvOS Simulator,OS=12.1,name=Apple TV 4K'
+    - TVOS_DESTINATION='platform=tvOS Simulator,OS=13.0,name=Apple TV 4K'
     - TVOS_BUILD_LOG_PATH='xcodebuild-tvos.json'
 
     - SKIP_SWIFT_LINT=TRUE

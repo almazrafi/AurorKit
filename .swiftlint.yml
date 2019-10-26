@@ -190,9 +190,9 @@ cyclomatic_complexity:
 
 discouraged_direct_init:
   types:
-    - 'Bundle'
-    - 'UIDevice'
-    - 'AVAudioSession'
+    - Bundle
+    - UIDevice
+    - AVAudioSession
 
 discouraged_object_literal:
   image_literal: true
@@ -217,7 +217,7 @@ file_length:
 
 file_name:
   excluded:
-    - 'main.swift'
+    - main.swift
   prefix_pattern: ''
   suffix_pattern: '[+][A-z][A-z]+'
   nested_type_separator: ''
@@ -238,9 +238,9 @@ generic_type_name:
     error: 100
   validates_start_with_lowercase: true
   excluded:
-    - 'T'
-    - 'U'
-    - 'V'
+    - T
+    - U
+    - V
 
 identifier_name:
   min_length:
@@ -251,15 +251,15 @@ identifier_name:
     error: 100
   validates_start_with_lowercase: true
   excluded:
-    - 'a'
-    - 'b'
-    - 'c'
-    - 'd'
-    - 'i'
-    - 'j'
-    - 'x'
-    - 'y'
-    - 'z'
+    - a
+    - r
+    - g
+    - b
+    - i
+    - j
+    - x
+    - y
+    - z
 
 large_tuple:
   warning: 3
@@ -275,20 +275,20 @@ line_length:
 
 modifier_order:
   preferred_modifier_order:
-    - 'acl'
-    - 'setterACL'
-    - 'override'
-    - 'owned'
-    - 'mutators'
-    - 'final'
-    - 'typeMethods'
-    - 'required'
-    - 'convenience'
-    - 'lazy'
-    - 'dynamic'
+    - acl
+    - setterACL
+    - override
+    - owned
+    - mutators
+    - final
+    - typeMethods
+    - required
+    - convenience
+    - lazy
+    - dynamic
 
 multiline_arguments:
-  first_argument_location: 'next_line'
+  first_argument_location: next_line
   only_enforce_after_first_closure_on_first_line: false
 
 nesting:
@@ -324,7 +324,7 @@ shorthand_operator:
   severity: warning
 
 statement_position:
-  statement_mode: 'default'
+  statement_mode: default
 
 switch_case_alignment:
   indented_cases: false
@@ -344,8 +344,9 @@ type_contents_order:
     - associated_type
     - type_alias
     - subtype
-    - type_property
     - case
+    - type_property
+    - type_method
     - ib_outlet
     - ib_inspectable
     - instance_property
@@ -354,7 +355,6 @@ type_contents_order:
     - other_method
     - view_life_cycle_method
     - subscript
-    - type_method
 
 type_body_length:
   warning: 400

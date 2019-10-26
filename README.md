@@ -3,8 +3,9 @@
 [![Codecov](https://codecov.io/gh/almazrafi/AurorKit/branch/master/graph/badge.svg)](https://codecov.io/gh/almazrafi/AurorKit)
 [![Cocoapods](https://img.shields.io/cocoapods/v/AurorKit.svg?style=flat)](http://cocoapods.org/pods/AurorKit)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-Compatible-brightgreen.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![SPM compatible](https://img.shields.io/badge/SPM-Compatible-brightgreen.svg?style=flat)](https://swift.org/package-manager/)
 [![Platforms](https://img.shields.io/cocoapods/p/AurorKit.svg?style=flat)](https://developer.apple.com/discover/)
-[![Xcode](https://img.shields.io/badge/Xcode-10.2-blue.svg)](https://developer.apple.com/xcode)
+[![Xcode](https://img.shields.io/badge/Xcode-11-blue.svg)](https://developer.apple.com/xcode)
 [![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg)](https://swift.org)
 [![License](https://img.shields.io/github/license/almazrafi/AurorKit.svg?style=flat)](https://opensource.org/licenses/MIT)
 
@@ -37,6 +38,7 @@ If you don't need all the features of AurorKit, you can also include only the ne
 - Extensions: `pod 'AurorKit/Extensions'`
 - Events: `pod 'AurorKit/Events'`
 - Log: `pod 'AurorKit/Log'`
+- Device: `pod 'AurorKit/Device'`
 
 Finally run the following command:
 ```bash
