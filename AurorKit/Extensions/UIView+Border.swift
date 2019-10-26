@@ -1,3 +1,4 @@
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 extension UIView {
@@ -13,3 +14,4 @@ extension UIView {
         set { layer.border = newValue }
     }
 }
+#endif

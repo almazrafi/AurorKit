@@ -1,3 +1,4 @@
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 open class LoggedTabBarController: UITabBarController {
@@ -46,3 +47,4 @@ open class LoggedTabBarController: UITabBarController {
         Log.high("viewDidDisappear(animated: \(animated))", from: self)
     }
 }
+#endif

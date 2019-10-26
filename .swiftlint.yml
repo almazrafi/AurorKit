@@ -19,6 +19,7 @@ whitelist_rules:
   - compiler_protocol_init
   - conditional_returns_on_newline
   - contains_over_first_not_nil
+  - contains_over_range_nil_comparison
   - control_statement
   - convenience_type
   - custom_rules
@@ -41,6 +42,7 @@ whitelist_rules:
   - file_length
   - file_name
   - first_where
+  - flatmap_over_map_reduce
   - for_where
   - force_try
   - function_body_length
@@ -110,6 +112,7 @@ whitelist_rules:
   - switch_case_on_newline
   - syntactic_sugar
   - todo
+  - toggle_bool
   - trailing_closure
   - trailing_comma
   - trailing_newline

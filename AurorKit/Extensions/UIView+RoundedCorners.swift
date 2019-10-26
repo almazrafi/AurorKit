@@ -1,3 +1,4 @@
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 @available(iOS 11.0, tvOS 11.0, *)
@@ -14,3 +15,4 @@ extension UIView {
         set { layer.roundedCorners = newValue }
     }
 }
+#endif

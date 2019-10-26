@@ -1,4 +1,4 @@
-import Foundation
+#if canImport(CoreGraphics)
 import CoreGraphics
 
 extension CGPoint {
@@ -9,3 +9,4 @@ extension CGPoint {
         return CGPoint(x: x.rounded(.down), y: y.rounded(.down))
     }
 }
+#endif

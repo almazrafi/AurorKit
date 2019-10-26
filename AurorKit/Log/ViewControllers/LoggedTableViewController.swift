@@ -1,3 +1,4 @@
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 open class LoggedTableViewController: UITableViewController {
@@ -46,3 +47,4 @@ open class LoggedTableViewController: UITableViewController {
         Log.high("viewDidDisappear(animated: \(animated))", from: self)
     }
 }
+#endif

@@ -1,4 +1,4 @@
-import Foundation
+#if canImport(CoreGraphics)
 import CoreGraphics
 
 extension CGRect {
@@ -40,3 +40,4 @@ extension CGRect {
         self.init(x: origin.x, y: origin.y, width: CGFloat(width), height: CGFloat(height))
     }
 }
+#endif

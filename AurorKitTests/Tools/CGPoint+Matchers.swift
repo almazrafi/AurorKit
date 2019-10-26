@@ -1,3 +1,4 @@
+#if canImport(CoreGraphics)
 import CoreGraphics
 import Nimble
 
@@ -20,3 +21,4 @@ func beCloseTo(_ expectedValue: CGPoint, within delta: CGFloat = CGFloat(Default
         return .matches
     }
 }
+#endif

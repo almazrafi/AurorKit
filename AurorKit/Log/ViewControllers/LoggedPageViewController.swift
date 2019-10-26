@@ -1,3 +1,4 @@
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 open class LoggedPageViewController: UIPageViewController {
@@ -46,3 +47,4 @@ open class LoggedPageViewController: UIPageViewController {
         Log.high("viewDidDisappear(animated: \(animated))", from: self)
     }
 }
+#endif

@@ -1,3 +1,4 @@
+#if canImport(QuartzCore) && canImport(CoreGraphics) && !os(watchOS)
 import QuartzCore
 import CoreGraphics
 
@@ -41,3 +42,4 @@ extension CALayer {
         }
     }
 }
+#endif

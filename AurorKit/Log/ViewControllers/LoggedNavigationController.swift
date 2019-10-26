@@ -1,3 +1,4 @@
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 open class LoggedNavigationController: UINavigationController {
@@ -46,3 +47,4 @@ open class LoggedNavigationController: UINavigationController {
         Log.high("viewDidDisappear(animated: \(animated))", from: self)
     }
 }
+#endif

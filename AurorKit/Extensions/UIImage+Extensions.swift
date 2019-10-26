@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 extension UIImage {
@@ -42,3 +43,4 @@ extension UIImage {
         return scaled(to: CGSize(width: size.width * height / size.height, height: height))
     }
 }
+#endif

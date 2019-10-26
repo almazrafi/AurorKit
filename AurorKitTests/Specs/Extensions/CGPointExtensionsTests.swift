@@ -1,6 +1,5 @@
-import Foundation
+#if canImport(CoreGraphics)
 import CoreGraphics
-
 import Quick
 import Nimble
 
@@ -38,3 +37,4 @@ class CGPointExtensionsTests: QuickSpec {
         }
     }
 }
+#endif

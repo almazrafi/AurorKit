@@ -1,3 +1,4 @@
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 extension UIWindow {
@@ -34,3 +35,4 @@ extension UIWindow {
         return topViewController
     }
 }
+#endif

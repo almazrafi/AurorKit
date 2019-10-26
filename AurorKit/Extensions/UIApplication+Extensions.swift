@@ -1,3 +1,4 @@
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 extension UIApplication {
@@ -16,3 +17,4 @@ extension UIApplication {
         }
     }
 }
+#endif
